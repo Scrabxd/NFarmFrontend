@@ -5,6 +5,8 @@ import { NavbarMenu } from './components/navbar/NavbarMenu'
 export const App = () => {
 	return (
 		<>
+			<NavbarMenu />
+
 			<Header />
 
 			<AboutUs />
