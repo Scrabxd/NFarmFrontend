@@ -1,5 +1,5 @@
 import { Grid, Image, Text } from "@nextui-org/react"
-import { aboutUsInfo } from "../../helpers/aboutUsInfo"
+import { aboutUsInfo } from "../../helpers"
 import { AboutUsBadges } from "./AboutUsBadges"
 
 

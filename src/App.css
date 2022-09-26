@@ -1,0 +1,9 @@
+/* Landing Titles */
+
+.line::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #147452;
+}
