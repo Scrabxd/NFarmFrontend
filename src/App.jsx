@@ -4,6 +4,8 @@ import { AboutUs } from './components/about/AboutUs'
 import { Price } from './components/price/Price'
 import './app.css'
 import { Team } from './components/Team/Team'
+import { FAQ } from './components/faq/FAQ'
+import { Footer } from './components/Footer/Footer'
 
 export const App = () => {
 	return (
@@ -17,6 +19,10 @@ export const App = () => {
 			<Price />
 
 			<Team />
+
+			<FAQ />
+
+			<Footer />
 		</>
 	)
 }

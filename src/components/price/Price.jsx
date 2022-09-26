@@ -12,7 +12,7 @@ export const Price = () => {
 				</Grid>
 			</Grid.Container>
 
-            <Grid.Container direction="row" gap={2} wrap="wrap" justify="center">
+            <Grid.Container direction="row" wrap="wrap" justify="center">
                 <Grid xs={12} sm={3} justify="center">
                     <PriceNFT />
                 </Grid>

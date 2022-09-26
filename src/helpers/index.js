@@ -1,4 +1,4 @@
 export * from './aboutUsInfo'
 export * from './teamInfo'
-// export * from './testimonials'
-// export * from './faqQuestions'
+export * from './faqQuestions'
+export * from './testimonials'

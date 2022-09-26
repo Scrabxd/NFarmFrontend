@@ -4,7 +4,7 @@ import Spline from '@splinetool/react-spline';
 export const Header = () => {
     return (
 
-        <Grid.Container justify="center" gap={2}>
+        <Grid.Container justify="center" css={{ mt:"1rem" }}>
             <Grid xs={11} sm={7} md={7} lg={7} xl={7} direction="column" justify="center" >
                 <Text h1 size={70} em>You, Your Cattle & The System</Text>
                 <Text h2 hideIn="xs">Automated cattle certification via NFT</Text>

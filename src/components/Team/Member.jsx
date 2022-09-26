@@ -1,7 +1,7 @@
 import { Card, Col, Row, Button, Text, Grid, User } from "@nextui-org/react";
 
 export const Member= ({ name, role, social, img }) => (
-    <Grid xs={2} css={{ minWidth:"17rem" }}>
+    <Grid xs={1} css={{ minWidth:"17rem" }}>
         <Card css={{ w: "100%", h: "250px" }}>
             <Card.Body css={{ p: 0 }}>
             <Card.Image
