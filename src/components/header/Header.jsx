@@ -1,6 +1,5 @@
-import { Card, Grid, Text } from "@nextui-org/react"
+import { Grid, Text } from "@nextui-org/react"
 import Spline from '@splinetool/react-spline';
-import styles from '../../../styles/header/Header.module.css'
 
 export const Header = () => {
     return (
@@ -11,7 +10,7 @@ export const Header = () => {
                 <Text h2 hideIn="xs">Automated cattle certification via NFT</Text>
             </Grid>
             <Grid xs={11} sm={4} md={4} lg={4} xl={4} css={{ aspectRatio: '1/1' }}>
-                <Spline scene="https://prod.spline.design/3RcuLnlMwt6kZbmt/scene.splinecode" />
+                {/* <Spline scene="https://prod.spline.design/3RcuLnlMwt6kZbmt/scene.splinecode" /> */}
             </Grid>
         </Grid.Container>
     )

@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.10",
+    "@splinetool/react-spline": "^2.2.3",
+    "@splinetool/runtime": "^0.9.109",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
