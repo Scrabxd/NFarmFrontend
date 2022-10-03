@@ -1,11 +1,12 @@
-import { Text,  Input, Button } from "@nextui-org/react"
+import { Text,  Input, Button, Spacer } from "@nextui-org/react"
 
 export const FooterSubscribe = () => {
 
 
 
     return (
-        <>
+        <>  
+            <Spacer y={2}/>
             <Text weight={"semibold"}>Our Newsletter</Text>
             <Text>Subscribe to the newsletter to keep in touch with NFarm</Text>
             <Input
