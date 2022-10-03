@@ -2,7 +2,7 @@ import { Card, Text, Row, Button, Spacer } from "@nextui-org/react"
 
 export const PriceNFT = () => {
     return (
-        <Card css={{ mw: "20rem", alignItems:"center" }}>
+        <Card css={{ mw: "18rem", alignItems:"center", border:"none" }}>
             <Card.Header css={{ justifyContent:"center" }}>
               	<Text h4 b>Authentified cow NFTzation</Text>
             </Card.Header>

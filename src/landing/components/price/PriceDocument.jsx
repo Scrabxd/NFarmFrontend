@@ -2,7 +2,7 @@ import { Card, Text, Row, Button, Spacer } from "@nextui-org/react"
 
 export const PriceDocument = () => {
     return (
-        <Card css={{ mw: "20rem", alignItems:"center" }}>
+        <Card css={{ maxWidth: "18rem", alignItems:"center", border:"none" }}>
             <Card.Header css={{ justifyContent:"center", bg:"#147452" }}>
               	<Text h4 b>Document authentification</Text>
             </Card.Header>
