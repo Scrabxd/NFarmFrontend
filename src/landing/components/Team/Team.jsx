@@ -1,5 +1,5 @@
 import { Grid, Text } from "@nextui-org/react"
-import { teamInfo } from "../../helpers"
+import { teamInfo } from "../../data"
 import { Member } from "./Member"
 
 
