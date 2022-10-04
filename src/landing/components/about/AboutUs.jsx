@@ -6,7 +6,7 @@ import { AboutUsBadges } from "./AboutUsBadges"
 export const AboutUs = () => {
     return (
 
-        <section className="flex w-full justify-center content-center mt-10">
+        <section className="flex w-full justify-center content-center mt-10" id="about">
             <div className="flex w-11/12 justify-center content-center">
 
                 <div className="hidden lg:flex lg:justify-center lg:items-center lg:w-2/5">
