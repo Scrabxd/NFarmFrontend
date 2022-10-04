@@ -6,7 +6,7 @@ export const Price = () => {
     return (
         <>
             
-            <section className="flex w-full justify-center content-center mt-10 sm:mt-20">
+            <section className="flex w-full justify-center content-center mt-10 sm:mt-20" id="pricing">
 				<div className="flex flex-col w-11/12 justify-center content-center">
 					
 					<div className="flex flex-col justify-center items-center">

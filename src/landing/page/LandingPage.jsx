@@ -10,8 +10,6 @@ export const LandingPage = () => {
     return (
 
         <>
-        
-            <NavbarMenu />
 
             <Header />
 

@@ -1,10 +1,10 @@
-import { LandingPage } from './landing/page/LandingPage'
+import { AppRouter } from './router/AppRouter'
 import './app.css'
 
 export const NFarmApp = () => {
 	return (
 		<>
-			<LandingPage />
+			<AppRouter />
 		</>
 	)
 }
