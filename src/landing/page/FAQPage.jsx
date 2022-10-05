@@ -1,7 +1,8 @@
 import React from 'react'
+import { FAQ } from '../components/faq/FAQ'
 
 export const FAQPage = () => {
     return (
-        <h1>FAQPage</h1>
+        <FAQ />
     )
 }

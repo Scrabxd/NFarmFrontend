@@ -1,6 +1,5 @@
-import { Route, Router, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import { LoginPage } from "../auth/page/LoginPage"
-import { LandingPage } from "../landing/page/LandingPage"
 import { LandingRoutes } from "../landing/routes/LandingRoutes"
 
 export const AppRouter = () => {

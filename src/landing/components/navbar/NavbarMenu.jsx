@@ -8,7 +8,7 @@ export const NavbarMenu = () => {
     	<Layout>
       		<Navbar isBordered variant="floating" css={{mb:25}}>
 
-        		<Navbar.Toggle showIn="xs"/>
+        		<Navbar.Toggle showIn="sm"/>
 
 				<NavbarBrand />
 
@@ -21,7 +21,7 @@ export const NavbarMenu = () => {
 					jc: "flex-end",
 					},
 				}}
-				hideIn="xs"
+				hideIn="sm"
 				>
 					<NavbarSession isLog={false}/>
 

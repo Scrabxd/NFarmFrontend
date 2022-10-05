@@ -1,6 +1,5 @@
 import { Grid, Text } from "@nextui-org/react"
-import Spline from '@splinetool/react-spline';
-// import Shape from "https://framer.com/m/Shape-5Jbr.js@nAjQKWp4qSEkMI5k2Z70"
+// import Spline from '@splinetool/react-spline';
 
 export const Header = () => {
     return (
@@ -14,25 +13,12 @@ export const Header = () => {
                     </div>
 
                     <div className="w-full sm:w-2/5 h-96">
-                        <Spline scene="https://prod.spline.design/3RcuLnlMwt6kZbmt/scene.splinecode" />
+                        {/* <Spline scene="https://prod.spline.design/3RcuLnlMwt6kZbmt/scene.splinecode" /> */}
                     </div>
 
                 </div>
             </header>
 
-            {/* <Shape /> */}
-
         </>
-
-
-        // <Grid.Container justify="center" css={{ mt:"1rem" }}>
-        //     <Grid xs={11} sm={7} md={7} lg={7} xl={7} direction="column" justify="center" >
-        //         <Text h1 size={70} em>You, Your Cattle & The System</Text>
-        //         <Text h2 hideIn="xs">Automated cattle certification via NFT</Text>
-        //     </Grid>
-        //     <Grid xs={11} sm={4} md={4} lg={4} xl={4} css={{ aspectRatio: '1/1' }}>
-        //         {/* <Spline scene="https://prod.spline.design/3RcuLnlMwt6kZbmt/scene.splinecode" /> */}
-        //     </Grid>
-        // </Grid.Container>
     )
 }
