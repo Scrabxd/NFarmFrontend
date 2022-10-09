@@ -10,15 +10,20 @@ export const NavbarLinks = () => {
         hideIn="sm"
         variant="underline-rounded"
         >
-            <Navbar.Link href="#">Home</Navbar.Link>
-            <Navbar.Link href="#about">
-                About
-            </Navbar.Link>
-            <Navbar.Link href="#team">Team</Navbar.Link>
-            <Navbar.Link href="#pricing">Pricing</Navbar.Link>
+            <NavLink to="/">
+                Home
+            </NavLink>
 
             <NavLink to="/">
-                Pricingg
+                About
+            </NavLink>
+
+            <NavLink to="/">
+                Pricing
+            </NavLink>
+
+            <NavLink to="/">
+                Team
             </NavLink>
 
             <NavLink to="/questions">
