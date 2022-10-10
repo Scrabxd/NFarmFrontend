@@ -13,7 +13,7 @@ export const LandingRoutes = () => {
             <Routes>
 
                 <Route path="/questions" element={ <FAQPage /> }/>
-
+                
                 <Route path="/*" element={ <LandingPage /> } />
 
             </Routes>
