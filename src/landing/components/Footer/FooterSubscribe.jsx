@@ -7,8 +7,8 @@ export const FooterSubscribe = () => {
     return (
         <>  
             <Spacer y={2}/>
-            <Text weight={"semibold"}>Our Newsletter</Text>
-            <Text>Subscribe to the newsletter to keep in touch with NFarm</Text>
+            <Text weight={"semibold"} color="white">Our Newsletter</Text>
+            <Text color="white">Subscribe to the newsletter to keep in touch with NFarm</Text>
             <Input
                 type="email"
                 aria-label="subscribe input" 

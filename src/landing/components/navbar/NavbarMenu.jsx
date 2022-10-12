@@ -1,5 +1,5 @@
 import { Navbar } from "@nextui-org/react"
-import { Layout, NavbarBrand, NavbarLinks,NavbarSession, NavbarCollapse } from "./navbarComponents"
+import { Layout, NavbarBrand, NavbarLinks, NavbarCollapse, NavbarSessionButtons } from "./navbarComponents"
 
 export const NavbarMenu = () => {
     
@@ -23,7 +23,7 @@ export const NavbarMenu = () => {
 				}}
 				hideIn="sm"
 				>
-					<NavbarSession isLog={false}/>
+					<NavbarSessionButtons />
 
         		</Navbar.Content>
 

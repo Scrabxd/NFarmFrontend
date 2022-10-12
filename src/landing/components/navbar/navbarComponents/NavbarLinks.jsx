@@ -10,23 +10,23 @@ export const NavbarLinks = () => {
         hideIn="sm"
         variant="underline-rounded"
         >
-            <NavLink to="/">
+            <NavLink to="/" className="text-inherit">
                 Home
             </NavLink>
 
-            <NavLink to="/">
+            <NavLink to="/" className="text-inherit">
                 About
             </NavLink>
 
-            <NavLink to="/">
+            <NavLink to="/" className="text-inherit">
                 Pricing
             </NavLink>
 
-            <NavLink to="/">
+            <NavLink to="/" className="text-inherit">
                 Team
             </NavLink>
 
-            <NavLink to="/questions">
+            <NavLink to="/questions" className="text-inherit">
                 FAQ
             </NavLink>
         </Navbar.Content>

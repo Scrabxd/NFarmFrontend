@@ -7,7 +7,7 @@ export const Footer = () => {
     return (
         <>
         
-            <footer className="flex flex-col w-full sm:flex-row justify-around mt-10 sm:mt-20 bg-[#147452]">
+            <footer className="flex flex-col w-full sm:flex-row justify-around mt-10 sm:mt-20 bg-[#147452] text-white">
 
                 <div className="flex flex-col justify-center items-center sm:mb-10">
                     <div className="footer-line mt-5"></div>

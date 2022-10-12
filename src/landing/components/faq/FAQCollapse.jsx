@@ -1,16 +1,16 @@
+import { useTheme } from "@nextui-org/react"
 import { motion } from "framer-motion"
 
 export const FAQCollapse = ({ title, description }) => {
 
-    const mode = 'dark'
-
+    const { isDark } = useTheme()
 
     return (
 
         <motion.div
             className="max-w-xs h-64 rounded-lg overflow-hidden drop-shadow-2xl border"
             whileHover={{ rotate: 3.5 }}
-            animate= { mode === 'dark' ? { boxShadow: "10px 10px 0 rgba(255, 255, 255, 0.2)" } : { boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)" } }
+            animate= { isDark ? { boxShadow: "10px 10px 0 rgba(255, 255, 255, 0.2)" } : { boxShadow: "10px 10px 0 rgba(0, 0, 0, 0.2)" } }
         >
 
             <div className="bg-[#115F43] w-full">
