@@ -6,11 +6,9 @@ import { darkTheme, lightTheme } from './themes/themes'
 
 export const NFarmApp = () => {
 	return (
-		<>
-			<NextUIProvider theme={ darkTheme }>
-				<AppRouter />
-			</NextUIProvider>
-		</>
+		<NextUIProvider theme={ darkTheme }>
+			<AppRouter />
+		</NextUIProvider>
 	)
 }
 

@@ -1,4 +1,5 @@
 import { changeTheme, Switch, useTheme } from "@nextui-org/react"
+import { useEffect } from "react"
 import { MoonIcon } from "./MoonIcon"
 import { SunIcon } from "./SunIcon"
 
@@ -10,14 +11,16 @@ export const SwitchTheme = () => {
 
 		const nextTheme = isDark ? 'light' : 'dark'
 		changeTheme( nextTheme )
+		localStorage.setItem( 'isDark', isDark )
+
 	}
 
     return (
     	<Switch
-          	checked={ false }
+          	checked={ !isDark }
 		    onChange={ onHandleChangeTheme }
 			color="success"
-			size="sm"
+			size="md"
           	iconOn={<SunIcon filled />}
           	iconOff={<MoonIcon filled />}
         />

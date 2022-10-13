@@ -10,11 +10,11 @@ import { NFarmApp } from './NFarmApp'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-	<React.StrictMode>
-		<BrowserRouter>
+		<React.StrictMode>
+			<BrowserRouter>
 
-				<NFarmApp />
+					<NFarmApp />
 
-		</BrowserRouter>
-  	</React.StrictMode>
+			</BrowserRouter>
+		</React.StrictMode>
 )
