@@ -2,23 +2,19 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import { BrowserRouter } from 'react-router-dom'
-import { NFarmApp } from './NFarmApp'
 
 import './main.css'
 
-import { NextUIProvider } from '@nextui-org/react'
-import { darkTheme } from './themes/darktheme'
+import { NFarmApp } from './NFarmApp'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-	<React.StrictMode>
-		<BrowserRouter>
+		<React.StrictMode>
+			<BrowserRouter>
 
-			<NextUIProvider theme={ darkTheme }>
-				<NFarmApp />
-			</NextUIProvider>
+					<NFarmApp />
 
-		</BrowserRouter>
-  	</React.StrictMode>
+			</BrowserRouter>
+		</React.StrictMode>
 )

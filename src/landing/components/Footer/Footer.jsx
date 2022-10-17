@@ -7,7 +7,7 @@ export const Footer = () => {
     return (
         <>
         
-            <footer className="flex flex-col w-full sm:flex-row justify-around mt-10 sm:mt-20 bg-[#147452]">
+            <footer className="flex flex-col w-full sm:flex-row justify-around mt-10 sm:mt-20 bg-[#147452] text-white">
 
                 <div className="flex flex-col justify-center items-center sm:mb-10">
                     <div className="footer-line mt-5"></div>
@@ -25,25 +25,7 @@ export const Footer = () => {
                 </div> 
 
             </footer>
-
-            {/* <Grid.Container css={{ bg:"#147452", mt:"1rem" }} wrap="wrap" gap={3}>
-                <Grid xs={12} sm={8} direction="column" alignItems="center">
-                    <div className="footer-line"></div> 
-                    <Text weight={"bold"} h3>NFarm</Text>
-                    <Text i>You, Your Cattle & The System</Text>
-
-                    <Spacer y={2}/>
-                    <FooterSubscribe />
-                    
-                </Grid>
-                <Grid xs={12} sm={4} direction="column" alignItems="center" css={{ '@md':{alignItems:"flex-start" }}}> 
-                    <Text h4>Useful Links</Text>
-                    <FooterLinks title={"Home"}/>
-                    <FooterLinks title={"About us"}/>
-                    <FooterLinks title={"Features"}/>
-                    <FooterLinks title={"Our Team"}/>
-                </Grid>
-            </Grid.Container> */}
+            
         </>
     )
 }

@@ -21,22 +21,7 @@ export const Price = () => {
 
 				</div>
 			</section>
-            
-            {/* <Grid.Container justify="center" css={{ mt:"8rem" }} id="pricing">
-				<Grid xs={10} direction="column" alignItems="center">
-				<Text h3 className="line" >Pricing</Text>
-				<Text h1>Our Business Model</Text>
-				</Grid>
-			</Grid.Container>
-
-            <Grid.Container direction="row" wrap="wrap" justify="center">
-                <Grid xs={12} sm={3} justify="center">
-                    <PriceNFT />
-                </Grid>
-                <Grid xs={12} sm={3} justify="center">
-                    <PriceDocument />
-                </Grid>
-            </Grid.Container> */}
+    
         </>
     )
 }

@@ -4,7 +4,7 @@ export const darkTheme = createTheme({
     type: 'dark',
     theme: {
       colors: { 
-            nfamColor: "#fff"
-        }, // override dark theme colors
+            primary: '#147452',
+        },
     }
 });

@@ -1,4 +1,5 @@
 import { Navbar } from "@nextui-org/react"
+import { NavLink } from "react-router-dom"
 
 export const NavbarLinks = () => {
 
@@ -6,15 +7,28 @@ export const NavbarLinks = () => {
         <Navbar.Content
         //   enableCursorHighlight
         activeColor="success"
-        hideIn="xs"
+        hideIn="sm"
         variant="underline-rounded"
         >
-            <Navbar.Link href="#">Home</Navbar.Link>
-            <Navbar.Link href="#about">
+            <NavLink to="/" className="text-inherit">
+                Home
+            </NavLink>
+
+            <NavLink to="/" className="text-inherit">
                 About
-            </Navbar.Link>
-            <Navbar.Link href="#team">Team</Navbar.Link>
-            <Navbar.Link href="#pricing">Pricing</Navbar.Link>
+            </NavLink>
+
+            <NavLink to="/" className="text-inherit">
+                Pricing
+            </NavLink>
+
+            <NavLink to="/" className="text-inherit">
+                Team
+            </NavLink>
+
+            <NavLink to="/questions" className="text-inherit">
+                FAQ
+            </NavLink>
         </Navbar.Content>
     )
 }

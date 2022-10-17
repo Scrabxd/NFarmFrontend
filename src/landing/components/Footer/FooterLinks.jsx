@@ -8,7 +8,7 @@ export const FooterLinks = ({ title }) => {
         <Link>
             <FontAwesomeIcon icon={faAngleRight} className="icon" />
             <Spacer x={0.5}/>
-            <Text>{ title }</Text>
+            <Text color="white">{ title }</Text>
         </Link>
     )
 }

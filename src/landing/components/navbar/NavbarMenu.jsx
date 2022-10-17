@@ -1,5 +1,5 @@
 import { Navbar } from "@nextui-org/react"
-import { Layout, NavbarBrand, NavbarLinks,NavbarSession, NavbarCollapse } from "./navbarComponents"
+import { Layout, NavbarBrand, NavbarLinks, NavbarCollapse, NavbarSessionButtons } from "./navbarComponents"
 
 export const NavbarMenu = () => {
     
@@ -8,7 +8,7 @@ export const NavbarMenu = () => {
     	<Layout>
       		<Navbar isBordered variant="floating" css={{mb:25}}>
 
-        		<Navbar.Toggle showIn="xs"/>
+        		<Navbar.Toggle showIn="sm"/>
 
 				<NavbarBrand />
 
@@ -21,9 +21,9 @@ export const NavbarMenu = () => {
 					jc: "flex-end",
 					},
 				}}
-				hideIn="xs"
+				hideIn="sm"
 				>
-					<NavbarSession isLog={false}/>
+					<NavbarSessionButtons />
 
         		</Navbar.Content>
 

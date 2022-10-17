@@ -1,4 +1,5 @@
 import { Navbar, Link } from "@nextui-org/react"
+import { SwitchTheme } from "../../switchTheme/SwitchTheme";
 
 export const NavbarCollapse = () => {
 
@@ -6,10 +7,10 @@ export const NavbarCollapse = () => {
     const collapseItems = [
         "Home",
         "About",
-        "Team",
         "Pricing",
-        "Sign in",
+        "Team",
         "Log in",
+        "Sign in",
     ];
 
     return (
@@ -34,6 +35,10 @@ export const NavbarCollapse = () => {
                     </Link>
                 </Navbar.CollapseItem>
             ))}
+
+                    <Link>
+                        <SwitchTheme />
+                    </Link>
         </Navbar.Collapse>
     )
 }
