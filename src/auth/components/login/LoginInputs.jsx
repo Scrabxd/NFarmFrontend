@@ -4,6 +4,7 @@ import { useForm } from "../../hooks/useForm"
 export const LoginInputs = () => {
 
     const { formState, onInputChangeValues, email, password } = useForm({
+        type: 'login',
         email: '',
         password: '',
     })

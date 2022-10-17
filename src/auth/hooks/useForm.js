@@ -20,7 +20,7 @@ export const useForm = ( initialForm = {} ) => {
 
 
     return {
-        ...formState, //destructuring the state, so that when we call the hook we can get { email, password } without using formState.email
+        ...formState, //destructuring the state, so that when we call the hook we can get attributes of the state without using formState.atribute
         formState, // return the complete state
         onInputChangeValues
     }

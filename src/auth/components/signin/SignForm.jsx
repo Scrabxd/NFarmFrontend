@@ -1,4 +1,4 @@
-import { SignInputs } from "./SignInputs"
+import { SignInputsRestaurant } from "./SignInputsRestaurant"
 
 export const SignForm = () => {
     return (
@@ -9,7 +9,7 @@ export const SignForm = () => {
                 <p className="text-2xl sm:text-3xl">Register</p>
 
                 <div className="w-full sm:w-1/2 mt-10">
-                    <SignInputs />
+                    <SignInputsRestaurant />
                 </div>
 
             </div>
