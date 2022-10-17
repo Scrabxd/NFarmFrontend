@@ -32,7 +32,7 @@ export const SidebarMenu = () => {
                                 </li>
 
                                 <li>
-                                    <p>NFarm</p>
+                                    <p>🐮 Your Cattle</p>
                                 </li>
 
                                 <li>

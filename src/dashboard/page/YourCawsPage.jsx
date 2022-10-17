@@ -1,6 +1,7 @@
+import { CattleItem } from "../components/cattle/CattleItem"
 
 export const YourCawsPage = () => {
     return (
-        <h1 className="text-center">YourCawsPage</h1>
+        <CattleItem />
     )
 }
