@@ -1,14 +1,13 @@
 import { AppRouter } from './router/AppRouter'
 import './app.css'
 
-import { NextUIProvider } from '@nextui-org/react'
-import { darkTheme, lightTheme } from './themes/themes'
+import { AppTheme } from './themes'
 
 export const NFarmApp = () => {
 	return (
-		<NextUIProvider theme={ darkTheme }>
+		<AppTheme>
 			<AppRouter />
-		</NextUIProvider>
+		</AppTheme>
 	)
 }
 
