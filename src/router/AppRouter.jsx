@@ -11,7 +11,7 @@ export const AppRouter = () => {
             {/* Cualquier ruta que no sea /login, desplegar rutas del landing */}
             <Route path="/*" element={ <LandingRoutes /> } />
 
-            <Route path="/login" element={ <AuthRoutes /> } />
+            <Route path="/auth/*" element={ <AuthRoutes /> } />
 
             <Route path="/dash" element={ <DashboardRoutes /> } />
 

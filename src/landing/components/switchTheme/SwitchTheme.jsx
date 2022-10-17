@@ -15,6 +15,8 @@ export const SwitchTheme = () => {
 
 	}
 
+	console.log( 'switch' )
+
     return (
     	<Switch
           	checked={ !isDark }

@@ -1,6 +1,7 @@
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import { DashboardRoutes } from "../../dashboard/routes/DashboardRoutes"
 import { LoginPage } from "../page/LoginPage"
+import { SigninPage } from "../page/SigninPage"
 
 export const AuthRoutes = () => {
 
@@ -10,7 +11,11 @@ export const AuthRoutes = () => {
 
             <Routes>
 
-                <Route path="/*" element={ <LoginPage /> } />
+                <Route path="/register" element={ <SigninPage /> }/>
+
+                <Route path="/login" element={ <LoginPage /> } />
+
+                <Route path="/*" element={ <Navigate to="/login"/> } />
 
             </Routes>
 
