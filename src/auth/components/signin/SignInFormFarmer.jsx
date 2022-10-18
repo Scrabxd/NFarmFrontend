@@ -1,15 +1,16 @@
 import { Button, Card, Input, Spacer } from "@nextui-org/react"
 import { useForm } from "../../hooks/useForm"
 
-export const SignInFormRestaurant = () => {
+export const SignInFormFarmer = () => {
 
 
-    const { formState, onInputChangeValues, name, lastname, rfc, restaurantName, email, password } = useForm({
-        type: 'signin restaurant',
+    const { formState, onInputChangeValues, name, lastname, rfc, exportaionCountry, exportRegistration, email, password } = useForm({
+        type: 'signin farmer',
         name: '',
         lastname: '',
         rfc: '',
-        restaurantName: '',
+        exportationCountry: '',
+        exportRegistration: '',
         email: '',
         password: ''
     })
@@ -17,12 +18,12 @@ export const SignInFormRestaurant = () => {
     const onSendSigninData = () => {
         console.log( formState )
     }
-
+    
     return (
-
+        
         <Card css={{ border:"none" }}>
             <Card.Body>
-
+                
                 <div className="w-full flex">
                     <div className="w-1/2">
 
@@ -65,10 +66,20 @@ export const SignInFormRestaurant = () => {
                 <Spacer y={1.5}/>
 
                 <Input 
-                    labelPlaceholder="Restaurant name" 
+                    labelPlaceholder="Exportation country" 
                     bordered color="primary"
-                    name="restaurantName"
-                    value={ restaurantName }
+                    name="exportationCountry"
+                    value={ exportaionCountry }
+                    onChange={ onInputChangeValues }
+                />
+
+                <Spacer y={1.5}/>
+
+                <Input 
+                    labelPlaceholder="export registration" 
+                    bordered color="primary"
+                    name="exportRegistration"
+                    value={ exportRegistration }
                     onChange={ onInputChangeValues }
                 />
 
@@ -77,9 +88,10 @@ export const SignInFormRestaurant = () => {
                 <Input 
                     labelPlaceholder="email" 
                     bordered color="primary"
+                    type='email'
                     name="email"
                     value={ email }
-                    onChange={ onInputChangeValues }
+                    onChange={ onInputChangeValues }    
                 />
 
                 <Spacer y={1.5}/>
