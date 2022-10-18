@@ -1,3 +1,4 @@
+import { Divider } from "@nextui-org/react"
 import { SidebarMenu } from "../components/sidebar/SidebarMenu"
 
 export const DashLayout = ({ children, title }) => {
@@ -5,12 +6,15 @@ export const DashLayout = ({ children, title }) => {
 
         <div className="w-full">
 
-            <SidebarMenu />
 
-            <div className="bg-red-300 flex flex-col justify-center items-center">
-                <p className="text-3xl text-center sm:text-5xl font-bold">{ title }</p>
+            <SidebarMenu title={ title }/>
+            
+            <div className="flex flex-col justify-center items-center">
 
-                <div className="w-11/12 bg-blue-300 mt-6 flex flex-row flex-wrap justify-center items-center gap-4 ">
+            <p className="text-3xl text-center sm:text-5xl font-bold mb-4 mt-4">{ title }</p>
+            <Divider />
+
+                <div className="w-11/12">
             
                     { children }
 

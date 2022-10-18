@@ -1169,20 +1169,6 @@
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.0.1.tgz#88d7ac31811ab0cef14aaaeae2a0474923b278bc"
   integrity sha512-eBV5rvW4dRFOU1eajN7FmYxjAIVz/mRHgUE9En9mBn6m3mulK3WTR5C3iQhL9MZ14rWAq+xOlEaCkDiW0/heOg==
 
-"@splinetool/react-spline@^2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@splinetool/react-spline/-/react-spline-2.2.3.tgz#f0c93fe1f539be95de4564c19440be1061d42ee0"
-  integrity sha512-KdvyP2cCLLG/PcHp0ObE147nhawY4R/iqI6733MSWBx4KSpeo4oD589rCPuXeGdgyr2lCtZqUQOkQj4QCnXxmw==
-  dependencies:
-    react-merge-refs "^1.1.0"
-
-"@splinetool/runtime@^0.9.109":
-  version "0.9.109"
-  resolved "https://registry.yarnpkg.com/@splinetool/runtime/-/runtime-0.9.109.tgz#676fdc597ddec237963acbbe6e0baefdbdc21e33"
-  integrity sha512-TAUM285GWbEmNWo+ZknPLqt8ZMaYD6k2WKhukZZO9LrqmPrw/s7yO/SFnkQ8xh5JyLNb6z99V6TB7CEfUPge+g==
-  dependencies:
-    on-change "^4.0.0"
-
 "@stitches/react@1.2.8":
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/@stitches/react/-/react-1.2.8.tgz#954f8008be8d9c65c4e58efa0937f32388ce3a38"
@@ -1816,11 +1802,6 @@ object-hash@^3.0.0:
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-3.0.0.tgz#73f97f753e7baffc0e2cc9d6e079079744ac82e9"
   integrity sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==
 
-on-change@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/on-change/-/on-change-4.0.1.tgz#a3fea9971748efab3560351c8278ea1a692b7c16"
-  integrity sha512-Gxmr/8NsLTigoUUEPvnAIUGl7uxwfC3Mm1G+qTmODEZcT4ZGfeaFyQgfGCdbKVS2pICIFYB82RH6MUHToPcS4Q==
-
 path-parse@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
@@ -1935,11 +1916,6 @@ react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
-
-react-merge-refs@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-merge-refs/-/react-merge-refs-1.1.0.tgz#73d88b892c6c68cbb7a66e0800faa374f4c38b06"
-  integrity sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==
 
 react-merge-refs@^2.0.1:
   version "2.0.1"

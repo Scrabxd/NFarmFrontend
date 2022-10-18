@@ -3,7 +3,7 @@ import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 export const CattleItem = () => {
     return (
         
-        <Card css={{ maxW: "18rem", h: "300px", border: "none" }}>
+        <Card css={{ maxW: "17rem", h: "300px", border: "none" }}>
             <Card.Body css={{ p: 0 }}>
             <Card.Image
                 src="/assets/img/cow.jfif"
@@ -43,7 +43,7 @@ export const CattleItem = () => {
                     flat
                     auto
                     rounded
-                    css={{ color: "#94f9f0", bg: "#94f9f026" }}
+                    css={{ color: "#fff", bg: "$primary" }}
                     >
                     <Text
                         css={{ color: "inherit" }}
