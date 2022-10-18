@@ -1,7 +1,7 @@
-import { CattleItem } from "../components/cattle/CattleItem"
+import { CattleList } from "../components/cattle/CattleList"
 
 export const YourCawsPage = () => {
     return (
-        <CattleItem />
+        <CattleList />
     )
 }
