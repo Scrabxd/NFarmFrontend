@@ -1,18 +1,55 @@
-import { LoginInputs } from "./LoginInputs"
+import { Button, Card, Input, Spacer } from "@nextui-org/react"
+import { useForm } from "../../hooks/useForm"
+import { AuthLayout } from "../../layout/AuthLayout"
 
 export const LoginForm = () => {
+
+    const { formState, onInputChangeValues, email, password } = useForm({
+        type: 'login',
+        email: '',
+        password: '',
+    })
+
+    const onSendLoginData = () => {
+        console.log( formState )
+    }
+
     return (
-        <div className="flex w-full justify-center content-center">
-            <div className="flex flex-col w-11/12 justify-center items-center mt-10">
 
-                <p className="text-4xl font-bold sm:text-5xl">NFARM</p>
-                <p className="text-2xl sm:text-3xl">Access to the system</p>
+        <AuthLayout title='Access to the system'>
 
-                <div className="w-full sm:w-1/2 mt-10">
-                    <LoginInputs />
-                </div>
+            <Card css={{ border:"none" }}>
+                <Card.Body>
 
-            </div>
-        </div>
+                    <Spacer y={1.2}/>
+
+                    <Input 
+                        labelPlaceholder="email" 
+                        bordered color="primary" 
+                        name="email" 
+                        value={ email } 
+                        onChange={ onInputChangeValues }
+                    />
+
+                    <Spacer y={1.5}/>
+
+                    <Input.Password 
+                        labelPlaceholder="password" 
+                        bordered color="primary" 
+                        name="password" 
+                        value={ password } 
+                        onChange={ onInputChangeValues }
+                    />
+                    
+                    <Spacer y={1.5}/>
+
+                    <Button color="primary" onPress={ onSendLoginData }>Access</Button>
+
+                </Card.Body>
+            </Card>
+
+        </AuthLayout>
+        
+        
     )
 }
