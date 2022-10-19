@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import { YourCawsPage } from "../page/YourCawsPage"
 
 export const DashboardRoutes = () => {
@@ -8,7 +8,9 @@ export const DashboardRoutes = () => {
 
             <Routes>
 
-                <Route path="/*" element={ <YourCawsPage /> } />
+                <Route path="/cattle" element={ <YourCawsPage /> }/>
+
+                <Route path="/*" element={ <Navigate to="/cattle" /> } />
 
             </Routes>
         </>

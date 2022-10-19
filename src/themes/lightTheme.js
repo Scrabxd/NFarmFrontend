@@ -4,7 +4,7 @@ export const lightTheme = createTheme({
     type: 'light',
     theme: {
         colors: {
-            primary: '#0000ff',
+            primary: '#147452',
         },
     }
 })

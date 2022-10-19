@@ -1,11 +1,12 @@
 import { Button, Card, Input, Spacer } from "@nextui-org/react"
 import { useForm } from "../../hooks/useForm"
 
+const userRole = 1
+
 export const SignInFormFarmer = () => {
 
-
     const { formState, onInputChangeValues, name, lastname, rfc, exportaionCountry, exportRegistration, email, password } = useForm({
-        type: 'signin farmer',
+        role: userRole,
         name: '',
         lastname: '',
         rfc: '',

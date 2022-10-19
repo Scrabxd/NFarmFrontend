@@ -1,5 +1,4 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import { DashboardRoutes } from "../../dashboard/routes/DashboardRoutes"
 import { LoginPage } from "../page/LoginPage"
 import { SigninPage } from "../page/SigninPage"
 

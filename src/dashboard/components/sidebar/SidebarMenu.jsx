@@ -2,7 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { Divider } from "@nextui-org/react"
+import { UserDropDown } from "./UserDropDown"
+import { Link, NavLink } from "react-router-dom"
 
 export const SidebarMenu = () => {
 
@@ -33,7 +34,14 @@ export const SidebarMenu = () => {
                                 </li>
 
                                 <li>
-                                    <p className="font-semibold text-lg sm:text-xl">🐮 Your Cattle</p>
+
+                                    <NavLink
+                                        className="text-inherit font-semibold text-lg sm:text-xl" 
+                                        to="/dash/cattle"
+                                    >
+                                        🐮 Your Cattle
+                                    </NavLink>
+                                    
                                 </li>
 
                                 <li>
@@ -41,11 +49,10 @@ export const SidebarMenu = () => {
                                 </li>
                             </ul>
 
-                            <ul>
-                                <li>
-                                    <p>NFarm</p>
-                                </li>
-                            </ul>
+                            {/* <UserDropDown /> */}
+
+                            <p>NFarm</p>
+
                         </>
                         : <></>
                 }
