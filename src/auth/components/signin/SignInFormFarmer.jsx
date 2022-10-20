@@ -1,7 +1,9 @@
 import { Button, Card, Input, Spacer } from "@nextui-org/react"
 import { useForm } from "../../hooks/useForm"
+import axios from 'axios'
 
 const userRole = 1
+const url = 'https://nfarm-back.herokuapp.com/api/nfarm'
 
 export const SignInFormFarmer = () => {
 
@@ -17,7 +19,16 @@ export const SignInFormFarmer = () => {
     })
 
     const onSendSigninData = () => {
+
         console.log( formState )
+
+        // axios.post( url, formState )
+        //     .then( (resp) => {
+        //         console.log( resp )
+        //     } )
+        //     .catch( (err) => {
+        //         console.log( err )
+        //     })
     }
     
     return (
