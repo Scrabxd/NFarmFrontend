@@ -1,5 +1,6 @@
 import { Button, Card, Input, Spacer } from "@nextui-org/react"
-import { Form, Formik } from "formik"
+import { Field, Form, Formik } from "formik"
+import * as Yup from 'yup'
 import axios from 'axios'
 
 const url = 'https://nfarm-back.herokuapp.com/api/nfarm'
@@ -24,16 +25,21 @@ export const SignInFormFarmer = () => {
                         password: ''
                     }}
 
+                    validationSchema = { Yup.object().shape({
+                        name: Yup.string()
+                            .required( 'Please type a name' )
+                    }) }
+
                     validate={ ( values ) => {
 
                         let errors = {  }
                         
                         // name validations
-                        if ( !values.name ) {
-                            errors.name = 'Please type a name'
-                        } else if ( !/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test( values.name ) ){ // true if it meets the regular expression
-                            errors.name = 'The name can only contain letters and spaces'
-                        }
+                        // if ( !values.name ) {
+                        //     errors.name = 'Please type a name'
+                        // } else if ( !/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test( values.name ) ){ // true if it meets the regular expression
+                        //     errors.name = 'The name can only contain letters and spaces'
+                        // }
 
                         //Lastname validations
                         if ( !values.last_name ) {
