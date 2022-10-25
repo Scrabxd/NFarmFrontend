@@ -1,18 +1,10 @@
-import { Button, Card, Input, Spacer } from "@nextui-org/react"
-import { useForm } from "../../hooks/useForm"
+import { Card, Input, Spacer } from "@nextui-org/react"
+import { Formik } from "formik"
+import { validationSchemeLogin } from "../../helpers"
 import { AuthLayout } from "../../layout/AuthLayout"
 
 export const LoginForm = () => {
 
-    const { formState, onInputChangeValues, email, password } = useForm({
-        type: 'login',
-        email: '',
-        password: '',
-    })
-
-    const onSendLoginData = () => {
-        console.log( formState )
-    }
 
     return (
 
@@ -21,29 +13,68 @@ export const LoginForm = () => {
             <Card css={{ border:"none" }}>
                 <Card.Body>
 
-                    <Spacer y={1.2}/>
+                    <Formik
+                        initialValues={{
+                            email: '',
+                            password: '',
+                        }}
 
-                    <Input 
-                        labelPlaceholder="email" 
-                        bordered color="primary" 
-                        name="email" 
-                        value={ email } 
-                        onChange={ onInputChangeValues }
-                    />
+                        validationSchema={ validationSchemeLogin }
 
-                    <Spacer y={1.5}/>
+                        onSubmit={ ( values ) => { //function to execute when we send the form
+                            console.log( values )
+                            console.log( 'formulario enviado' )
+                        } }
+                    >
 
-                    <Input.Password 
-                        labelPlaceholder="password" 
-                        bordered color="primary" 
-                        name="password" 
-                        value={ password } 
-                        onChange={ onInputChangeValues }
-                    />
-                    
-                    <Spacer y={1.5}/>
+                        {/* form props from Formik */}
+                        { ({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
 
-                    <Button color="primary" onPress={ onSendLoginData }>Access</Button>
+                            <form className="w-full flex flex-col gap-2" onSubmit={ handleSubmit }>
+
+                                <Spacer x={1.5}/>
+
+                                <Input 
+                                    labelPlaceholder="Email" 
+                                    bordered 
+                                    color={ !errors.email ? 'primary' : 'error' }
+                                    name='email'
+                                    value={ values.email }
+                                    onChange={ handleChange }    
+                                    onBlur={ handleBlur }
+                                    helperColor={ !errors.email ? 'primary' : 'error' }
+                                    helperText={ touched.email && errors.email }
+                                />
+
+                                <Spacer x={1.5}/>
+
+                                <Input.Password 
+                                    labelPlaceholder="Password" 
+                                    bordered 
+                                    color={ !errors.password ? 'primary' : 'error' }
+                                    name="password"
+                                    value={ values.password }
+                                    onChange={ handleChange }  
+                                    onBlur={ handleBlur } 
+                                    helperColor={ !errors.password ? 'primary' : 'error' }
+                                    helperText={ touched.password && errors.password } 
+                                />
+                                
+                                <Spacer x={1.5}/>
+
+                                <Input 
+                                    type="submit" 
+                                    aria-label="send-form"
+                                    status='success'
+                                    value='Create an account'
+                                />
+
+                            </form>
+
+                        ) }   
+
+
+                    </Formik>
 
                 </Card.Body>
             </Card>

@@ -8,7 +8,7 @@ export const AuthLayout = ({ children, title }) => {
                 <p className="text-4xl font-bold sm:text-5xl">NFARM</p>
                 <p className="text-2xl sm:text-3xl">{ title }</p>
 
-                <div className="w-full sm:w-1/2 mt-10">
+                <div className="w-full lg:w-1/2 mt-10">
                     { children }
                 </div>
 

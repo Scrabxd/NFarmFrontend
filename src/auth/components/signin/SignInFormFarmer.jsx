@@ -1,9 +1,6 @@
-import { Button, Card, Input, Spacer } from "@nextui-org/react"
-import { Field, Form, Formik } from "formik"
-import * as Yup from 'yup'
-import axios from 'axios'
-
-const url = 'https://nfarm-back.herokuapp.com/api/nfarm'
+import { Card, Input, Spacer } from "@nextui-org/react"
+import { Formik } from "formik"
+import { validationSchemeSignFarmer } from "../../helpers"
 
 export const SignInFormFarmer = () => {
 
@@ -17,71 +14,15 @@ export const SignInFormFarmer = () => {
                     initialValues={{
                         id_role: 1,
                         name: '',
-                        last_name: '',
+                        lastName: '',
                         rfc: '',
-                        country_Exportation: '',
-                        credential_Exportation: '',
+                        countryExportation: '',
+                        credentialExportation: '',
                         email: '',
                         password: ''
                     }}
 
-                    validationSchema = { Yup.object().shape({
-                        name: Yup.string()
-                            .required( 'Please type a name' )
-                    }) }
-
-                    validate={ ( values ) => {
-
-                        let errors = {  }
-                        
-                        // name validations
-                        // if ( !values.name ) {
-                        //     errors.name = 'Please type a name'
-                        // } else if ( !/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test( values.name ) ){ // true if it meets the regular expression
-                        //     errors.name = 'The name can only contain letters and spaces'
-                        // }
-
-                        //Lastname validations
-                        if ( !values.last_name ) {
-                            errors.last_name = 'Please type a lastname'
-                        } else if ( !/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test( values.last_name ) ){ // true if it meets the regular expression
-                            errors.last_name = 'The lastname can only contain letters and spaces'
-                        }
-
-                        //rfc validations
-                        if ( !values.rfc ) {
-                            errors.rfc = 'Please type a rfc'
-                        } else if ( values.rfc.length < 12 || values.rfc.length > 13 ){ // true if it meets the regular expression
-                            errors.rfc = 'Invalid rfc'
-                        }
-
-                        //country exportation validations
-                        if ( !values.country_Exportation ) {
-                            errors.country_Exportation = 'Please type an exportation country'
-                        }
-
-                        //credential exportation validations
-                        if ( !values.credential_Exportation ) {
-                            errors.credential_Exportation = 'Please type an exportation credential'
-                        }
-
-                        //email validations
-                        if ( !values.email ) {
-                            errors.email = 'Please type an email'
-                        } else if ( !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test( values.email ) ){
-                            errors.email = 'invalid email'
-                        }
-
-                        //password validations
-                        if ( !values.password ) {
-                            errors.password = 'Please type a password'
-                        } else if ( !/^(?!.*\s)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).{10,16}$/.test( values.password ) ){
-                            errors.password= 'Password should contain at least one number and one special character and 10-16 characters longer'
-                        }
-
-                        return errors
-
-                    }}
+                    validationSchema = { validationSchemeSignFarmer }
 
                     onSubmit={ ( values ) => { //function to execute when we send the form
                         console.log( values )
@@ -116,14 +57,14 @@ export const SignInFormFarmer = () => {
                                     <Input 
                                         labelPlaceholder="Lastname" 
                                         bordered 
-                                        color={ !errors.last_name ? 'primary' : 'error' }
+                                        color={ !errors.lastName ? 'primary' : 'error' }
                                         css={{ w: '100%' }}
-                                        name="last_name"
-                                        value={ values.last_name }
+                                        name="lastName"
+                                        value={ values.lastName }
                                         onChange={ handleChange }
                                         onBlur={ handleBlur }
-                                        helperColor={ !errors.last_name ? 'primary' : 'error' }
-                                        helperText={ touched.last_name && errors.last_name }
+                                        helperColor={ !errors.lastName ? 'primary' : 'error' }
+                                        helperText={ touched.lastName && errors.lastName }
                                     />
 
                                 </div>
@@ -148,13 +89,13 @@ export const SignInFormFarmer = () => {
                             <Input 
                                 labelPlaceholder="Exportation country" 
                                 bordered 
-                                color={ !errors.country_Exportation ? 'primary' : 'error' }
-                                name="country_Exportation"
-                                value={ values.country_Exportation }
+                                color={ !errors.countryExportation ? 'primary' : 'error' }
+                                name="countryExportation"
+                                value={ values.countryExportation }
                                 onChange={ handleChange }
                                 onBlur={ handleBlur }
-                                helperColor={ !errors.country_Exportation ? 'primary' : 'error' }
-                                helperText={ touched.country_Exportation && errors.country_Exportation }
+                                helperColor={ !errors.countryExportation ? 'primary' : 'error' }
+                                helperText={ touched.countryExportation && errors.countryExportation }
                             />
 
                             <Spacer y={1.5}/>
@@ -162,13 +103,13 @@ export const SignInFormFarmer = () => {
                             <Input 
                                 labelPlaceholder="Exportation credencial" 
                                 bordered 
-                                color={ !errors.credential_Exportation ? 'primary' : 'error' }
-                                name="credential_Exportation"
-                                value={ values.credential_Exportation }
+                                color={ !errors.credentialExportation ? 'primary' : 'error' }
+                                name="credentialExportation"
+                                value={ values.credentialExportation }
                                 onChange={ handleChange }
                                 onBlur={ handleBlur }
-                                helperColor={ !errors.credential_Exportation ? 'primary' : 'error' }
-                                helperText={ touched.credential_Exportation && errors.credential_Exportation }
+                                helperColor={ !errors.credentialExportation ? 'primary' : 'error' }
+                                helperText={ touched.credentialExportation && errors.credentialExportation }
                             />
 
                             <Spacer y={1.5}/>
