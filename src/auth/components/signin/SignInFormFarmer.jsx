@@ -1,9 +1,13 @@
 import { Card, Input, Spacer } from "@nextui-org/react"
 import { Formik } from "formik"
+import { useDispatch, useSelector } from "react-redux"
+import { registerUser } from "../../../store/slices/signup"
 import { validationSchemeSignFarmer } from "../../helpers"
 
 export const SignInFormFarmer = () => {
 
+    const dispatch = useDispatch()
+    const { status } = useSelector( state => state.register ) // reference to store -> reducer -> register
     
     return (
         
@@ -12,7 +16,7 @@ export const SignInFormFarmer = () => {
                 
                 <Formik
                     initialValues={{
-                        id_role: 1,
+                        // id_role: 1,
                         name: '',
                         lastName: '',
                         rfc: '',
@@ -25,8 +29,10 @@ export const SignInFormFarmer = () => {
                     validationSchema = { validationSchemeSignFarmer }
 
                     onSubmit={ ( values ) => { //function to execute when we send the form
-                        console.log( values )
                         console.log( 'formulario enviado' )
+                        dispatch( registerUser( values ) ) // signup slice -> thunk register a new user request
+                        
+                        console.log({ status })
                     } }
                 >
                     {/* form props from Formik */}
