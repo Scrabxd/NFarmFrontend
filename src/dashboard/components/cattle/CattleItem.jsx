@@ -3,7 +3,7 @@ import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 export const CattleItem = () => {
     return (
         
-        <Card css={{ maxW: "17rem", h: "300px", border: "none" }}>
+        <Card css={{ maxW: "17rem", minWidth:"14rem",h: "300px", border: "none" }}>
             <Card.Body css={{ p: 0 }}>
             <Card.Image
                 src="/assets/img/cow.jfif"

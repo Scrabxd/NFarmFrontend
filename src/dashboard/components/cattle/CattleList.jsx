@@ -26,9 +26,6 @@ export const CattleList = () => {
 
             </div>
 
-
-
-
         </DashLayout>
     )
 }
