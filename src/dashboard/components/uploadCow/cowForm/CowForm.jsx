@@ -3,10 +3,28 @@ import { DropdownRanch } from "../../cattle/DropdownRanch"
 
 export const CowForm = () => {
     return (
-        <div className="w-full flex justify-center items-center">
+        <div className="w-full flex flex-col justify-center items-center">
 
             <Card css={{ border: 'none' }}>
                 <Card.Body>
+
+                    <Spacer x={1.5}/>
+
+                    <Input 
+                        labelPlaceholder="Cow name"
+                        bordered
+                        color="primary"
+                        name="cowName"
+                    />
+
+                    <Spacer x={1.5}/>
+
+                    <Input 
+                        labelPlaceholder="Cow name"
+                        bordered
+                        color="primary"
+                        name="cowName"
+                    />
 
                     <Spacer x={1.5}/>
 

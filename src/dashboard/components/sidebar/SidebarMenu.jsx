@@ -16,7 +16,7 @@ export const SidebarMenu = () => {
                 <FontAwesomeIcon icon={ faBars } className="p-2"/>
             </motion.div>
 
-            <div className={ `h-screen ${ isOpen ? 'w-52' : 'w-0' } float-left bg-[#1b1b1b] flex flex-col justify-around items-center duration-300 z-20` }>
+            <div className={ `h-screen ${ isOpen ? 'w-screen sm:w-52' : 'w-0' } float-left bg-[#1b1b1b] flex flex-col justify-around items-center duration-300 z-20` }>
 
                 {
                     isOpen

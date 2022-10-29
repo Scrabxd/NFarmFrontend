@@ -1,8 +1,12 @@
 import { Card, Input, Spacer } from "@nextui-org/react"
 import { Formik } from "formik"
+import { useDispatch, useSelector } from "react-redux"
 import { validationSchemeSignRestaurant } from "../../helpers"
 
 export const SignInFormRestaurant = () => {
+
+    const dispatch = useDispatch()
+    const { status } = useSelector( state => state.login ) // reference to store -> reducer -> login
 
     
     return (
