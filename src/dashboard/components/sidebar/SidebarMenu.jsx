@@ -1,18 +1,18 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { UserDropDown } from "./UserDropDown"
-import { Link, NavLink } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { expand } from "../../../store/slices/sidebar/openSidebarSlice"
+
+import { NavLink } from "react-router-dom"
+
+import { UserDropDown } from "./UserDropDown"
+
+import { motion } from "framer-motion"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 export const SidebarMenu = () => {
 
     const dispatch = useDispatch()
     const { isOpen } = useSelector( state => state.openSidebar ) // reference to store -> reducer -> sidebar
-
-    // const [isOpen, setOpen ] = useState( false )
 
     return (
 
