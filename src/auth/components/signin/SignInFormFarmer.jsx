@@ -2,7 +2,7 @@ import { Card, Input, Spacer } from "@nextui-org/react"
 import { Formik } from "formik"
 import { useDispatch, useSelector } from "react-redux"
 import { registerUser } from "../../../store/slices/signup"
-import { validationSchemeSignFarmer } from "../../helpers"
+import { validationSchemeSignFarmer } from "../../validations"
 
 export const SignInFormFarmer = () => {
 
@@ -30,9 +30,9 @@ export const SignInFormFarmer = () => {
 
                     onSubmit={ ( values ) => { //function to execute when we send the form
                         console.log( 'formulario enviado' )
-                        dispatch( registerUser( values ) ) // signup slice -> thunk register a new user request
+                        //dispatch( registerUser( values ) ) // signup slice -> thunk register a new user request
                         
-                        console.log({ status })
+                        //console.log({ status })
                     } }
                 >
                     {/* form props from Formik */}
@@ -46,7 +46,7 @@ export const SignInFormFarmer = () => {
                                         labelPlaceholder="Name" 
                                         bordered 
                                         color={ !errors.name ? 'primary' : 'error' }
-                                        css={{ w: '100%' }}
+                                        fullWidth
                                         name="name"
                                         value={ values.name }
                                         onChange={ handleChange }
@@ -64,7 +64,7 @@ export const SignInFormFarmer = () => {
                                         labelPlaceholder="Lastname" 
                                         bordered 
                                         color={ !errors.lastName ? 'primary' : 'error' }
-                                        css={{ w: '100%' }}
+                                        fullWidth
                                         name="lastName"
                                         value={ values.lastName }
                                         onChange={ handleChange }

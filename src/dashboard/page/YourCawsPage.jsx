@@ -1,9 +1,14 @@
-import { CattleList } from "../components/cattle/CattleList"
-import { UploadCow } from "../components/uploadCow/UploadCow"
+import { DashLayout } from "../layout/DashLayout"
+import { CattleList } from "../components/cattle"
 
 export const YourCawsPage = () => {
     return (
-        <UploadCow />
-        // <CattleList />
+        
+        <DashLayout title='Your Cattle'>
+
+            <CattleList />
+
+        </DashLayout>
+        
     )
 }

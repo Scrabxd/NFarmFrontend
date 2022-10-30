@@ -1,6 +1,6 @@
 import { Card, Input, Spacer } from "@nextui-org/react"
 import { Formik } from "formik"
-import { validationSchemeLogin } from "../../helpers"
+import { validationSchemeLogin } from "../../validations"
 import { AuthLayout } from "../../layout/AuthLayout"
 
 export const LoginForm = () => {

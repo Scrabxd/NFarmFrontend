@@ -1,7 +1,7 @@
 import { Card, Input, Spacer } from "@nextui-org/react"
 import { Formik } from "formik"
 import { useDispatch, useSelector } from "react-redux"
-import { validationSchemeSignRestaurant } from "../../helpers"
+import { validationSchemeSignRestaurant } from "../../validations"
 
 export const SignInFormRestaurant = () => {
 
