@@ -1,21 +1,27 @@
 import axios from "axios"
-import { setRegisterStatus } from "./signupSlice"
+import { setRegisterErrorMesage, setRegisterStatus } from "./signupSlice"
 
 export const registerUser = ( dataForm ) => {
     
     return async ( dispatch ) => {
 
-        // make post request to register a new user
-        // const data = await axios.post( 'http://nfarm-back.herokuapp.com/api/nfarm?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', {
-        //     headers: {
-        //         idRole: '1'
-        //     },
-        //     data: dataForm,
-        // })
+        // make a post request to register a new user
+        try {
 
-        // console.log( data )
+            // get the status of the reques, 200 = ok
+            const { status } = await axios.post( "http://nfarm-back.herokuapp.com/api/nfarm?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=", dataForm )
+            dispatch( setRegisterStatus({ status }) )
+            // console.log( status )
+            
+        } catch ( error ) {
+            
+            // get the message error if there is one ( error like, the email is alredy registered )
+            const errorMessage = error.response.data.msg
+            dispatch( setRegisterErrorMesage({ errorMessage }) )
+            // console.log( error )
 
-        // dispatch( setRegisterStatus( status ) )
+        }
+
 
     }
 

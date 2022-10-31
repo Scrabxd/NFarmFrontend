@@ -1,14 +1,35 @@
-import { Card, Input, Spacer } from "@nextui-org/react"
-import { Formik } from "formik"
-import { validationSchemeLogin } from "../../validations"
+import { loginUser } from "../../../store/slices/login/thunks"
+import { useDispatch, useSelector } from "react-redux"
+import { Navigate } from "react-router-dom"
+
 import { AuthLayout } from "../../layout/AuthLayout"
 
+import { Formik } from "formik"
+import { validationSchemeLogin } from "../../validations"
+import { ErrorMessage } from "../errorMessage/ErrorMessage"
+import { Card, Input, Spacer } from "@nextui-org/react"
+
 export const LoginForm = () => {
+
+    const dispatch = useDispatch()
+    const { status, errorMessage } = useSelector( state => state.login )
 
 
     return (
 
         <AuthLayout title='Access to the system'>
+
+            {
+                ( errorMessage )
+                    ? <ErrorMessage message={ errorMessage }/>
+                    : ''
+            }
+
+            {
+                ( status === 200 ) // 200 == ok
+                    ? <Navigate to='/dash' />
+                    : ''
+            }
 
             <Card css={{ border:"none" }}>
                 <Card.Body>
@@ -22,8 +43,10 @@ export const LoginForm = () => {
                         validationSchema={ validationSchemeLogin }
 
                         onSubmit={ ( values ) => { //function to execute when we send the form
-                            console.log( values )
                             console.log( 'formulario enviado' )
+
+                            dispatch( loginUser( values ) ) // make login request thrugh thunks
+
                         } }
                     >
 

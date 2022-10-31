@@ -10,6 +10,10 @@ export const validationSchemeSignRestaurant = yup.object().shape({
         .matches( justLettersAndSpacesRegex, 'The lastname can only contain letters and spaces' ),
     restaurantName: yup.string()
         .required(),
+    rfc: yup.string()
+        .required()
+        .min(12)
+        .max(13),
     email: yup.string()
         .required()
         .email(),

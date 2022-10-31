@@ -16,7 +16,7 @@ export const DashboardRoutes = () => {
 
                 <Route path="/upload-ranch" element={ <UploadRanchPage /> } />
 
-                <Route path="/*" element={ <Navigate to="/cattle" /> } />
+                <Route path="/*" element={ <Navigate to="/dash/cattle" /> } />
 
             </Routes>
         </>
