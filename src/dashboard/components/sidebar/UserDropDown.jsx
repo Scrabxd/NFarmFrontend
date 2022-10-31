@@ -1,59 +1,54 @@
-import { Dropdown, Avatar, Text } from "@nextui-org/react";
+import { Dropdown, Text, User } from "@nextui-org/react";
 
 export const UserDropDown = () => {
+
+    const { name, lastName, email } = JSON.parse( localStorage.getItem( 'userData' ) )
+
   return (
    
-        <Dropdown>
+    <Dropdown placement="bottom">
 
-            <Dropdown.Trigger>
-                <Avatar
+        <Dropdown.Trigger>
+
+            <User
                 bordered
+                size="md"
                 as="button"
                 color="primary"
-                size="md"
-                src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                />
-            </Dropdown.Trigger>
+                name={ `${ name } ${ lastName }` }
+                description={ email }
+                src=""
+            />
 
-            <Dropdown.Menu
-            aria-label="User menu actions"
-            color="default"
-            onAction={ (actionKey) => console.log({ actionKey }) }
-            >
+        </Dropdown.Trigger>
 
-                <Dropdown.Item key="profile" css={{ height: "$18" }}>
-                    <Text b color="inherit" css={{ d: "flex" }}>
+        <Dropdown.Menu color="default" aria-label="User Actions">
+
+            <Dropdown.Item key="profile" css={{ height: "$18" }}>
+                <Text b color="inherit" css={{ d: "flex" }}>
                     Signed in as
-                    </Text>
-                    <Text b color="inherit" css={{ d: "flex" }}>
-                    zoey@example.com
-                    </Text>
-                </Dropdown.Item>
+                </Text>
+                <Text b color="inherit" css={{ d: "flex" }}>
+                    { email }
+                </Text>
+            </Dropdown.Item>
 
-                <Dropdown.Item key="settings" withDivider>
-                    My Settings
-                </Dropdown.Item>
+            <Dropdown.Item key="settings" withDivider>
+                My Settings
+            </Dropdown.Item>
 
-                <Dropdown.Item key="team_settings">Team Settings</Dropdown.Item>
+            <Dropdown.Item key="configurations">Configurations</Dropdown.Item>
 
-                <Dropdown.Item key="analytics" withDivider>
-                    Analytics
-                </Dropdown.Item>
+            <Dropdown.Item key="help_and_feedback" withDivider>
+                Help & Feedback
+            </Dropdown.Item>
 
-                <Dropdown.Item key="system">System</Dropdown.Item>
-
-                <Dropdown.Item key="configurations">Configurations</Dropdown.Item>
-
-                <Dropdown.Item key="help_and_feedback" withDivider>
-                    Help & Feedback
-                </Dropdown.Item>
-
-                <Dropdown.Item key="logout" withDivider color="error">
-                    Log Out
-                </Dropdown.Item>
-
-            </Dropdown.Menu>
-        </Dropdown>
+            <Dropdown.Item key="logout" color="error" withDivider>
+                Log Out
+            </Dropdown.Item>
+            
+        </Dropdown.Menu>
+    </Dropdown>
 
     )
 }

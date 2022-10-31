@@ -33,7 +33,7 @@ export const SidebarMenu = () => {
                         <>
                             <ul>
                                 <li>
-                                    <p>{ `Welcome ${ name } ${ lastName } ! - ${ email }` }</p>
+                                    <p>NFarm</p>
                                 </li>
                             </ul>
 
@@ -67,8 +67,6 @@ export const SidebarMenu = () => {
                             </ul>
 
                             {/* <UserDropDown /> */}
-
-                            <p>NFarm</p>
 
                         </>
                         : <></>
