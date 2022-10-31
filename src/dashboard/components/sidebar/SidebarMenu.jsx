@@ -14,7 +14,11 @@ export const SidebarMenu = () => {
     const dispatch = useDispatch()
     const { isOpen } = useSelector( state => state.openSidebar ) // reference to store -> reducer -> sidebar
 
+    // get the logged user data con convert it to a json
+    const { name, lastName, email } = JSON.parse( localStorage.getItem( 'userData' ) )
+
     return (
+
 
         <>
             <motion.div className="fixed m-4 cursor-pointer z-10" onClick={ () => { dispatch( expand() ) } } whileHover={{ scale: 1.2 }}>
@@ -29,7 +33,7 @@ export const SidebarMenu = () => {
                         <>
                             <ul>
                                 <li>
-                                    <p>NFarm</p>
+                                    <p>{ `Welcome ${ name } ${ lastName } ! - ${ email }` }</p>
                                 </li>
                             </ul>
 

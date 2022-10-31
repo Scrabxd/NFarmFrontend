@@ -1,5 +1,5 @@
 import axios from "axios"
-import { setLoginErrorMesage, setLoginStatus } from "./loginSlice"
+import { setLoginErrorMesage, setLoginStatus, setUserInfor } from "./loginSlice"
 
 export const loginUser = ( dataForm ) => {
     
@@ -10,6 +10,7 @@ export const loginUser = ( dataForm ) => {
             // get the status of the reques, 200 = ok, the jwt toke and the user info
             const { status, data: { token, user } } = await axios.post( "http://nfarm-back.herokuapp.com/api/auth/login?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=", dataForm )
             
+            // user Data to save in to local storage to keep the session
             const userData = {
                 email: user.email,
                 name: user.name,
@@ -18,8 +19,6 @@ export const loginUser = ( dataForm ) => {
 
             localStorage.setItem( 'toke', token )
             localStorage.setItem( 'userData', JSON.stringify( userData ) )
-
-            // console.log( status )
             
             dispatch( setLoginStatus({ status }) )
             
