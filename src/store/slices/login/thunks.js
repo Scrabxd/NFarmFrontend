@@ -17,7 +17,7 @@ export const loginUser = ( dataForm ) => {
                 lastName: user.lastName
             }
 
-            localStorage.setItem( 'toke', token )
+            localStorage.setItem( 'token', token )
             localStorage.setItem( 'userData', JSON.stringify( userData ) )
             
             dispatch( setLoginStatus({ status }) )

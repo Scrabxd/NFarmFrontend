@@ -1,13 +1,25 @@
 import { Card, Input, Spacer } from "@nextui-org/react"
 import { Formik } from "formik"
+import { useDispatch, useSelector } from "react-redux"
+import { uploadRanch } from "../../../store/slices/ranchForm/thunks"
 import { validationSchemeUploadRanch } from "../../validations"
+import { SuccesMessage } from "../messages"
 
 export const RanchForm = () => {
+
+    const dispatch = useDispatch()
+    const { status } = useSelector( state => state.uploadRanch )
 
     return (
         <div className="w-full flex justify-center items-center mb-5">
 
-            <div className="w-full md:w-1/2">
+            <div className="w-full lg:w-1/2">
+
+                {
+                    ( status === 201 ) // 201 == created
+                        ? <SuccesMessage message='Ranch created'/>
+                        : ''
+                }
 
                 <Card css={{ border: 'none' }}>
                     <Card.Body>
@@ -26,7 +38,8 @@ export const RanchForm = () => {
                             validationSchema={ validationSchemeUploadRanch }
 
                             onSubmit={ ( values ) => {
-                                console.log( values )
+                                console.log( 'formulario enviado' )
+                                dispatch( uploadRanch( values ) ) // make a post petition through thunks to create a ranch
                             } }
                         >
                             
