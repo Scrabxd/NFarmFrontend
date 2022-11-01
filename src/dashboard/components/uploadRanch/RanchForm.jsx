@@ -1,6 +1,7 @@
 import { Card, Input, Spacer } from "@nextui-org/react"
 import { Formik } from "formik"
 import { useDispatch, useSelector } from "react-redux"
+import { setRerenderState } from "../../../store/slices/ranches/getRanchesSlice"
 import { uploadRanch } from "../../../store/slices/ranchForm/thunks"
 import { validationSchemeUploadRanch } from "../../validations"
 import { SuccesMessage } from "../messages"
@@ -9,6 +10,7 @@ export const RanchForm = () => {
 
     const dispatch = useDispatch()
     const { status } = useSelector( state => state.uploadRanch ) // store -> reducer -> uploadRanch
+    const { rerender } = useSelector( state => state.ranches ) // store -> reducer -> ranches
 
 
     return (
@@ -41,6 +43,7 @@ export const RanchForm = () => {
                             onSubmit={ ( values ) => {
                                 console.log( 'formulario enviado' )
                                 dispatch( uploadRanch( values ) ) // make a post petition through thunks to create a ranch
+                                dispatch( setRerenderState() )
                             } }
                         >
                             
