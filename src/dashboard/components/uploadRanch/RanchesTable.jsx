@@ -1,49 +1,59 @@
-import { Table } from "@nextui-org/react"
+import { Loading, Table } from "@nextui-org/react"
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { getRanches } from "../../../store/slices/ranches/thunks"
+import { LoadingSpinner } from "../loading/LoadingSpinner"
 
 export const RanchesTable = () => {
+
+	const dispatch = useDispatch()
+	const { isLoading, ranches } = useSelector( state => state.ranches ) // store -> reducer -> ranches
+
+	useEffect(() => {
+
+		dispatch( getRanches() ) // get all the user logged ranches
+
+	}, [])
+
     return (
-		<Table
-		aria-label="Example table with static content"
-		css={{
-		  height: "auto",
-		  minWidth: "100%",
-		  border: 'none'
-		}}
-		selectionMode='single'
-		color='primary'
-	  >
-			<Table.Header>
-				<Table.Column>ID</Table.Column>
-				<Table.Column>NAME</Table.Column>
-				<Table.Column>RANCH</Table.Column>
-				<Table.Column>ACTIONS</Table.Column>
-			</Table.Header>
-			<Table.Body>
-				<Table.Row key="1">
-					<Table.Cell>Tony Reichert</Table.Cell>
-					<Table.Cell>CEO</Table.Cell>
-					<Table.Cell>Active</Table.Cell>
-					<Table.Cell>Active</Table.Cell>
-				</Table.Row>
-				<Table.Row key="2">
-					<Table.Cell>Zoey Lang</Table.Cell>
-					<Table.Cell>Technical Lead</Table.Cell>
-					<Table.Cell>Paused</Table.Cell>
-					<Table.Cell>Active</Table.Cell>
-				</Table.Row>
-				<Table.Row key="3">
-					<Table.Cell>Jane Fisher</Table.Cell>
-					<Table.Cell>Senior Developer</Table.Cell>
-					<Table.Cell>Active</Table.Cell>
-					<Table.Cell>Active</Table.Cell>
-				</Table.Row>
-				<Table.Row key="4">
-					<Table.Cell>William Howard</Table.Cell>
-					<Table.Cell>Community Manager</Table.Cell>
-					<Table.Cell>Vacation</Table.Cell>
-					<Table.Cell>Active</Table.Cell>
-				</Table.Row>
-			</Table.Body>
-	  </Table>
+		
+		<>
+
+			{
+				( isLoading )
+					? <LoadingSpinner />
+					: 
+					<Table
+						aria-label="Example table with static content"
+						css={{
+						height: "auto",
+						minWidth: "100%",
+						border: 'none'
+						}}
+						selectionMode='single'
+						color='primary'
+					>
+						<Table.Header>
+							<Table.Column>ID</Table.Column>
+							<Table.Column>Ranch</Table.Column>
+							<Table.Column>Street</Table.Column>
+							<Table.Column>ACTIONS</Table.Column>
+						</Table.Header>
+						<Table.Body>
+							{
+								ranches.map( ranch => (
+									<Table.Row key={ ranch.id }>
+										<Table.Cell>{ ranch.id }</Table.Cell>
+										<Table.Cell>{ ranch.ranchName }</Table.Cell>
+										<Table.Cell>{ ranch.street }</Table.Cell>
+										<Table.Cell>Active</Table.Cell>
+									</Table.Row>
+								))
+							}
+						</Table.Body>
+					</Table>
+			}
+
+		</>
     )
 }

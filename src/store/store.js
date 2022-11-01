@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { cowFormSlice } from "./slices/cowForm/cowFormSlice";
 
 import { loginSlice } from "./slices/login/loginSlice";
+import { getRanchesSlice } from "./slices/ranches/getRanchesSlice";
 import { ranchFormSlice } from "./slices/ranchForm/ranchFormSlice";
 import { restaurantFormSlice } from "./slices/restaurantForm/restaurantFormSlice";
 import { openSidebarSlice } from "./slices/sidebar";
@@ -17,6 +18,7 @@ export const store = configureStore({
         uploadCow:              cowFormSlice.reducer,
         uploadRanch:            ranchFormSlice.reducer,
         uploadRestaurantBranch: restaurantFormSlice.reducer,
+        ranches:                getRanchesSlice.reducer
     }
 
 })

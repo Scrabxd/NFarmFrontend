@@ -8,7 +8,8 @@ import { SuccesMessage } from "../messages"
 export const RanchForm = () => {
 
     const dispatch = useDispatch()
-    const { status } = useSelector( state => state.uploadRanch )
+    const { status } = useSelector( state => state.uploadRanch ) // store -> reducer -> uploadRanch
+
 
     return (
         <div className="w-full flex justify-center items-center mb-5">
