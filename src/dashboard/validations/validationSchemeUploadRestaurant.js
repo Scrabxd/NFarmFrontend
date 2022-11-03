@@ -5,6 +5,8 @@ export const validationSchemeUploadRestaurant = yup.object().shape({
         .required(),
     street: yup.string()
         .required(),
+    outsideNumber: yup.number()
+        .required(),
     country: yup.string()
         .required(),
     city: yup.string()

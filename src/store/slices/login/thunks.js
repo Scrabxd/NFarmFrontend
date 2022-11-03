@@ -1,9 +1,11 @@
 import axios from "axios"
-import { setLoginErrorMesage, setLoginStatus, setUserInfor } from "./loginSlice"
+import { setLoginErrorMesage, setLoginStatus, startLoadingLogin } from "./loginSlice"
 
 export const loginUser = ( dataForm ) => {
     
     return async ( dispatch ) => {
+
+        dispatch( startLoadingLogin() )
 
         try {
 
@@ -14,9 +16,11 @@ export const loginUser = ( dataForm ) => {
             const userData = {
                 email: user.email,
                 name: user.name,
-                lastName: user.lastName
+                lastName: user.lastName,
+                idRole: user.idRole
             }
-
+            
+            console.log( userData )
             localStorage.setItem( 'token', token )
             localStorage.setItem( 'userData', JSON.stringify( userData ) )
             

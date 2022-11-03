@@ -5,12 +5,12 @@ import { Navigate } from "react-router-dom"
 import { Formik } from "formik"
 import { validationSchemeSignFarmer } from "../../validations"
 import { ErrorMessage } from "../errorMessage/ErrorMessage"
-import { Card, Input, Spacer } from "@nextui-org/react"
+import { Card, Input, Loading, Spacer } from "@nextui-org/react"
 
 export const SignInFormFarmer = () => {
 
     const dispatch = useDispatch()
-    const { status, errorMessage } = useSelector( state => state.register ) // reference to store -> reducer -> register
+    const { status, errorMessage, isLoading } = useSelector( state => state.register ) // reference to store -> reducer -> register
     
     return (
 
@@ -166,14 +166,16 @@ export const SignInFormFarmer = () => {
 
                                 <Spacer y={1.5}/>
 
-                                {/* <Button color="primary" onPress={ onSendSigninData }>Create an account</Button> */}
-
-                                <Input 
-                                    type="submit" 
-                                    aria-label="send-form"
-                                    status='success'
-                                    value='Create an account'
-                                />
+                                {
+                                    ( !isLoading )
+                                        ? <Input 
+                                                type="submit" 
+                                                aria-label="send-form" 
+                                                status='success' 
+                                                value='Create and account'
+                                            />
+                                        : <Loading type="points"/>
+                                }
 
                             </form>
                         ) }

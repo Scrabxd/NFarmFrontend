@@ -8,14 +8,17 @@ import { UserDropDown } from "./UserDropDown"
 import { motion } from "framer-motion"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { FarmerLinks } from "./FarmerLinks"
+import { RestaurantLinks } from "./RestaurantLinks"
 
 export const SidebarMenu = () => {
 
     const dispatch = useDispatch()
     const { isOpen } = useSelector( state => state.openSidebar ) // reference to store -> reducer -> sidebar
 
-    // get the logged user data con convert it to a json
-    const { name, lastName, email } = JSON.parse( localStorage.getItem( 'userData' ) )
+    // get the idRole user to show the corresponding sidebar
+    const { idRole } = JSON.parse( localStorage.getItem( 'userData' ) )
+    const farmerRole = 1
 
     return (
 
@@ -37,34 +40,11 @@ export const SidebarMenu = () => {
                                 </li>
                             </ul>
 
-                            <ul>
-                                <li>
-                                    <NavLink
-                                        className="text-inherit font-semibold text-lg sm:text-xl" 
-                                        to="/dash/upload-cow"
-                                    >
-                                        🐄 Upload a cow
-                                    </NavLink>
-                                </li>
-
-                                <li>
-                                    <NavLink
-                                        className="text-inherit font-semibold text-lg sm:text-xl" 
-                                        to="/dash/cattle"
-                                    >
-                                        🐮 Your Cattle
-                                    </NavLink>
-                                </li>
-
-                                <li>
-                                    <NavLink
-                                        className="text-inherit font-semibold text-lg sm:text-xl" 
-                                        to="/dash/upload-ranch"
-                                    >
-                                        👨‍🌾 Upload a Ranch
-                                    </NavLink>
-                                </li>
-                            </ul>
+                            {
+                                ( idRole === farmerRole )
+                                    ? <FarmerLinks />
+                                    : <RestaurantLinks />
+                            }
 
                             {/* <UserDropDown /> */}
 

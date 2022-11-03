@@ -8,7 +8,7 @@ export const getRanchesSlice = createSlice({
         rerender: false,
     },
     reducers: {
-        startLoadingRanches: (state, /* action */ ) => {
+        startLoadingRanches: ( state ) => {
             state.isLoading = true
         },
         setRerenderState: ( state ) => {
@@ -16,7 +16,8 @@ export const getRanchesSlice = createSlice({
         },
         setRanches: ( state, action ) => {
             state.isLoading = false
-            state.ranches = action.payload.ranch
+            // .reverse() to show the most recently added ranch first
+            state.ranches = action.payload.ranch.reverse()
             state.rerender = false
         }
     }

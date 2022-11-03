@@ -1,13 +1,26 @@
-import { Card, Input, Spacer } from "@nextui-org/react"
+import { Card, Input, Loading, Spacer } from "@nextui-org/react"
 import { Formik } from "formik"
+import { useDispatch, useSelector } from "react-redux"
+import { uploadRestaurantBranch } from "../../../store/slices/restaurantForm/thunks"
+import { setRerenderState } from "../../../store/slices/restaurants/getRestaurantsSlice"
 import { validationSchemeUploadRestaurant } from "../../validations"
+import { SuccesMessage } from "../messages"
 
 export const RestaurantForm = () => {
+
+    const dispatch = useDispatch()
+    const { status, isLoading } = useSelector( state => state.uploadRestaurantBranch ) // store -> reducer -> uploadRestaurantBranch
 
     return (
         <div className="w-full flex justify-center items-center mb-5">
 
             <div className="w-full md:w-1/2">
+
+                {
+                    ( status === 201 ) // 201 == created
+                        ? <SuccesMessage message='Branch created'/>
+                        : ''
+                }
 
                 <Card css={{ border: 'none' }}>
                     <Card.Body>
@@ -26,14 +39,17 @@ export const RestaurantForm = () => {
                             validationSchema={ validationSchemeUploadRestaurant }
 
                             onSubmit={ ( values ) => {
-                                console.log( values )
+                                console.log('formulario enviado')
+                                dispatch( uploadRestaurantBranch( values ) )
+                                // make that the table rerender with the new data changing the state of the table when we click the button
+                                dispatch( setRerenderState() )
                             } }
                         >
                             
                             {/* form props from Formik */}
                             { ({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
 
-                                <form onSubmit={ handleSubmit }>
+                                <form className="w-full flex flex-col" onSubmit={ handleSubmit }>
 
                                     <Spacer y={1.5}/>
 
@@ -70,7 +86,7 @@ export const RestaurantForm = () => {
 
                                     <div className="flex">
 
-                                        <div className="w-1/2">
+                                        <div className="w-1/3">
                                             <Input 
                                                 labelPlaceholder="Country"
                                                 bordered
@@ -87,7 +103,7 @@ export const RestaurantForm = () => {
 
                                         <Spacer  y={ 1.5 } />
 
-                                        <div className="w-1/2">
+                                        <div className="w-1/3">
                                             <Input 
                                                 labelPlaceholder="City"
                                                 bordered
@@ -99,6 +115,24 @@ export const RestaurantForm = () => {
                                                 onBlur={ handleBlur }
                                                 helperColor={ !errors.city ? 'primary' : 'error' }
                                                 helperText={ touched.city && errors.city }
+                                            />
+                                        </div>
+
+                                        <Spacer  y={ 1.5 } />
+
+                                        <div className="w-1/3">
+                                            <Input 
+                                                labelPlaceholder="Out Number"
+                                                bordered
+                                                type='number'
+                                                name="outsideNumber"
+                                                fullWidth
+                                                color={ !errors.outsideNumber ? 'primary' : 'error' }
+                                                value={ values.outsideNumber }
+                                                onChange={ handleChange }
+                                                onBlur={ handleBlur }
+                                                helperColor={ !errors.outsideNumber ? 'primary' : 'error' }
+                                                helperText={ touched.outsideNumber && errors.outsideNumber }
                                             />
                                         </div>
                                     </div>
@@ -145,15 +179,19 @@ export const RestaurantForm = () => {
 
                                     <Spacer y={1.5}/>
 
-                                    <Input 
-                                        type="submit" 
-                                        aria-label="send-form"
-                                        bordered
-                                        fullWidth
-                                        css={{ bg: '$primary' }}
-                                        value='Upload Ranch'
-                                        animated='false'
-                                    />
+                                    {
+                                        ( !isLoading )
+                                            ? <Input 
+                                                type="submit" 
+                                                aria-label="send-form"
+                                                bordered
+                                                fullWidth
+                                                css={{ bg: '$primary' }}
+                                                value='Upload Restaurant'
+                                                animated='false' 
+                                            />
+                                            : <Loading type="points"/>
+                                    }
 
                                     <Spacer y={1.5}/>
 

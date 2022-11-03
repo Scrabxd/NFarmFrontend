@@ -1,4 +1,4 @@
-import { Card, Input, Spacer } from "@nextui-org/react"
+import { Card, Input, Loading, Spacer } from "@nextui-org/react"
 import { Formik } from "formik"
 import { useDispatch, useSelector } from "react-redux"
 import { setRerenderState } from "../../../store/slices/ranches/getRanchesSlice"
@@ -9,8 +9,7 @@ import { SuccesMessage } from "../messages"
 export const RanchForm = () => {
 
     const dispatch = useDispatch()
-    const { status } = useSelector( state => state.uploadRanch ) // store -> reducer -> uploadRanch
-    const { rerender } = useSelector( state => state.ranches ) // store -> reducer -> ranches
+    const { status, isLoading } = useSelector( state => state.uploadRanch ) // store -> reducer -> uploadRanch
 
 
     return (
@@ -43,14 +42,15 @@ export const RanchForm = () => {
                             onSubmit={ ( values ) => {
                                 console.log( 'formulario enviado' )
                                 dispatch( uploadRanch( values ) ) // make a post petition through thunks to create a ranch
-                                dispatch( setRerenderState() )
+                                // make that the table rerender with the new data changing the state of the table when we click the button
+                                dispatch( setRerenderState() ) 
                             } }
                         >
                             
                             {/* form props from Formik */}
                             { ({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
 
-                                <form onSubmit={ handleSubmit }>
+                                <form className="w-full flex flex-col" onSubmit={ handleSubmit }>
 
                                     <Spacer y={1.5}/>
 
@@ -178,26 +178,20 @@ export const RanchForm = () => {
 
                                     <Spacer y={1.5}/>
 
-                                    {/* <Input 
-                                        labelPlaceholder="Certificates"
-                                        bordered
-                                        type='file'
-                                        min={ 0 }
-                                        color="primary"
-                                        name="weight"
-                                    />
+                                    {
+                                        ( !isLoading )
+                                            ? <Input 
+                                                type="submit" 
+                                                aria-label="send-form"
+                                                bordered
+                                                fullWidth
+                                                css={{ bg: '$primary' }}
+                                                value='Upload Ranch'
+                                                animated='false' 
+                                            />
+                                            : <Loading type="points"/>
+                                    }
 
-                                    <Spacer y={1.5}/> */}
-
-                                    <Input 
-                                        type="submit" 
-                                        aria-label="send-form"
-                                        bordered
-                                        fullWidth
-                                        css={{ bg: '$primary' }}
-                                        value='Upload Ranch'
-                                        animated='false'
-                                    />
 
                                     <Spacer y={1.5}/>
 

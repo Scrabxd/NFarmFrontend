@@ -7,12 +7,12 @@ import { AuthLayout } from "../../layout/AuthLayout"
 import { Formik } from "formik"
 import { validationSchemeLogin } from "../../validations"
 import { ErrorMessage } from "../errorMessage/ErrorMessage"
-import { Card, Input, Spacer } from "@nextui-org/react"
+import { Card, Input, Loading, Spacer, } from "@nextui-org/react"
 
 export const LoginForm = () => {
 
     const dispatch = useDispatch()
-    const { status, errorMessage } = useSelector( state => state.login )
+    const { status, errorMessage, isLoading } = useSelector( state => state.login )
 
 
     return (
@@ -85,12 +85,17 @@ export const LoginForm = () => {
                                 
                                 <Spacer x={1.5}/>
 
-                                <Input 
-                                    type="submit" 
-                                    aria-label="send-form"
-                                    status='success'
-                                    value='Create an account'
-                                />
+                                {
+                                    ( !isLoading )
+                                        ? <Input 
+                                            type="submit" 
+                                            aria-label="send-form" 
+                                            status='success' 
+                                            value='Access' 
+                                            css={{ cursor: 'pointer' }} 
+                                        />
+                                        : <Loading type="points"/>
+                                }
 
                             </form>
 

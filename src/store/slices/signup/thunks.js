@@ -1,9 +1,11 @@
 import axios from "axios"
-import { setRegisterErrorMesage, setRegisterStatus } from "./signupSlice"
+import { setRegisterErrorMesage, setRegisterStatus, startLoadingSignup } from "./signupSlice"
 
 export const registerUser = ( dataForm ) => {
     
     return async ( dispatch ) => {
+
+        dispatch( startLoadingSignup() )
 
         // make a post request to register a new user
         try {

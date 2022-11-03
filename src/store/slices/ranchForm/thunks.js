@@ -1,10 +1,12 @@
 import { data } from "autoprefixer"
 import axios from "axios"
-import { setUploadRanchStatus } from "./ranchFormSlice"
+import { setUploadRanchStatus, startLoadingUploadRanch } from "./ranchFormSlice"
 
 export const uploadRanch = ( dataForm ) => {
     
     return async ( dispatch ) => {
+
+        dispatch( startLoadingUploadRanch() )
 
         // make a post request to register a new user
         try {
@@ -25,7 +27,7 @@ export const uploadRanch = ( dataForm ) => {
         } catch ( error ) {
             
             // get the message error if there is one ( error like, the email is alredy registered )
-            const errorMessage = error.response.data.msg
+            // const errorMessage = error.response.data.msg
             // dispatch( setUploadRanchStatus({ errorMessage }) )
             console.log( error )
 

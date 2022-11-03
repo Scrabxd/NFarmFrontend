@@ -1,4 +1,4 @@
-import { Loading, Table } from "@nextui-org/react"
+import { Table } from "@nextui-org/react"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getRanches } from "../../../store/slices/ranches/thunks"
@@ -37,7 +37,7 @@ export const RanchesTable = () => {
 							<Table.Column>Ranch Name</Table.Column>
 							<Table.Column>Country</Table.Column>
 							<Table.Column>City</Table.Column>
-							<Table.Column>Cow Heas</Table.Column>
+							<Table.Column>Cow Heads</Table.Column>
 							<Table.Column>ACTIONS</Table.Column>
 						</Table.Header>
 						<Table.Body>
