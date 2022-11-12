@@ -11,7 +11,7 @@ export const NavbarBrand = () => {
             },
         }}
         >
-            <AcmeLogo />
+          
             <Text b color="inherit" hideIn="sm">
                 NFarm
             </Text>

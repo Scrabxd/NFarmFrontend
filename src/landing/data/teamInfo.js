@@ -11,7 +11,7 @@ export const teamInfo = [
         id: 2,
         name:"Xochitl Escamilla",
         role:"UX Engineer",
-        media:"https://www.linkedin.com/in/xochescam/",
+        social:"https://www.linkedin.com/in/xochescam/",
         img: 'assets/img/team/xoch.jpeg'
         
     },

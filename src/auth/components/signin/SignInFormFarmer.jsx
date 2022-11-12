@@ -56,7 +56,7 @@ export const SignInFormFarmer = () => {
                         {/* form props from Formik */}
                         { ({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
 
-                            <form className="w-full flex flex-col gap-2" onSubmit={ handleSubmit }>
+                            <form className="w-full flex flex-col gap-2" >
                                 <div className="flex mt-4">
                                     <div className="w-1/2">
 

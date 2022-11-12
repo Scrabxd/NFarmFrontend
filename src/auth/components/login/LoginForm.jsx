@@ -53,7 +53,7 @@ export const LoginForm = () => {
                         {/* form props from Formik */}
                         { ({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
 
-                            <form className="w-full flex flex-col gap-2" onSubmit={ handleSubmit }>
+                            <form className="w-full flex flex-col gap-2">
 
                                 <Spacer x={1.5}/>
 
