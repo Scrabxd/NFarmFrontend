@@ -1,10 +1,12 @@
 # NFarm-Zencon-React
 
+Project made with yarn
+
 ### install all dependencies
 ```
 Yarn
 ```
-### run to server
+### run the server
 ```
 Yarn dev
 ```
