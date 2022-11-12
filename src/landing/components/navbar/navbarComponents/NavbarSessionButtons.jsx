@@ -10,7 +10,7 @@ export const NavbarSessionButtons = () => {
             </NavLink>
 
             <Navbar.Item>
-                <Button auto flat as={Link} href="/auth/register" color={"success"}> {/**Sign up color */}
+                <Button auto flat as={Link} href="/auth/register" color={'success'}> {/**Sign up color */}
                     Sign Up
                 </Button>
             </Navbar.Item>

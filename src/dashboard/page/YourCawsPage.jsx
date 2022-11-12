@@ -1,6 +1,14 @@
+import { DashLayout } from "../layout/DashLayout"
+import { CattleList } from "../components/cattle"
 
 export const YourCawsPage = () => {
     return (
-        <h1 className="text-center">YourCawsPage</h1>
+        
+        <DashLayout title='Your Cattle'>
+
+            <CattleList />
+
+        </DashLayout>
+        
     )
 }
