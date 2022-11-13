@@ -45,7 +45,7 @@ export const LoginForm = () => {
                         onSubmit={ ( values ) => { //function to execute when we send the form
                             console.log( 'formulario enviado' )
 
-                            dispatch( loginUser( values ) ) // make login request thrugh thunks
+                            // dispatch( loginUser( values ) ) // make login request thrugh thunks
 
                         } }
                     >
@@ -53,7 +53,7 @@ export const LoginForm = () => {
                         {/* form props from Formik */}
                         { ({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
 
-                            <form className="w-full flex flex-col gap-2">
+                            <form className="w-full flex flex-col gap-2" onSubmit={ handleSubmit }>
 
                                 <Spacer x={1.5}/>
 
