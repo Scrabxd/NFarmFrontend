@@ -17,10 +17,10 @@ export const teamInfo = [
     },
     {
         id: 3,
-       name:"Jose Bayona",
-       role:"Frontend Developer",
-       social: "https://www.linkedin.com/in/emmanuel-bayona-b3a490212/",
-       img: 'assets/img/team/emma.jpeg'
+        name:"Jose Bayona",
+        role:"Frontend Developer",
+        social: "https://www.linkedin.com/in/emmanuel-bayona-b3a490212/",
+        img: 'assets/img/team/emma.jpeg'
     },
     {
         id: 4,

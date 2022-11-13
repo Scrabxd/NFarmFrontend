@@ -28,11 +28,14 @@ export const SignInFrom = () => {
                 
             </div>
 
-            {
-                checked === 'farmer'
-                    ? <SignInFormFarmer />
-                    : <SignInFormRestaurant />
-            }
+            <div>
+                {
+                    checked === 'farmer'
+                        ? <SignInFormFarmer />
+                        : <SignInFormRestaurant />
+                }
+            </div>
+
             
         </AuthLayout>
 
