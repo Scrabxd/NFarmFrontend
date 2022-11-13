@@ -29,7 +29,7 @@ export const SignInFormFarmer = () => {
             }
             
 
-            <Card css={{ border:"none", marginBottom:"10px" }}>
+            <Card css={{ border:"none" }}>
                 <Card.Body>
                     
                     <Formik
