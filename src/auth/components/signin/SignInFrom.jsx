@@ -1,7 +1,6 @@
 import { Radio } from "@nextui-org/react"
 import { useState } from "react"
 import { AuthLayout } from "../../layout/AuthLayout"
-import { FooterAuth } from "../footer/FooterAuth"
 import { SignInFormFarmer } from "./SignInFormFarmer"
 import { SignInFormRestaurant } from "./SignInFormRestaurant"
 
@@ -35,7 +34,6 @@ export const SignInFrom = () => {
                     : <SignInFormRestaurant />
             }
 
-            <FooterAuth />
 
             
         </AuthLayout>

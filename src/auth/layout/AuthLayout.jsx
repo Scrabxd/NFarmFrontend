@@ -1,3 +1,4 @@
+import { FooterAuth } from "../components/footer/FooterAuth"
 
 export const AuthLayout = ({ children, title }) => {
     return (
@@ -11,6 +12,8 @@ export const AuthLayout = ({ children, title }) => {
                 <div className="w-full lg:w-1/2 mt-10">
                     { children }
                 </div>
+
+                <FooterAuth />
 
             </div>
         </div>
