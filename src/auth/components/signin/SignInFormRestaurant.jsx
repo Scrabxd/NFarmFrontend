@@ -29,7 +29,7 @@ export const SignInFormRestaurant = () => {
                     : ''
             }
 
-            <Card css={{ border:"none" }}>
+            <Card css={{ border:"none",  marginBottom:"10px" }}>
                 <Card.Body>
                     
                     <Formik
@@ -156,7 +156,7 @@ export const SignInFormRestaurant = () => {
                                                 type="submit" 
                                                 aria-label="send-form" 
                                                 status='success' 
-                                                value='Create and account'
+                                                value='Create an account'
                                             />
                                         : <Loading type="points"/>
                                 }
