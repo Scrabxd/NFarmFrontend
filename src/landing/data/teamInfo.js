@@ -27,7 +27,7 @@ export const teamInfo = [
         name:"Luis Cabral",
         role: "Backend Developer",
         social:"https://www.linkedin.com/in/luis-fernando-cabral-b13847220/",
-        img: 'assets/img/team/luis.jpeg'
+        img: 'assets/img/team/luis.JPEG'
     },
     {
         id: 5,
