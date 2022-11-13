@@ -7,6 +7,12 @@
     background-color: #147452;
 }
 
+/* Header img */
+.img-shape {
+    border-radius: 63% 37% 74% 26% / 45% 60% 40% 55%  ;
+}
+
+
 /* Footer */
 .footer-line {
     width: 65%;

@@ -3,38 +3,51 @@ import { SwitchTheme } from "../../switchTheme/SwitchTheme";
 
 export const NavbarCollapse = () => {
 
-    
-    const collapseItems = [
-        "Home",
-        "About",
-        "Pricing",
-        "Team",
-        "Log in",
-        "Sign in",
-    ];
 
     return (
         <Navbar.Collapse >
-            {collapseItems.map((item, index) => (
-                <Navbar.CollapseItem
-                    key={item}
-                    activeColor="success"
-                    css={{
-                        color: index === collapseItems.length - 1 ? "$success" : "",
-                    }}
-                    // isActive={index === 2 }
-                >
-                    <Link
-                        color="inherit"
-                        css={{
-                        minWidth: "100%",
-                        }}
-                        href="#"
-                    >
-                        {item}
-                    </Link>
-                </Navbar.CollapseItem>
-            ))}
+
+            <Navbar.CollapseItem>
+                <Link color="inherit" css={{ minWidth: "100%" }} href='/'>
+                    Home
+                </Link>
+            </Navbar.CollapseItem>
+
+            <Navbar.CollapseItem>
+                <Link color="inherit" css={{ minWidth: "100%" }} href='/'>
+                    About
+                </Link>
+            </Navbar.CollapseItem>
+
+            <Navbar.CollapseItem>
+                <Link color="inherit" css={{ minWidth: "100%" }} href='/'>
+                    Pricing
+                </Link>
+            </Navbar.CollapseItem>
+
+            <Navbar.CollapseItem>
+                <Link color="inherit" css={{ minWidth: "100%" }} href='/'>
+                    Team
+                </Link>
+            </Navbar.CollapseItem>
+
+            <Navbar.CollapseItem>
+                <Link color="inherit" css={{ minWidth: "100%" }} href='/questions'>
+                    FAQ
+                </Link>
+            </Navbar.CollapseItem>
+
+            <Navbar.CollapseItem>
+                <Link color="inherit" css={{ minWidth: "100%" }} href='/auth/login'>
+                    Login
+                </Link>
+            </Navbar.CollapseItem>
+
+            <Navbar.CollapseItem>
+                <Link color="success" css={{ minWidth: "100%" }} href='/auth/register'>
+                    Sign Up
+                </Link>
+            </Navbar.CollapseItem>
 
                     <Link>
                         <SwitchTheme />

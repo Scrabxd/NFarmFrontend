@@ -1,11 +1,8 @@
 import { useDispatch, useSelector } from "react-redux"
 import { expand } from "../../../store/slices/sidebar/openSidebarSlice"
 
-import { NavLink } from "react-router-dom"
-
 import { UserDropDown } from "./UserDropDown"
 
-import { motion } from "framer-motion"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { FarmerLinks } from "./FarmerLinks"
@@ -24,9 +21,9 @@ export const SidebarMenu = () => {
 
 
         <>
-            <motion.div className="fixed m-4 cursor-pointer z-10" onClick={ () => { dispatch( expand() ) } } whileHover={{ scale: 1.2 }}>
+            <div className="fixed m-4 cursor-pointer z-10" onClick={ () => { dispatch( expand() ) } }>
                 <FontAwesomeIcon icon={ faBars } className="p-2"/>
-            </motion.div>
+            </div>
 
             <div className={ `h-screen ${ isOpen ? 'w-screen sm:w-52' : 'w-0' } bg-[#1b1b1b] flex flex-col justify-around items-center duration-300` }>
 
