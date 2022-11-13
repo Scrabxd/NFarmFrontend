@@ -172,7 +172,7 @@ export const SignInFormFarmer = () => {
                                                 type="submit" 
                                                 aria-label="send-form" 
                                                 status='success' 
-                                                value='Create and account'
+                                                value='Create an account'
                                             />
                                         : <Loading type="points"/>
                                 }
