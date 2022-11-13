@@ -79,7 +79,7 @@ export const SignInFormFarmer = () => {
                                     <div className="w-1/2">
 
                                         <Input 
-                                            labelPlaceholder="Lastname" 
+                                            labelPlaceholder="Last name" 
                                             bordered 
                                             color={ !errors.lastName ? 'primary' : 'error' }
                                             fullWidth
