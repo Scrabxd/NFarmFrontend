@@ -15,7 +15,7 @@ export const SignInFormRestaurant = () => {
     
     return (
 
-        <div>
+        <>
 
             {
                 ( errorMessage )
@@ -168,7 +168,7 @@ export const SignInFormRestaurant = () => {
 
                 </Card.Body>
             </Card>
-        </div>
+        </>
         
 
 

@@ -14,7 +14,7 @@ export const SignInFormFarmer = () => {
     
     return (
 
-        <div>
+        <>
 
             {
                 ( errorMessage )
@@ -184,7 +184,7 @@ export const SignInFormFarmer = () => {
 
                 </Card.Body>
             </Card>
-        </div>
+        </>
         
 
 
