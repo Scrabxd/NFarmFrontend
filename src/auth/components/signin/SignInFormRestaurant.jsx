@@ -48,14 +48,14 @@ export const SignInFormRestaurant = () => {
                         onSubmit={ ( values ) => { //function to execute when we send the form
                             console.log( 'formulario enviado' )
 
-                            dispatch( registerUser( values ) ) // signup slice -> thunk register a new user request
+                            // dispatch( registerUser( values ) ) // signup slice -> thunk register a new user request
 
                         } }
                     >
                         {/* form props from Formik */}
                         { ({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
 
-                            <form className="w-full flex flex-col gap-2" >
+                            <form className="w-full flex flex-col gap-2" onSubmit={ handleSubmit } >
                                 <div className="flex mt-4">
                                     <div className="w-1/2">
 

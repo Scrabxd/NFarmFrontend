@@ -16,11 +16,11 @@ export const SignInFrom = () => {
                 
                 <Radio.Group orientation="horizontal" label='Create an account as:' value={ checked } onChange={ setChecked } >
 
-                    <Radio value="farmer" color="primary">
+                    <Radio value="farmer" color="success">
                         Farmer
                     </Radio>
 
-                    <Radio value="restaurant" color="primary">
+                    <Radio value="restaurant" color="success">
                         Restaurant
                     </Radio>
 

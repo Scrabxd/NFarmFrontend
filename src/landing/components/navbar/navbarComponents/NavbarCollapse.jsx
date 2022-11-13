@@ -1,4 +1,5 @@
 import { Navbar, Link } from "@nextui-org/react"
+import { NavLink } from "react-router-dom";
 import { SwitchTheme } from "../../switchTheme/SwitchTheme";
 
 export const NavbarCollapse = () => {
@@ -8,50 +9,51 @@ export const NavbarCollapse = () => {
         <Navbar.Collapse >
 
             <Navbar.CollapseItem>
-                <Link color="inherit" css={{ minWidth: "100%" }} href='/'>
+                <NavLink className="text-inherit" to="/">
                     Home
-                </Link>
+                </NavLink>
             </Navbar.CollapseItem>
 
             <Navbar.CollapseItem>
-                <Link color="inherit" css={{ minWidth: "100%" }} href='/'>
+                <NavLink className="text-inherit" to="/">
                     About
-                </Link>
+                </NavLink>
             </Navbar.CollapseItem>
 
             <Navbar.CollapseItem>
-                <Link color="inherit" css={{ minWidth: "100%" }} href='/'>
+                <NavLink className="text-inherit" to="/">
                     Pricing
-                </Link>
+                </NavLink>
             </Navbar.CollapseItem>
 
             <Navbar.CollapseItem>
-                <Link color="inherit" css={{ minWidth: "100%" }} href='/'>
+                <NavLink className="text-inherit" to="/">
                     Team
-                </Link>
+                </NavLink>
             </Navbar.CollapseItem>
 
             <Navbar.CollapseItem>
-                <Link color="inherit" css={{ minWidth: "100%" }} href='/questions'>
+                <NavLink className="text-inherit" to="/questions">
                     FAQ
-                </Link>
+                </NavLink>
             </Navbar.CollapseItem>
 
             <Navbar.CollapseItem>
-                <Link color="inherit" css={{ minWidth: "100%" }} href='/auth/login'>
+                <NavLink className="text-inherit" to="/auth/login">
                     Login
-                </Link>
+                </NavLink>
             </Navbar.CollapseItem>
 
             <Navbar.CollapseItem>
-                <Link color="success" css={{ minWidth: "100%" }} href='/auth/register'>
+                <NavLink className='text-[#147452] font-bold' to="/auth/register">
                     Sign Up
-                </Link>
+                </NavLink>
             </Navbar.CollapseItem>
 
-                    <Link>
-                        <SwitchTheme />
-                    </Link>
+            <Navbar.CollapseItem>
+                <SwitchTheme />
+            </Navbar.CollapseItem>
+
         </Navbar.Collapse>
     )
 }

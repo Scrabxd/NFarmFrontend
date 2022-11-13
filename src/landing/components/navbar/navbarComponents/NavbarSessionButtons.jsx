@@ -1,4 +1,4 @@
-import { Navbar, Button, Link } from "@nextui-org/react"
+import { Navbar } from "@nextui-org/react"
 import { NavLink } from "react-router-dom"
 import { SwitchTheme } from "../../switchTheme/SwitchTheme"
 
@@ -9,11 +9,10 @@ export const NavbarSessionButtons = () => {
                 Login
             </NavLink>
 
-            <Navbar.Item>
-                <Button auto flat as={Link} href="/auth/register" color={'success'}> {/**Sign up color */}
-                    Sign Up
-                </Button>
-            </Navbar.Item>
+            <NavLink to="/auth/register" className="text-white font-bold p-3 bg-[#147452] rounded-xl">
+                SignUp
+            </NavLink>
+
             <Navbar.Item>
                 <SwitchTheme />
             </Navbar.Item>
