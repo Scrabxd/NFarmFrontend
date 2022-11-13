@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import { AuthRoutes } from "../auth/routes/AuthRoutes"
 import { DashboardRoutes } from "../dashboard/routes/DashboardRoutes"
 import { LandingRoutes } from "../landing/routes/LandingRoutes"
+import { PrivateRoute } from "./PrivateRoute"
 
 export const AppRouter = () => {
     return (
@@ -13,7 +14,15 @@ export const AppRouter = () => {
 
             <Route path="/auth/*" element={ <AuthRoutes /> } />
 
-            <Route path="/dash/*" element={ <DashboardRoutes /> } />
+            {/* dashboard routes private */}
+
+            {/* <Route path="/dash/*" element={ <DashboardRoutes /> } /> */}
+            <Route path="/dash/*" element= {
+                <PrivateRoute>
+                    {/* PrivateRoutes receives as children DashboardRoutes */}
+                    <DashboardRoutes /> 
+                </PrivateRoute>
+            } />
 
         </Routes>
 
