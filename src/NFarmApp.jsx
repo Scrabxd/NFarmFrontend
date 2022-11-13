@@ -1,5 +1,5 @@
 import { AppRouter } from './router/AppRouter'
-import './app.css'
+import './App.css'
 
 import { AppTheme } from './themes'
 
