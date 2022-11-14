@@ -13,8 +13,6 @@ export const AuthLayout = ({ children, title }) => {
                     { children }
                 </div>
 
-                <FooterAuth />
-
             </div>
         </div>
 
