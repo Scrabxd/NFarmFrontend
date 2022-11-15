@@ -12,19 +12,14 @@ export const RestaurantForm = () => {
     const { status, isLoading } = useSelector( state => state.uploadRestaurantBranch ) // store -> reducer -> uploadRestaurantBranch
 
     return (
-        <div className="w-full flex justify-center items-center mb-5">
 
-            <div className="w-full md:w-1/2">
+            <div className="px-3 md:px-10">
 
                 {
                     ( status === 201 ) // 201 == created
                         ? <SuccesMessage message='Branch created'/>
                         : ''
                 }
-
-                <Card css={{ border: 'none' }}>
-                    <Card.Body>
-
                         <Formik
                             initialValues={{
                                 branchName: '',
@@ -84,9 +79,9 @@ export const RestaurantForm = () => {
 
                                     <Spacer y={1.5}/>
 
-                                    <div className="flex">
+                                    <div className="flex flex-col flex-wrap md:flex-row md:flex-nowrap">
 
-                                        <div className="w-1/3">
+                                        <div className="w-full md:w-1/3">
                                             <Input 
                                                 labelPlaceholder="Country"
                                                 bordered
@@ -101,9 +96,9 @@ export const RestaurantForm = () => {
                                             />
                                         </div>
 
-                                        <Spacer  y={ 1.5 } />
+                                        <Spacer y={ 1.5 } />
 
-                                        <div className="w-1/3">
+                                        <div className="w-full md:w-1/3">
                                             <Input 
                                                 labelPlaceholder="City"
                                                 bordered
@@ -120,19 +115,19 @@ export const RestaurantForm = () => {
 
                                         <Spacer  y={ 1.5 } />
 
-                                        <div className="w-1/3">
+                                        <div className="w-full md:w-1/3">
                                             <Input 
-                                                labelPlaceholder="Out Number"
+                                                labelPlaceholder="Phone Number"
                                                 bordered
-                                                type='number'
-                                                name="outsideNumber"
+                                                name="phoneNumber"
+                                                type="number"
                                                 fullWidth
-                                                color={ !errors.outsideNumber ? 'primary' : 'error' }
-                                                value={ values.outsideNumber }
+                                                color={ !errors.phoneNumber ? 'primary' : 'error' }
+                                                value={ values.phoneNumber }
                                                 onChange={ handleChange }
                                                 onBlur={ handleBlur }
-                                                helperColor={ !errors.outsideNumber ? 'primary' : 'error' }
-                                                helperText={ touched.outsideNumber && errors.outsideNumber }
+                                                helperColor={ !errors.phoneNumber ? 'primary' : 'error' }
+                                                helperText={ touched.phoneNumber && errors.phoneNumber }
                                             />
                                         </div>
                                     </div>
@@ -162,17 +157,17 @@ export const RestaurantForm = () => {
 
                                         <div className="w-1/2">
                                             <Input 
-                                                labelPlaceholder="Phone Number"
+                                                labelPlaceholder="Out Number"
                                                 bordered
-                                                name="phoneNumber"
-                                                type="number"
+                                                type='number'
+                                                name="outsideNumber"
                                                 fullWidth
-                                                color={ !errors.phoneNumber ? 'primary' : 'error' }
-                                                value={ values.phoneNumber }
+                                                color={ !errors.outsideNumber ? 'primary' : 'error' }
+                                                value={ values.outsideNumber }
                                                 onChange={ handleChange }
                                                 onBlur={ handleBlur }
-                                                helperColor={ !errors.phoneNumber ? 'primary' : 'error' }
-                                                helperText={ touched.phoneNumber && errors.phoneNumber }
+                                                helperColor={ !errors.outsideNumber ? 'primary' : 'error' }
+                                                helperText={ touched.outsideNumber && errors.outsideNumber }
                                             />
                                         </div>
                                     </div>
@@ -201,12 +196,7 @@ export const RestaurantForm = () => {
 
 
                         </Formik>
-
-                    </Card.Body>
-                </Card>
-
             </div>
 
-        </div>
     )
 }

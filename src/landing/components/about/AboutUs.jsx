@@ -1,4 +1,3 @@
-import { Grid, Image, Spacer, Text } from "@nextui-org/react"
 import { aboutUsInfo } from "../../data"
 import { AboutUsBadges } from "./AboutUsBadges"
 

@@ -1,6 +1,3 @@
-import { Grid, Image, Text, Spacer } from '@nextui-org/react'
-
-
 
 export const AboutUsBadges = ({ title, description, srcImg, altImg }) => {
   return (
