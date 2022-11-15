@@ -25,7 +25,7 @@ export const SidebarMenu = () => {
                 <FontAwesomeIcon icon={ faBars } className="p-2"/>
             </div>
 
-            <div className={ `h-screen ${ isOpen ? 'w-screen sm:w-52' : 'w-0' } bg-[#1b1b1b] flex flex-col justify-around items-center duration-300` }>
+            <div className={ `h-screen ${ isOpen ? 'w-screen sm:w-52' : 'w-0' } bg-[#1b1b1b] flex flex-col justify-between items-center duration-300` }>
 
                 {
                     isOpen
@@ -33,7 +33,7 @@ export const SidebarMenu = () => {
                         <>
                             <ul>
                                 <li>
-                                    <p>NFarm</p>
+                                    <img src="../public/assets/img/logos/nfarm-logoCircle.png" className="w-16"/>
                                 </li>
                             </ul>
 
@@ -44,6 +44,7 @@ export const SidebarMenu = () => {
                             }
 
                             {/* <UserDropDown /> */}
+                            <p>USER</p>
 
                         </>
                         : <></>

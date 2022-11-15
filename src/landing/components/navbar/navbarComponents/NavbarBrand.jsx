@@ -12,9 +12,10 @@ export const NavbarBrand = () => {
         }}
         >
           
-            <Text b color="inherit" hideIn="sm">
+            {/* <Text b color="inherit" hideIn="sm">
                 NFarm
-            </Text>
+            </Text> */}
+            <img src="assets/img/logos/nfarm-logoCircle.png" className="w-14"/>  
         </Navbar.Brand>
     )
 }

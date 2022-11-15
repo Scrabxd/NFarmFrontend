@@ -23,7 +23,7 @@ export const FarmerLinks = () => {
 
             <li>
                 <NavLink
-                    className="text-inherit font-semibold text-lg sm:text-xl" 
+                    className="text-inherit font-semibold text-lg" 
                     to="/dash/upload-ranch"
                 >
                     👨‍🌾 Upload a Ranch
