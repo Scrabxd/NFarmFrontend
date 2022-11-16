@@ -33,7 +33,8 @@ export const SidebarMenu = () => {
                         <>
                             <ul>
                                 <li>
-                                    <img src="../public/assets/img/logos/nfarm-logoCircle.png" className="w-16"/>
+                                    {/* <img src="../public/assets/img/logos/nfarm-logoCircle.png" className="w-16"/> */}
+                                    <p>NFarm</p>
                                 </li>
                             </ul>
 

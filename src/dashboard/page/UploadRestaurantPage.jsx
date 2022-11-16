@@ -8,8 +8,10 @@ export const UploadRestaurantPage = () => {
         
         <DashLayout title='Upload a Restaurant'>
 
-            <div className="flex flex-col justify-center items-center gap-y-10">
+            <div className="flex justify-end mb-5">
                 <ModalRestaurant />
+            </div>
+            <div className="w-full h-full">
                 <NoElementsMessage title="You haven't uploaded any restaurant" />
             </div>
 

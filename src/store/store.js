@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { cowFormSlice } from "./slices/cowForm/cowFormSlice";
+import { restaurantModalSlice } from "./slices/dashRestaurantSlices/restaurnatModalSlice";
 
 import { loginSlice } from "./slices/login/loginSlice";
 import { getRanchesSlice } from "./slices/ranches/getRanchesSlice";
@@ -15,12 +16,17 @@ export const store = configureStore({
     reducer: {
         register:               signupSlice.reducer,
         login:                  loginSlice.reducer,
+
+        openSidebar:            openSidebarSlice.reducer,
+
         uploadCow:              cowFormSlice.reducer,
         uploadRanch:            ranchFormSlice.reducer,
         uploadRestaurantBranch: restaurantFormSlice.reducer,
-        openSidebar:            openSidebarSlice.reducer,
-        ranches:                getRanchesSlice.reducer,
+        
         restaurants:            getRestaurantsSlice.reducer,
+        restaurantModal:        restaurantModalSlice.reducer,
+        
+        ranches:                getRanchesSlice.reducer,
     }
 
 })

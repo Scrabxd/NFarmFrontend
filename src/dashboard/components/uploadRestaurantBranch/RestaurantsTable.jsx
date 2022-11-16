@@ -7,7 +7,7 @@ import { LoadingSpinner } from "../loading/LoadingSpinner"
 export const RestaurantsTable = () => {
 
 	const dispatch = useDispatch()
-	const { isLoading, restaurants, rerender } = useSelector( state => state.restaurants )
+	const { isLoading, restaurants, rerender } = useSelector( state => state.restaurants ) // store -> reducer -> restaurants
 
 	useEffect(() => {
 	  
