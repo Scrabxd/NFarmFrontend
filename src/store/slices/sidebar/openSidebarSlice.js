@@ -3,14 +3,14 @@ import { createSlice } from '@reduxjs/toolkit';
 export const openSidebarSlice = createSlice({
     name: 'sidebar',
     initialState: {
-        isOpen: false
+        isOpenSidebar: true
     },
     reducers: {
-        expand: (state, /* action */ ) => {
-            state.isOpen = !state.isOpen
+        expandSidebar: (state, /* action */ ) => {
+            state.isOpenSidebar = !state.isOpenSidebar
         },
     }
 });
 
 // Action creators are generated for each case reducer function
-export const { expand } = openSidebarSlice.actions;
+export const { expandSidebar } = openSidebarSlice.actions;

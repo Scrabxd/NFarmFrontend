@@ -1,14 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { cowFormSlice } from "./slices/cowForm/cowFormSlice";
-import { restaurantModalSlice } from "./slices/dashRestaurantSlices/restaurnatModalSlice";
 
-import { loginSlice } from "./slices/login/loginSlice";
-import { getRanchesSlice } from "./slices/ranches/getRanchesSlice";
-import { ranchFormSlice } from "./slices/ranchForm/ranchFormSlice";
-import { restaurantFormSlice } from "./slices/restaurantForm/restaurantFormSlice";
-import { getRestaurantsSlice } from "./slices/restaurants/getRestaurantsSlice";
-import { openSidebarSlice } from "./slices/sidebar";
 import { signupSlice } from "./slices/signup";
+import { loginSlice } from "./slices/login";
+
+import { openSidebarSlice } from "./slices/sidebar";
+
+import { cowFormSlice } from "./slices/cowForm/";
+import { ranchFormSlice } from "./slices/ranchForm/";
+import { restaurantFormSlice } from "./slices/restaurantForm/";
+
+import { getRanchesSlice } from "./slices/ranches/";
+import { restaurantModalSlice } from "./slices/dashRestaurantSlices/";
+
+import { getRestaurantsSlice } from "./slices/restaurants/";
 
 
 export const store = configureStore({

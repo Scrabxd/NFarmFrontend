@@ -3,17 +3,17 @@ import { createSlice } from '@reduxjs/toolkit';
 export const restaurantModalSlice = createSlice({
     name: 'restaurantModal',
     initialState: {
-        isOpen: false
+        isOpenRestaurantModal: false
     },
     reducers: {
-        openModal: ( state ) => {
-            state.isOpen = true
+        openModalRestaurant: ( state ) => {
+            state.isOpenRestaurantModal = true
         },
-        closeModal: ( state ) => {
-            state.isOpen = false
+        closeModalRestaurant: ( state ) => {
+            state.isOpenRestaurantModal = false
         }
     }
 });
 
 // Action creators are generated for each case reducer function
-export const { openModal, closeModal } = restaurantModalSlice.actions;
+export const { openModalRestaurant, closeModalRestaurant } = restaurantModalSlice.actions;
