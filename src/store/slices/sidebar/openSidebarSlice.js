@@ -7,10 +7,13 @@ export const openSidebarSlice = createSlice({
     },
     reducers: {
         expandSidebar: (state, /* action */ ) => {
-            state.isOpenSidebar = !state.isOpenSidebar
+            state.isOpenSidebar = true
         },
+        closeSidebar: ( state ) => {
+            state.isOpenSidebar = false
+        }
     }
 });
 
 // Action creators are generated for each case reducer function
-export const { expandSidebar } = openSidebarSlice.actions;
+export const { expandSidebar, closeSidebar } = openSidebarSlice.actions;
