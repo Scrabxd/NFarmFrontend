@@ -141,7 +141,7 @@ export const RestaurantForm = () => {
 
                                         <div className="w-1/2">
                                             <Input 
-                                                labelPlaceholder="Postal Code"
+                                                labelPlaceholder="Zip code"
                                                 bordered
                                                 name="postalCode"
                                                 fullWidth
