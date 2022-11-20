@@ -1,12 +1,13 @@
+import { useDispatch, useSelector } from "react-redux"
+
+import { DashLayout } from "../layout/DashLayout"
+import { expandSidebar } from "../../store/slices/sidebar/openSidebarSlice"
+import { LoadResaurant } from "../components/uploadRestaurantBranch"
+import { ModalRestaurant } from "../components/uploadRestaurantBranch/ModalRestaurant"
+
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Divider } from "@nextui-org/react"
-import { useDispatch, useSelector } from "react-redux"
-import { expandSidebar } from "../../store/slices/sidebar/openSidebarSlice"
-import { NoElementsMessage } from "../components/messages/NoElementsMessage"
-import { ModalRestaurant } from "../components/uploadRestaurantBranch/ModalRestaurant"
-import { RestaurantsTable } from "../components/uploadRestaurantBranch/RestaurantsTable"
-import { DashLayout } from "../layout/DashLayout"
 
 export const UploadRestaurantPage = () => {
 
@@ -34,11 +35,9 @@ export const UploadRestaurantPage = () => {
             <Divider />
 
 
-            <div className="w-full mt-5">
-                <NoElementsMessage title="You haven't uploaded any restaurant" />
+            <div className="w-full mt-5 p-4">
+                <LoadResaurant />
             </div>
-
-            {/* <RestaurantsTable /> */}
 
         </DashLayout>
 

@@ -45,7 +45,7 @@ export const LoginForm = () => {
                         onSubmit={ ( values ) => { //function to execute when we send the form
                             console.log( 'formulario enviado' )
 
-                            // dispatch( loginUser( values ) ) // make login request thrugh thunks
+                            dispatch( loginUser( values ) ) // make login request thrugh thunks
 
                         } }
                     >

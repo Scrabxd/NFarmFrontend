@@ -20,8 +20,13 @@ export const getRestaurantsSlice = createSlice({
             state.restaurants = actions.payload.findRestaurant.reverse()
             state.rerender = false
         },
+        addRestaurant: ( state, actions ) => {
+            // add the restaurant at the beggining of the array
+            // add to show it in the table avoiding make a request to the DB
+            state.restaurants.unshift( actions.payload.values )
+        }
     }
 });
 
 // Action creators are generated for each case reducer function
-export const { startLoadingRestaurants, setRerenderState, setRestaurants } = getRestaurantsSlice.actions;
+export const { startLoadingRestaurants, setRerenderState, setRestaurants, addRestaurant } = getRestaurantsSlice.actions;

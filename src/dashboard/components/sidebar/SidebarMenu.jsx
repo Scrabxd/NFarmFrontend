@@ -13,8 +13,8 @@ export const SidebarMenu = () => {
     const dispatch = useDispatch()
     const { isOpenSidebar } = useSelector( state => state.openSidebar ) // reference to store -> reducer -> sidebar
 
-    // get the idRole user to show the corresponding sidebar
-    const { idRole } = JSON.parse( localStorage.getItem( 'userData' ) )
+    // get the user's data to show the corresponding sidebar
+    const { idRole, name, lastName, email } = JSON.parse( localStorage.getItem( 'userData' ) )
     const farmerRole = 1
 
     return (
@@ -38,8 +38,8 @@ export const SidebarMenu = () => {
                     </div>
 
                     <div className="w-full text-center mb-2">
-                        <p>Jose Bayona</p>
-                        <small >jose123@email.com</small>
+                        <p>{ name + ' ' + lastName }</p>
+                        <small >{ email }</small>
                         <Divider css={{ mt: 6 }} />
                     </div>
 

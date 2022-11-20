@@ -7,12 +7,12 @@ import { openSidebarSlice } from "./slices/sidebar";
 
 import { cowFormSlice } from "./slices/cowForm/";
 import { ranchFormSlice } from "./slices/ranchForm/";
-import { restaurantFormSlice } from "./slices/restaurantForm/";
+import { restaurantFormSlice } from "./slices/dashRestaurantSlices/restaurantForm";
 
 import { getRanchesSlice } from "./slices/ranches/";
-import { restaurantModalSlice } from "./slices/dashRestaurantSlices/";
+import { getRestaurantsSlice } from "./slices/dashRestaurantSlices/getRestaurants";
 
-import { getRestaurantsSlice } from "./slices/restaurants/";
+import { restaurantModalSlice } from "./slices/dashRestaurantSlices/restaurantModal";
 
 
 export const store = configureStore({

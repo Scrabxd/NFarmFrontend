@@ -1,10 +1,12 @@
-import { Card, Input, Loading, Spacer } from "@nextui-org/react"
 import { Formik } from "formik"
-import { useDispatch, useSelector } from "react-redux"
-import { uploadRestaurantBranch } from "../../../store/slices/restaurantForm/thunks"
-import { setRerenderState } from "../../../store/slices/restaurants/getRestaurantsSlice"
 import { validationSchemeUploadRestaurant } from "../../validations"
+
+import { useDispatch, useSelector } from "react-redux"
+import { uploadRestaurantBranch } from "../../../store/slices/dashRestaurantSlices/restaurantForm/thunks"
+import { addRestaurant, setRerenderState } from "../../../store/slices/dashRestaurantSlices/getRestaurants/"
+
 import { SuccesMessage } from "../messages"
+import { Input, Loading, Spacer } from "@nextui-org/react"
 
 export const RestaurantForm = () => {
 
@@ -37,7 +39,8 @@ export const RestaurantForm = () => {
                                 console.log('formulario enviado')
                                 dispatch( uploadRestaurantBranch( values ) )
                                 // make that the table rerender with the new data changing the state of the table when we click the button
-                                dispatch( setRerenderState() )
+                                // dispatch( setRerenderState() )
+                                dispatch( addRestaurant({ values }) )
                             } }
                         >
                             

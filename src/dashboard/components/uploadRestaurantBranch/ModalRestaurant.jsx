@@ -1,6 +1,6 @@
 import { Button, Modal } from "@nextui-org/react"
 import { useDispatch, useSelector } from "react-redux"
-import { closeModalRestaurant, openModalRestaurant } from "../../../store/slices/dashRestaurantSlices/restaurnatModalSlice"
+import { closeModalRestaurant, openModalRestaurant } from "../../../store/slices/dashRestaurantSlices/restaurantModal/restaurnatModalSlice"
 import { RestaurantForm } from "./RestaurantForm"
 
 export const ModalRestaurant = () => {

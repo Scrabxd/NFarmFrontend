@@ -49,7 +49,7 @@ export const SignInFormFarmer = () => {
                         onSubmit={ ( values ) => { //function to execute when we send the form
                             console.log( 'formulario enviado' )
 
-                            // dispatch( registerUser( values ) ) // signup slice -> thunk register a new user request
+                            dispatch( registerUser( values ) ) // signup slice -> thunk register a new user request
 
                         } }
                     >
