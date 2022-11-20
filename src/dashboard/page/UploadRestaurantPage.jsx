@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 
 import { DashLayout } from "../layout/DashLayout"
 import { expandSidebar } from "../../store/slices/sidebar/openSidebarSlice"
@@ -12,11 +12,10 @@ import { Divider } from "@nextui-org/react"
 export const UploadRestaurantPage = () => {
 
     const dispatch = useDispatch()
-    const { isOpenSidebar } = useSelector( state => state.openSidebar ) // reference to store -> reducer -> sidebar
 
     return (
         
-        <DashLayout>
+        <DashLayout title="Upload a Restaurant">
 
             <div className="flex items-center p-4 justify-between">
                 <div className="flex gap-2 items-center">
@@ -33,7 +32,6 @@ export const UploadRestaurantPage = () => {
             </div>
 
             <Divider />
-
 
             <div className="w-full mt-5 p-4">
                 <LoadResaurant />
