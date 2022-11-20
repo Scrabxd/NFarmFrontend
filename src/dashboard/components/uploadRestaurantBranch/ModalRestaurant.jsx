@@ -11,13 +11,14 @@ export const ModalRestaurant = () => {
 
     return (
         <>
-
+            {/* button for desktop resolutions */}
             <div className="hidden md:block">
                 <Button onPress={ () => { dispatch( openModalRestaurant() ) } } auto >
                     + Upload a restaurant
                 </Button>
             </div>
 
+            {/* button for movile resolutions */}
             <div className="block md:hidden -z-0">
                 <Button onPress={ () => { dispatch( openModalRestaurant() ) } } auto>
                     +

@@ -1,13 +1,12 @@
 import { useDispatch, useSelector } from "react-redux"
-
-import { UserDropDown } from "./UserDropDown"
+import { closeSidebar } from "../../../store/slices/sidebar/openSidebarSlice"
 
 import { FarmerLinks } from "./FarmerLinks"
 import { RestaurantLinks } from "./RestaurantLinks"
-import { Divider } from "@nextui-org/react"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-import { closeSidebar, expandSidebar } from "../../../store/slices/sidebar/openSidebarSlice"
+import { faXmark } from "@fortawesome/free-solid-svg-icons"
+import { Divider } from "@nextui-org/react"
 
 export const SidebarMenu = () => {
 
@@ -21,12 +20,15 @@ export const SidebarMenu = () => {
     return (
 
         <>
+            {/* full screen sidebar in movile and sidebar always open in tablet or desketop resolution */}
             <div className={ `h-full ${ isOpenSidebar ? 'w-screen' : 'w-0' } w-screen md:w-56 bg-[#1b1b1b] duration-300 absolute top-0 left-0 z-10 md:relative` }>
 
+                {/* close sidebar when click on the icon */}
                 <div className="absolute top-0 -right-0 md:hidden">
                     <FontAwesomeIcon icon={ faXmark } className="p-4 cursor-pointer text-lg" onClick={ () => { dispatch( closeSidebar() ) } }/>
                 </div>
 
+                {/* in movile hide the content if the sidebar is closed, in desktop always show the content */}
                 <div className={ `${ isOpenSidebar ? 'block' : 'hidden' } md:block` }>
 
                     <div className="flex justify-center items-center py-4">
