@@ -1,10 +1,11 @@
-import { Card, Input, Loading, Spacer } from "@nextui-org/react"
 import { Formik } from "formik"
 import { useDispatch, useSelector } from "react-redux"
-import { setRerenderState } from "../../../store/slices/ranches/getRanchesSlice"
-import { uploadRanch } from "../../../store/slices/ranchForm/thunks"
+import { addRanch, } from "../../../store/slices/dashRanchSlices/getRanches"
+import { uploadRanch } from "../../../store/slices/dashRanchSlices/rancheForm"
+
 import { validationSchemeUploadRanch } from "../../validations"
 import { SuccesMessage } from "../messages"
+import { Card, Input, Loading, Spacer } from "@nextui-org/react"
 
 export const RanchForm = () => {
 
@@ -43,7 +44,8 @@ export const RanchForm = () => {
                                 console.log( 'formulario enviado' )
                                 dispatch( uploadRanch( values ) ) // make a post petition through thunks to create a ranch
                                 // make that the table rerender with the new data changing the state of the table when we click the button
-                                dispatch( setRerenderState() ) 
+                                // dispatch( setRerenderState() ) 
+                                dispatch( addRanch({ values }) )
                             } }
                         >
                             

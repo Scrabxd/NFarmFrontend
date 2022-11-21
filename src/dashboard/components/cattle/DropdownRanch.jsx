@@ -1,7 +1,7 @@
-import { Dropdown } from "@nextui-org/react"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { getRanches } from "../../../store/slices/ranches/thunks"
+import { getRanches } from "../../../store/slices/dashRanchSlices/getRanches"
+import { Dropdown } from "@nextui-org/react"
 
 export const DropdownRanch = () => {
 

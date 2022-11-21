@@ -19,9 +19,14 @@ export const getRanchesSlice = createSlice({
             // .reverse() to show the most recently added ranch first
             state.ranches = action.payload.ranch.reverse()
             state.rerender = false
+        },
+        addRanch: ( state, action ) => {
+            // add the restaurant at the beggining of the array
+            // add to show it in the table avoiding make a request to the DB
+            state.ranches.unshift( action.payload.values )
         }
     }
 });
 
 // Action creators are generated for each case reducer function
-export const { startLoadingRanches, setRanches, setRerenderState } = getRanchesSlice.actions;
+export const { startLoadingRanches, setRanches, setRerenderState, addRanch } = getRanchesSlice.actions;

@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux"
 import { getRestaurants } from "../../../store/slices/dashRestaurantSlices/getRestaurants/thunks"
 
 import { RestaurantsTable } from "./RestaurantsTable"
-import { LoadingSpinner } from "../loading/LoadingSpinner"
 import { NoElementsMessage } from "../messages/NoElementsMessage"
 
 export const LoadResaurant = () => {
