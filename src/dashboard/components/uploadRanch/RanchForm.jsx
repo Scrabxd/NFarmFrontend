@@ -5,7 +5,7 @@ import { uploadRanch } from "../../../store/slices/dashRanchSlices/rancheForm"
 
 import { validationSchemeUploadRanch } from "../../validations"
 import { SuccesMessage } from "../messages"
-import { Card, Input, Loading, Spacer } from "@nextui-org/react"
+import { Input, Loading, Spacer } from "@nextui-org/react"
 
 export const RanchForm = () => {
 

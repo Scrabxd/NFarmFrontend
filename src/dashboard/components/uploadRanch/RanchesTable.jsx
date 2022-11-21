@@ -39,13 +39,13 @@ export const RanchesTable = ({ ranches }) => {
 										<Tooltip
 											content="Delete ranch"
 											color="error"
-											onClick={ () => console.log( restaurant.branchName ) }
+											onClick={ () => console.log( ranch.ranchName ) }
 										>
 											<DeleteIcon size={20} fill="#FF0080"/>
 										</Tooltip>
 										<Tooltip
 											content="Edit ranch"
-											onClick={ () => console.log( restaurant.branchName ) }
+											onClick={ () => console.log( ranch.ranchName ) }
 										>
 											<EditIcon size={20} fill="#979797"/>
 										</Tooltip>
