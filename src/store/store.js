@@ -15,6 +15,8 @@ import { getRestaurantsSlice } from "./slices/dashRestaurantSlices/getRestaurant
 import { restaurantModalSlice } from "./slices/dashRestaurantSlices/restaurantModal";
 import { ranchesModalSlice } from "./slices/dashRanchSlices/ranchesModal/racnhesModalSlice";
 
+import { ranchDropdownSlice } from "./slices/dashCattleSlices/ranchesDropdown/ranchDropdownSlice";
+
 
 export const store = configureStore({
 
@@ -33,6 +35,8 @@ export const store = configureStore({
         
         restaurantModal:        restaurantModalSlice.reducer,
         ranchesModal:           ranchesModalSlice.reducer,
+
+        ranchDropdown:          ranchDropdownSlice.reducer,
     }
 
 })

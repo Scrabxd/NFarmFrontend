@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { Divider } from "@nextui-org/react"
 import { CattleList } from "../components/cattle/CattleList"
+import { LoadYourCattle } from "../components/cattle/LoadYourCattle"
 
 export const YourCawsPage = () => {
 
@@ -32,7 +33,7 @@ export const YourCawsPage = () => {
             <Divider />
 
             <div className="w-full mt-5 p-4">
-                <CattleList />
+                <LoadYourCattle />
             </div>
 
         </DashLayout>

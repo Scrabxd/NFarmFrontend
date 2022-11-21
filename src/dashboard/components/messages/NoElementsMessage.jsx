@@ -6,7 +6,7 @@ export const NoElementsMessage = ({ title }) => {
 
                 <p className="text-xl md:text-2xl font-semibold">Opps!!</p>
                 <img src='/assets/img/about/cowi.png' className="w-20 md:w-24" />
-                <p className="text-2xl md:text-3xl font-semibold text-center">{ title }</p>
+                <p className="text-xl md:text-3xl font-semibold text-center">{ title }</p>
 
             </div>
         </div>

@@ -15,14 +15,14 @@ export const LoadRanches = () => {
 	
 	}, [  ] )
 
-    console.log({ ranches })
+    // console.log({ ranches })
 
     return (
         <>
             {
                 ( ranches.length != 0 ) // check if we have any ranches
                     ? <RanchesTable ranches={ ranches } />
-                    : <NoElementsMessage title="You haven't uploaded ranch"/>
+                    : <NoElementsMessage title="You haven't uploaded any ranch"/>
             }
         </> 
     )
