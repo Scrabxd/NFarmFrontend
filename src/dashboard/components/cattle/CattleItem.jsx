@@ -1,6 +1,21 @@
+import QRcode from 'qrcode'
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
+import { useState } from 'react';
+import { ModalQR } from './ModalQR';
 
 export const CattleItem = () => {
+
+    const url = 'www.google.com'
+    const [qr, setqr] = useState('')
+
+    const generateQRCode = () => {
+        QRcode.toDataURL( url , ( err, url ) => {
+            if ( err ) throw Error( err )
+            console.log( url )
+            setqr( url )
+        })
+    }
+
     return (
         
         <Card css={{ maxW: "17rem", minWidth:"14rem",h: "300px", border: "none" }}>
@@ -39,21 +54,7 @@ export const CattleItem = () => {
                 </Col>
                 <Col>
                 <Row justify="flex-end">
-                    <Button
-                    flat
-                    auto
-                    rounded
-                    css={{ color: "#fff", bg: "$primary" }}
-                    >
-                    <Text
-                        css={{ color: "inherit" }}
-                        size={12}
-                        weight="bold"
-                        transform="uppercase"
-                    >
-                        Get App
-                    </Text>
-                    </Button>
+                    <ModalQR/>
                 </Row>
                 </Col>
             </Row>

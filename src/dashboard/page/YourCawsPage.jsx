@@ -33,7 +33,7 @@ export const YourCawsPage = () => {
             <Divider />
 
             <div className="w-full mt-5 p-4">
-                <LoadYourCattle />
+                <CattleList />
             </div>
 
         </DashLayout>

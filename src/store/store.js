@@ -16,6 +16,7 @@ import { restaurantModalSlice } from "./slices/dashRestaurantSlices/restaurantMo
 import { ranchesModalSlice } from "./slices/dashRanchSlices/ranchesModal/racnhesModalSlice";
 
 import { ranchDropdownSlice } from "./slices/dashCattleSlices/ranchesDropdown/ranchDropdownSlice";
+import { qrCodesSlice } from "./slices/dashCattleSlices/qrCodes/qrCodesSlices";
 
 
 export const store = configureStore({
@@ -37,6 +38,8 @@ export const store = configureStore({
         ranchesModal:           ranchesModalSlice.reducer,
 
         ranchDropdown:          ranchDropdownSlice.reducer,
+
+        qrCodes:                qrCodesSlice.reducer,
     }
 
 })
