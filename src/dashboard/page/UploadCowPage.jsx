@@ -4,7 +4,7 @@ import { DashLayout } from "../layout/DashLayout"
 export const UploadCowPage = () => {
     return (
         
-        <DashLayout title='Upload a cow'>
+        <DashLayout>
 
             <CowForm />
 

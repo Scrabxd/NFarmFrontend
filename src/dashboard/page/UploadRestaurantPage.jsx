@@ -15,7 +15,7 @@ export const UploadRestaurantPage = () => {
 
     return (
         
-        <DashLayout title="Upload a Restaurant">
+        <DashLayout>
 
             <div className="flex items-center p-4 justify-between">
                 <div className="flex gap-2 items-center">

@@ -13,7 +13,7 @@ export const UploadRanchPage = () => {
 
     return (
         
-        <DashLayout title="Upload a Ranch">
+        <DashLayout>
 
             <div className="flex items-center p-4 justify-between">
                 <div className="flex gap-2 items-center">
