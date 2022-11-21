@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { closeModalRanches, openModalRanches } from "../../../store/slices/dashRanchSlices/ranchesModal/racnhesModalSlice"
+import { closeModal, openModal } from "../../../store/slices/dashModals/dashModalSlice"
 import QRcode from 'qrcode'
 
 import { Button, Modal } from "@nextui-org/react"
@@ -8,7 +8,7 @@ import { setQr } from "../../../store/slices/dashCattleSlices/qrCodes/qrCodesSli
 export const ModalQR = () => {
 
     const dispatch = useDispatch()
-    const { isOpenRanchesModal } = useSelector( state => state.ranchesModal ) //reference to store -> reducer -> ranchesModal
+    const { isModalOpen } = useSelector( state => state.dashModal ) //reference to store -> reducer -> dashModal
     const { qr } = useSelector( state => state.qrCodes )
 
     // provisional code - CHANGE TO THE CORRECT URL
@@ -40,7 +40,7 @@ export const ModalQR = () => {
                 auto
                 rounded
                 css={{ color: "#fff", bg: "$primary" }}
-                onPress={ () => { dispatch( openModalRanches() ) } } 
+                onPress={ () => { dispatch( openModal() ) } } 
             >
                 QR code
             </Button>
@@ -49,8 +49,8 @@ export const ModalQR = () => {
                 closeButton
                 blur
                 aria-labelledby="restaurant-modal"
-                open={ isOpenRanchesModal }
-                onClose={ () => { dispatch( closeModalRanches() ) } }
+                open={ isModalOpen }
+                onClose={ () => { dispatch( closeModal() ) } }
                 onOpen={ generateQRCode }
             >
                 <Modal.Header>

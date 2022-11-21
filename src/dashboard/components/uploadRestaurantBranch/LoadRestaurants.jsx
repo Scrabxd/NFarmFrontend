@@ -17,7 +17,7 @@ export const LoadResaurant = () => {
 	
 	}, [  ] )
 
-    console.log({ restaurants })
+    // console.log({ restaurants })
 
     return (
         <>

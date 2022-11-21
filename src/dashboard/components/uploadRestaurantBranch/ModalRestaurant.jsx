@@ -1,26 +1,26 @@
 import { Button, Modal } from "@nextui-org/react"
 import { useDispatch, useSelector } from "react-redux"
-import { closeModalRestaurant, openModalRestaurant } from "../../../store/slices/dashRestaurantSlices/restaurantModal/restaurnatModalSlice"
+import { closeModal, openModal } from "../../../store/slices/dashModals/dashModalSlice"
 import { RestaurantForm } from "./RestaurantForm"
 
 export const ModalRestaurant = () => {
 
     const dispatch = useDispatch()
-    const { isOpenRestaurantModal } = useSelector( state => state.restaurantModal ) //reference to store -> reducer -> restaurantModal
+    const { isModalOpen } = useSelector( state => state.dashModal )  //reference to store -> reducer -> dashModal
 
 
     return (
         <>
             {/* button for desktop resolutions */}
             <div className="hidden md:block">
-                <Button onPress={ () => { dispatch( openModalRestaurant() ) } } auto >
+                <Button onPress={ () => { dispatch( openModal() ) } } auto >
                     + Upload a restaurant
                 </Button>
             </div>
 
             {/* button for movile resolutions */}
             <div className="block md:hidden -z-0">
-                <Button onPress={ () => { dispatch( openModalRestaurant() ) } } auto>
+                <Button onPress={ () => { dispatch( openModal() ) } } auto>
                     +
                 </Button>
             </div>
@@ -29,8 +29,8 @@ export const ModalRestaurant = () => {
                 closeButton
                 blur
                 aria-labelledby="restaurant-modal"
-                open={ isOpenRestaurantModal }
-                onClose={ () => { dispatch( closeModalRestaurant() ) } }
+                open={ isModalOpen }
+                onClose={ () => { dispatch( closeModal() ) } }
                 width={ "90%" }
             >
                 <Modal.Header>

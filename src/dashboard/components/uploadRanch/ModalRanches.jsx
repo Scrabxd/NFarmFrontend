@@ -1,26 +1,26 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { closeModalRanches, openModalRanches } from '../../../store/slices/dashRanchSlices/ranchesModal/racnhesModalSlice'
+import { closeModal, openModal } from '../../../store/slices/dashModals/dashModalSlice'
 import { RanchForm } from './RanchForm'
 import { Button, Modal } from '@nextui-org/react'
 
 export const ModalRanches = () => {
 
     const dispatch = useDispatch()
-    const { isOpenRanchesModal } = useSelector( state => state.ranchesModal ) //reference to store -> reducer -> ranchesModal
+    const { isModalOpen } = useSelector( state => state.dashModal )  //reference to store -> reducer -> dashModal
 
     return (
         <>
 
             {/* button for desktop resolutions */}
             <div className="hidden md:block">
-                <Button onPress={ () => { dispatch( openModalRanches() ) } } auto >
+                <Button onPress={ () => { dispatch( openModal() ) } } auto >
                     + Upload a restaurant
                 </Button>
             </div>
 
             {/* button for movile resolutions */}
             <div className="block md:hidden -z-0">
-                <Button onPress={ () => { dispatch( openModalRanches() ) } } auto>
+                <Button onPress={ () => { dispatch( openModal() ) } } auto>
                     +
                 </Button>
             </div>
@@ -29,8 +29,8 @@ export const ModalRanches = () => {
                 closeButton
                 blur
                 aria-labelledby="restaurant-modal"
-                open={ isOpenRanchesModal }
-                onClose={ () => { dispatch( closeModalRanches() ) } }
+                open={ isModalOpen }
+                onClose={ () => { dispatch( closeModal() ) } }
                 width={ "90%" }
             >
                 <Modal.Header>

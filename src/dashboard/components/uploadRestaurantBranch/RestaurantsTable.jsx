@@ -1,5 +1,6 @@
 import { Table, Tooltip } from "@nextui-org/react"
 import { DeleteIcon } from "../messages"
+import { EditIcon } from "../messages/EditIcon"
 
 export const RestaurantsTable = ({ restaurants }) => {
 
