@@ -1,20 +1,8 @@
-import QRcode from 'qrcode'
-import { Card, Col, Row, Button, Text } from "@nextui-org/react";
-import { useState } from 'react';
+import { Card, Col, Row, Text } from "@nextui-org/react";
 import { ModalQR } from './ModalQR';
 
 export const CattleItem = () => {
 
-    const url = 'www.google.com'
-    const [qr, setqr] = useState('')
-
-    const generateQRCode = () => {
-        QRcode.toDataURL( url , ( err, url ) => {
-            if ( err ) throw Error( err )
-            console.log( url )
-            setqr( url )
-        })
-    }
 
     return (
         
