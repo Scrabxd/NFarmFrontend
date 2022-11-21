@@ -1,9 +1,5 @@
-import { expandSidebar } from "../../store/slices/sidebar/openSidebarSlice"
 import { SidebarMenu } from "../components/sidebar/SidebarMenu"
 
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Divider } from "@nextui-org/react"
 
 export const DashLayout = ({ children }) => {
 
@@ -19,7 +15,7 @@ export const DashLayout = ({ children }) => {
 
             </div>
 
-            <div className="w-full h-screen overflow-auto">
+            <div className="w-full h-screen overflow-auto z-0">
                 { children }
             </div>
 

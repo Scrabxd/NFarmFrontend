@@ -1,4 +1,5 @@
 import axios from "axios"
+import { restaurantApi } from "../../../../api/restaurantsAPI"
 import { setUploadRestaurantBranchStatus, startLoadingUploadBranch } from "./restaurantFormSlice"
 
 export const uploadRestaurantBranch = ( dataForm ) => {
@@ -11,6 +12,8 @@ export const uploadRestaurantBranch = ( dataForm ) => {
         try {
 
             // get the status of the request, 201 = created
+            // const { status } = await restaurantApi( dataForm )
+            // const  { status } = await restaurantApi.post( dataForm )
             const { status } = await axios.post( 'http://nfarm-back.herokuapp.com/api/restaurant?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
                 dataForm, 
                 {

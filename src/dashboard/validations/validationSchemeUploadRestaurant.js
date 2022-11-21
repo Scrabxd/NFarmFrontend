@@ -17,5 +17,5 @@ export const validationSchemeUploadRestaurant = yup.object().shape({
     phoneNumber: yup.number()
         .required("you must enter a phone number")
         .positive( "A phone number can't start with a minus" )
-        .test( 'len', 'A phone number must have 10 digits', val => val.toString().length === 10 ),
+        // .test( 'len', 'A phone number must have 10 digits', val => val.toString().length === 10 ),
 })
