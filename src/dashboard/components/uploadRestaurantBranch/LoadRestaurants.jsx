@@ -27,8 +27,7 @@ export const LoadResaurant = () => {
                     ? <RestaurantsTable restaurants={ restaurants } />
                     : <NoElementsMessage title="You haven't uploaded any restaurant"/>
             }
-            {/* ( isLoading ) ? ( <LoadingSpinner /> ) :  <RestaurantsTable restaurants={ restaurants } /> */}
-            {/* <NoElementsMessage title="You haven't uploaded any restaurant"/> */}
+            
         </> 
     )
 }

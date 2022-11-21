@@ -1,21 +1,8 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { getRestaurants } from "../../../store/slices/dashRestaurantSlices/getRestaurants/thunks"
-
 import { Table, Tooltip } from "@nextui-org/react"
 import { DeleteIcon } from "../messages"
 
 export const RestaurantsTable = ({ restaurants }) => {
 
-	const dispatch = useDispatch()
-	// const { isLoading, restaurants, rerender } = useSelector( state => state.restaurants ) // store -> reducer -> restaurants
-
-	useEffect(() => {
-	  
-		dispatch( getRestaurants() )
-	
-	}, [  ] )
-	
 
     return (
 		<>
