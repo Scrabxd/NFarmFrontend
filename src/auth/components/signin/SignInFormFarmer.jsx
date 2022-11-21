@@ -1,5 +1,5 @@
-import { registerUser } from "../../../store/slices/signup"
 import { useDispatch, useSelector } from "react-redux"
+import { registerUser } from "../../../store/slices/authSlices/signup"
 import { Navigate } from "react-router-dom"
 
 import { Formik } from "formik"

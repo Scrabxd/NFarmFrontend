@@ -1,5 +1,5 @@
-import { loginUser } from "../../../store/slices/login/thunks"
 import { useDispatch, useSelector } from "react-redux"
+import { loginUser } from "../../../store/slices/authSlices/login"
 import { Navigate } from "react-router-dom"
 
 import { AuthLayout } from "../../layout/AuthLayout"

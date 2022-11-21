@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { signupSlice } from "./slices/signup";
-import { loginSlice } from "./slices/login";
+import { signupSlice } from "./slices/authSlices/signup";
+import { loginSlice } from "./slices/authSlices/login";
 
 import { openSidebarSlice } from "./slices/sidebar";
 
