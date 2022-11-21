@@ -21,7 +21,7 @@ export const RestaurantsTable = ({ restaurants }) => {
 					<Table.Column>Country</Table.Column>
 					<Table.Column>City</Table.Column>
 					<Table.Column>Postal Code</Table.Column>
-					<Table.Column>Actions</Table.Column>
+					<Table.Column align="center">Actions</Table.Column>
 				</Table.Header>
 				<Table.Body>
 					{
@@ -32,13 +32,21 @@ export const RestaurantsTable = ({ restaurants }) => {
 								<Table.Cell>{ restaurant.city }</Table.Cell>
 								<Table.Cell>{ restaurant.postalCode }</Table.Cell>
 								<Table.Cell>
-									<Tooltip
-										content="Delete restaurant"
-										color="error"
-										onClick={ () => console.log( restaurant.branchName ) }
-									>
-										<DeleteIcon size={20} fill="#FF0080"/>
-									</Tooltip>
+									<div className="w-full flex justify-around">
+										<Tooltip
+											content="Delete ranch"
+											color="error"
+											onClick={ () => console.log( restaurant.branchName ) }
+										>
+											<DeleteIcon size={20} fill="#FF0080"/>
+										</Tooltip>
+										<Tooltip
+											content="Edit ranch"
+											onClick={ () => console.log( restaurant.branchName ) }
+										>
+											<EditIcon size={20} fill="#979797"/>
+										</Tooltip>
+									</div>
 								</Table.Cell>
 							</Table.Row>
 						) )

@@ -1,5 +1,6 @@
 import { Table, Tooltip } from "@nextui-org/react"
 import { DeleteIcon } from "../messages"
+import { EditIcon } from "../messages/EditIcon"
 
 export const RanchesTable = ({ ranches }) => {
 
@@ -22,8 +23,8 @@ export const RanchesTable = ({ ranches }) => {
 					<Table.Column>Ranch Name</Table.Column>
 					<Table.Column>Country</Table.Column>
 					<Table.Column>City</Table.Column>
-					<Table.Column>Cow Heads</Table.Column>
-					<Table.Column>ACTIONS</Table.Column>
+					<Table.Column >Cow Heads</Table.Column>
+					<Table.Column align="center">Actions</Table.Column>
 				</Table.Header>
 				<Table.Body>
 					{
@@ -34,13 +35,21 @@ export const RanchesTable = ({ ranches }) => {
 								<Table.Cell>{ ranch.city }</Table.Cell>
 								<Table.Cell>{ ranch.cowHeads }</Table.Cell>
 								<Table.Cell>
-									<Tooltip
-										content="Delete restaurant"
-										color="error"
-										onClick={ () => console.log( restaurant.branchName ) }
-									>
-										<DeleteIcon size={20} fill="#FF0080"/>
-									</Tooltip>
+									<div className="w-full flex justify-around">
+										<Tooltip
+											content="Delete ranch"
+											color="error"
+											onClick={ () => console.log( restaurant.branchName ) }
+										>
+											<DeleteIcon size={20} fill="#FF0080"/>
+										</Tooltip>
+										<Tooltip
+											content="Edit ranch"
+											onClick={ () => console.log( restaurant.branchName ) }
+										>
+											<EditIcon size={20} fill="#979797"/>
+										</Tooltip>
+									</div>
 								</Table.Cell>
 							</Table.Row>
 						))
