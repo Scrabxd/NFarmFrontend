@@ -1,4 +1,6 @@
-import { Table } from "@nextui-org/react"
+import { Table, Tooltip } from "@nextui-org/react"
+import { DeleteIcon } from "../messages"
+import { EditIcon } from "../messages/EditIcon"
 
 const cowsExampleData = [
 	{
@@ -23,23 +25,23 @@ const cowsExampleData = [
 	},
 ]
 
-export const CowsTable = () => {
+export const CowsTable = ({ cows }) => {
     return (
 		<Table
 		aria-label="Example table with static content"
 		css={{
 		  height: "auto",
 		  minWidth: "100%",
-		  border: 'none'
 		}}
 		selectionMode='single'
 		color='primary'
+		bordered
 	  >
 			<Table.Header>
 				<Table.Column>ID</Table.Column>
 				<Table.Column>NAME</Table.Column>
 				<Table.Column>RANCH</Table.Column>
-				<Table.Column>ACTIONS</Table.Column>
+				<Table.Column align="center">ACTIONS</Table.Column>
 			</Table.Header>
 			<Table.Body>
 
@@ -49,7 +51,23 @@ export const CowsTable = () => {
 							<Table.Cell>{ cow.id }</Table.Cell>
 							<Table.Cell>{ cow.name }</Table.Cell>
 							<Table.Cell>{ cow.ranch }</Table.Cell>
-							<Table.Cell>Active</Table.Cell>
+							<Table.Cell>
+								<div className="w-full flex justify-around">
+									<Tooltip
+										content="Delete ranch"
+										color="error"
+										onClick={ () => console.log( ranch.ranchName ) }
+									>
+										<DeleteIcon size={20} fill="#FF0080"/>
+									</Tooltip>
+									<Tooltip
+										content="Edit ranch"
+										onClick={ () => console.log( ranch.ranchName ) }
+									>
+										<EditIcon size={20} fill="#979797"/>
+									</Tooltip>
+								</div>
+							</Table.Cell>
 						</Table.Row>
 					))
 				}
