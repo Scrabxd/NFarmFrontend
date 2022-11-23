@@ -5,14 +5,14 @@ import QRcode from 'qrcode'
 import { Button, Modal } from "@nextui-org/react"
 import { setQr } from "../../../store/slices/dashCattleSlices/qrCodes/qrCodesSlices"
 
-export const ModalQR = () => {
+export const ModalQR = ({ idCow }) => {
 
     const dispatch = useDispatch()
     const { isModalOpen } = useSelector( state => state.dashModal ) //reference to store -> reducer -> dashModal
     const { qr } = useSelector( state => state.qrCodes )
 
     // provisional code - CHANGE TO THE CORRECT URL
-    const url = 'www.google.com'
+    const url = `http://127.0.0.1:5173/cow/${ idCow }`
 
     // generate a qr
     const generateQRCode = () => {

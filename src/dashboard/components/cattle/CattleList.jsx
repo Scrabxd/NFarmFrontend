@@ -7,6 +7,7 @@ import { DropdownRanch } from "./DropdownRanch"
 export const CattleList = ({ ranches }) => {
 
     const { cows, isLoading } = useSelector( state => state.cows ) // reference to store -> reducer -> cows
+    console.log( cows )
 
     return (
 
@@ -28,7 +29,7 @@ export const CattleList = ({ ranches }) => {
                             ?
                                 ( !isLoading ) && <LoadingSpinner /> &&
                                 cows.map( ( cow, index ) => (
-                                    <CattleItem key={ index } breed={ cow.breed } name={ cow.name } weight={ cow.weight } />
+                                    <CattleItem key={ index } { ...cow } /> //send to the component all the info of cows
                                 ) )
                                 
                             : ( !isLoading ) && <LoadingSpinner /> && <NoElementsMessage title="You don't have any cow on this ranch"/>

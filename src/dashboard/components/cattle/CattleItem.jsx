@@ -1,8 +1,7 @@
 import { Card, Col, Row, Text } from "@nextui-org/react";
 import { ModalQR } from './ModalQR';
 
-export const CattleItem = ({ breed, name, weight }) => {
-
+export const CattleItem = ({ breed, name, weight, id }) => {
 
     return (
         
@@ -42,7 +41,7 @@ export const CattleItem = ({ breed, name, weight }) => {
                 </Col>
                 <Col>
                 <Row justify="flex-end">
-                    <ModalQR/>
+                    <ModalQR idCow={ id }/>
                 </Row>
                 </Col>
             </Row>
