@@ -90,9 +90,11 @@ export const LoginForm = () => {
                                         ? <Input 
                                             type="submit" 
                                             aria-label="send-form" 
-                                            status='success' 
                                             value='Access' 
-                                            css={{ cursor: 'pointer' }} 
+                                            bordered
+                                            fullWidth
+                                            css={{ bg: '$primary', cursor: 'pointer' }}
+                                            animated='false'
                                         />
                                         : <Loading type="points"/>
                                 }

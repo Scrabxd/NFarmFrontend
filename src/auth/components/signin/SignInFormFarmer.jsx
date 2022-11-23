@@ -171,8 +171,11 @@ export const SignInFormFarmer = () => {
                                         ? <Input 
                                                 type="submit" 
                                                 aria-label="send-form" 
-                                                status='success' 
                                                 value='Create an account'
+                                                bordered
+                                                fullWidth
+                                                css={{ bg: '$primary', cursor: 'pointer' }}
+                                                animated='false'
                                             />
                                         : <Loading type="points"/>
                                 }
