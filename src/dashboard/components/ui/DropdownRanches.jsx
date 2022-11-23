@@ -1,10 +1,8 @@
-import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { getRanches } from "../../../store/slices/dashRanchSlices/getRanches"
 import { setSelectedDropdownRanchValue } from "../../../store/slices/dashCattleSlices/ranchesDropdown/ranchDropdownSlice"
 import { getCows } from "../../../store/slices/dashCowSlices/getCows/thunks"
 
-export const DropdownRanch = ({ ranches }) => {
+export const DropdownRanches = ({ ranches }) => {
 
     const dispatch = useDispatch()
     const { dropdownValue } = useSelector( state => state.ranchDropdown ) // reference to store -> reducer -> ranchDropdown
@@ -28,6 +26,7 @@ export const DropdownRanch = ({ ranches }) => {
                 value={ dropdownValue } 
                 onChange={ handleChange }
             >
+                <option value=''>Select a ranch</option>
                 {
                     ranches.map( ( ranch, index ) => (
                         <option key={ index } value={ ranch.id }>{ ranch.ranchName }</option>

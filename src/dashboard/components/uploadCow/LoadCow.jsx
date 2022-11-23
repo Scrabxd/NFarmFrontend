@@ -1,29 +1,29 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { getCows } from "../../../store/slices/dashCowSlices/getCows/thunks"
+import { getRanches } from "../../../store/slices/dashRanchSlices/getRanches"
 import { NoElementsMessage } from "../messages"
-import { CowsTable } from "./CowsTable"
+import { CowsList } from "./CowsList"
 
 export const LoadCow = () => {
 
-    // const dispatch = useDispatch()
-    // const { cows } = useSelector( state => state.cows ) // reference to store -> reducer -> cows
+    const dispatch = useDispatch()
+    const { ranches } = useSelector( state => state.ranches ) // reference to store -> reducer -> ranches
 
-    // useEffect(() => {
+    useEffect(() => {
+      
+        dispatch( getRanches() ) // get all the ranches of the loogged user
     
-    //     dispatch( getCows() )
-    
-    // }, [  ])
+    }, [] )
     
 
-    const cows = []
-    // console.log({ cows })
+    // const cows = []
+    console.log({ ranches })
     
     return (
         <>
         {
-            ( cows.length != 0 ) // check if we have any ranches
-                ? <CowsTable cows={ cows } />
+            ( ranches.length != 0 ) // check if we have any ranches
+                ? <CowsList ranches={ ranches } />
                 : <NoElementsMessage title="You haven't uploaded any cow"/>
         }
     </> 

@@ -114,6 +114,7 @@ export const CowForm = () => {
                                     name="idRanch"
                                     disabled={ ranches.length === 0 } //disable if the user don't have ranches
                                 >
+                                    <option value=''>Select a ranch</option>
                                     {
                                         ranches.map( ( ranch, index ) => (
                                             <option key={ index } value={ ranch.id }>{ ranch.ranchName }</option>

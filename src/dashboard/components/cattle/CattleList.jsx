@@ -1,8 +1,8 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import { LoadingSpinner } from "../loading/LoadingSpinner"
 import { NoElementsMessage } from "../messages/NoElementsMessage"
+import { DropdownRanches } from "../ui/DropdownRanches"
 import { CattleItem } from "./CattleItem"
-import { DropdownRanch } from "./DropdownRanch"
 
 export const CattleList = ({ ranches }) => {
 
@@ -15,7 +15,7 @@ export const CattleList = ({ ranches }) => {
 
             <>
                 <div className="w-full mb-4 flex justify-center items-center">
-                    <DropdownRanch ranches={ ranches } /> 
+                    <DropdownRanches ranches={ ranches } /> 
                 </div>
 
                 {
