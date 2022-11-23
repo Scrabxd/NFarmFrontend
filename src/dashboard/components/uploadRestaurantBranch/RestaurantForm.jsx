@@ -187,6 +187,7 @@ export const RestaurantForm = () => {
                                                 css={{ bg: '$primary' }}
                                                 value='Upload Restaurant'
                                                 animated='false' 
+                                                disabled={ isLoading }
                                             />
                                             : <Loading type="points"/>
                                     }

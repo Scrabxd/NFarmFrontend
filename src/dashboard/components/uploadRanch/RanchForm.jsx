@@ -184,6 +184,7 @@ export const RanchForm = () => {
                                     css={{ bg: '$primary' }}
                                     value='Upload Ranch'
                                     animated='false' 
+                                    disabled={ isLoading }
                                 />
                                 : <Loading type="points"/>
                         }
