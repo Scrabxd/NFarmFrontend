@@ -1,5 +1,5 @@
 import axios from "axios"
-import { setUploadCowStatus, startLoadingUploadCow } from "./cowFormSlice"
+import { setLastCow, setUploadCowStatus, startLoadingUploadCow } from "./cowFormSlice"
 
 export const uploadCow = ( dataForm, idRanch ) => {
 
@@ -11,7 +11,7 @@ export const uploadCow = ( dataForm, idRanch ) => {
         try {
  
             // get the status of the request, 201 = created
-            const { status, data: { createCow } } = await axios.post( 'http://nfarm-back.herokuapp.com/api/cow?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
+            const { status, data: { createCow: { id } } } = await axios.post( 'http://nfarm-back.herokuapp.com/api/cow?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
                 dataForm, 
                 {
                     headers:{
@@ -22,7 +22,8 @@ export const uploadCow = ( dataForm, idRanch ) => {
             )
 
             dispatch( setUploadCowStatus({ status }) )
-            console.log( status, createCow )
+            console.log( status, id )
+            dispatch( setLastCow({ id }) )
             
         } catch ( error ) {
             

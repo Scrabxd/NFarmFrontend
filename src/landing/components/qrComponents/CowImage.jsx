@@ -1,7 +1,8 @@
-import { Card, Loading } from "@nextui-org/react"
+import { Card  } from "@nextui-org/react"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
+import { getImageCow } from "../../../store/slices/dashCowSlices/getCowImage/thunks"
 import { getSingleCow } from "../../../store/slices/dashCowSlices/getSingelCow/thunks"
 import { CowTable } from "./cowTable"
 
@@ -11,16 +12,16 @@ export const CowImage = () => {
     const { cowId } = useParams()
 
     const dispatch = useDispatch()
-    const { isLoading, cow } = useSelector( state => state.cow ) // reference to store -> reducer -> cow
+    const { img } = useSelector( state => state.imageCow ) // reference to store -> reducer ->imageCow
+    const { cow } = useSelector( state => state.cow ) // reference to store -> reducer -> cow
 
     useEffect(() => {
         
+        dispatch( getImageCow( cowId ) )
         dispatch( getSingleCow( cowId ) )
     
     }, [ ])
     
-
-
 
     return (
 
@@ -32,7 +33,10 @@ export const CowImage = () => {
                         <p className="text-lg md:text-2xl">{ cow.name }</p>
                     </div>
 
-                    <img src="/assets/img/cow.jfif" className="w-full rounded-xl"/>
+                    <div className="w-full flex justify-center items-center">
+                        <img src={ img } className="rounded-xl w-96"/>
+                    </div>
+
 
 
                 </Card.Body>

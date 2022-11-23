@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { closeModal, openModal } from "../../../store/slices/dashModals/dashModalSlice"
 import { Button, Modal } from "@nextui-org/react"
 import { CowForm } from "./CowForm"
+import { CowImageForm } from "./CowImageForm"
 
 export const ModalCow = () => {
 
@@ -38,6 +39,7 @@ export const ModalCow = () => {
                 </Modal.Header>
                 <Modal.Body>
                     <CowForm />
+                    <CowImageForm />
                 </Modal.Body>
             </Modal>
 

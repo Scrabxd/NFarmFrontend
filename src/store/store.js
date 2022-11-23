@@ -18,6 +18,8 @@ import { getSingleCowSlice } from "./slices/dashCowSlices/getSingelCow/getSingle
 import { ranchDropdownSlice } from "./slices/dashCattleSlices/ranchesDropdown/ranchDropdownSlice";
 import { qrCodesSlice } from "./slices/dashCattleSlices/qrCodes/qrCodesSlices";
 import { dashModalSlice } from "./slices/dashModals/dashModalSlice";
+import { cowFormImageSlice } from "./slices/dashCowSlices/cowFormImage/cowFormImageSlice";
+import { getCowImageSlice } from "./slices/dashCowSlices/getCowImage";
 
 
 export const store = configureStore({
@@ -31,11 +33,13 @@ export const store = configureStore({
         uploadRanch:            ranchFormSlice.reducer,
         uploadRestaurantBranch: restaurantFormSlice.reducer,
         uploadCow:              cowFormSlice.reducer,
+        uploadCowImage:         cowFormImageSlice.reducer,
         
         restaurants:            getRestaurantsSlice.reducer,
         ranches:                getRanchesSlice.reducer,
         cows:                   getCowsSlice.reducer,
         cow:                    getSingleCowSlice.reducer,
+        imageCow:               getCowImageSlice.reducer,
         
         dashModal:              dashModalSlice.reducer,
 

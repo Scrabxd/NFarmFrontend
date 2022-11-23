@@ -4,7 +4,8 @@ export const cowFormSlice = createSlice({
     name: 'cowForm',
     initialState: {
         isLoading: false,
-        status: ''
+        status: '',
+        lastCowId: '',
     },
     reducers: {
         startLoadingUploadCow: ( state ) => {
@@ -13,9 +14,13 @@ export const cowFormSlice = createSlice({
         setUploadCowStatus: ( state, action ) => {
             state.status = action.payload.status
             state.isLoading = false
+        },
+        setLastCow: ( state, action ) => {
+            // put the last cow in order to upload the image of the corresponding cow
+            state.lastCowId = action.payload.id
         }
     }
 });
 
 // Action creators are generated for each case reducer function
-export const { startLoadingUploadCow, setUploadCowStatus } = cowFormSlice.actions;
+export const { startLoadingUploadCow, setUploadCowStatus, setLastCow } = cowFormSlice.actions;
