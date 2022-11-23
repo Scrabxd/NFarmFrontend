@@ -17,7 +17,7 @@ export const LoadCow = () => {
     
 
     // const cows = []
-    console.log({ ranches })
+    // console.log({ ranches })
     
     return (
         <>

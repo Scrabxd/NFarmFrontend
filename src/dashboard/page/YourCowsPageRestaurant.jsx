@@ -1,20 +1,12 @@
-import { useDispatch } from "react-redux"
+import { DashLayout } from '../layout/DashLayout'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Divider } from '@nextui-org/react'
+import { LoadYourCattleRestaurant } from '../components/cattleRestaurant/LoadYourCattleRestaurant'
 
-import { DashLayout } from "../layout/DashLayout"
-import { expandSidebar } from "../../store/slices/sidebar/openSidebarSlice"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { Divider } from "@nextui-org/react"
-import { CattleList } from "../components/cattle/CattleList"
-import { LoadYourCattle } from "../components/cattle/LoadYourCattle"
-
-export const YourCawsPage = () => {
-
-    const dispatch = useDispatch()
+export const YourCowsPageRestaurant = () => {
 
     return (
-        
         <DashLayout>
 
             <div className="flex items-center p-4 justify-between">
@@ -33,10 +25,9 @@ export const YourCawsPage = () => {
             <Divider />
 
             <div className="w-full mt-5 p-4">
-                <LoadYourCattle />
+                <LoadYourCattleRestaurant />
             </div>
 
         </DashLayout>
-        
     )
 }

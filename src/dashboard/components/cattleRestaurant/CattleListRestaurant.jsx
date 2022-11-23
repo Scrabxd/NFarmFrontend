@@ -2,9 +2,9 @@ import { useSelector } from "react-redux"
 import { LoadingSpinner } from "../loading/LoadingSpinner"
 import { NoElementsMessage } from "../messages/NoElementsMessage"
 import { CattleItem } from "../ui/CattleItem"
-import { DropdownRanches } from "../ui/DropdownRanches"
+import { DropdownRestaurants } from "../ui/DropdownRestaurants"
 
-export const CattleList = ({ ranches }) => {
+export const CattleListRestaurant = ({ restaurants }) => {
 
     const { cows, isLoading } = useSelector( state => state.cows ) // reference to store -> reducer -> cows
     // console.log( cows )
@@ -15,7 +15,7 @@ export const CattleList = ({ ranches }) => {
 
             <>
                 <div className="w-full mb-4 flex justify-center items-center">
-                    <DropdownRanches ranches={ ranches } /> 
+                    <DropdownRestaurants restaurants={ restaurants } /> 
                 </div>
 
                 {

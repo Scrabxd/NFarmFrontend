@@ -15,7 +15,7 @@ export const RestaurantLinks = () => {
             <li>
                 <NavLink
                     className="text-inherit font-semibold text-base sm:text-lg hover:bg-[#323232] p-2 rounded-lg duration-150" 
-                    to="/dash/cattle"
+                    to="/dash/cattle-restaurant"
                 >
                     Your Cattle
                 </NavLink>

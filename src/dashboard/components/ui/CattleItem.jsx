@@ -1,5 +1,5 @@
 import { Card, Col, Row, Text } from "@nextui-org/react";
-import { ModalQR } from './ModalQR';
+import { ModalQR } from "./ModalQR";
 
 export const CattleItem = ({ breed, name, weight, id }) => {
 

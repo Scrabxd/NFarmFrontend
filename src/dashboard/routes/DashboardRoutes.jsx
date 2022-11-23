@@ -2,7 +2,8 @@ import { Navigate, Route, Routes } from "react-router-dom"
 import { UploadCowPage } from "../page/UploadCowPage"
 import { UploadRanchPage } from "../page/UploadRanchPage"
 import { UploadRestaurantPage } from "../page/UploadRestaurantPage"
-import { YourCawsPage } from "../page/YourCawsPage"
+import { YourCowsPage } from "../page/YourCowsPage"
+import { YourCowsPageRestaurant } from "../page/YourCowsPageRestaurant"
 
 export const DashboardRoutes = () => {
     return (
@@ -13,7 +14,9 @@ export const DashboardRoutes = () => {
 
                 <Route path="/upload-cow" element={ <UploadCowPage /> }/>
 
-                <Route path="/cattle" element={ <YourCawsPage /> }/>
+                <Route path="/cattle" element={ <YourCowsPage /> }/>
+
+                <Route path="/cattle-restaurant" element={ <YourCowsPageRestaurant /> }/>
 
                 <Route path="/upload-ranch" element={ <UploadRanchPage /> } />
 
