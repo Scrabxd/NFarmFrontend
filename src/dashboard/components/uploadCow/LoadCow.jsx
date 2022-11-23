@@ -16,6 +16,7 @@ export const LoadCow = () => {
     // }, [  ])
     
 
+    const cows = []
     // console.log({ cows })
     
     return (

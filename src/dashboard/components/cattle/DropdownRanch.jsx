@@ -2,27 +2,22 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getRanches } from "../../../store/slices/dashRanchSlices/getRanches"
 import { setSelectedDropdownRanchValue } from "../../../store/slices/dashCattleSlices/ranchesDropdown/ranchDropdownSlice"
+import { getCows } from "../../../store/slices/dashCowSlices/getCows/thunks"
 
-export const DropdownRanch = () => {
+export const DropdownRanch = ({ ranches }) => {
 
     const dispatch = useDispatch()
     const { dropdownValue } = useSelector( state => state.ranchDropdown ) // reference to store -> reducer -> ranchDropdown
-    const { ranches } = useSelector( state => state.ranches ) // reference to store -> reducer -> ranches
 
     const handleChange = ( event ) => {
         const value = event.target.value // get the value (ranch name) of the option selected
+        // console.log( value )
         dispatch( setSelectedDropdownRanchValue({ value }) )
+
+        // get all the cows of the specific ranch
+        dispatch( getCows( value ) )
     }
-
-    useEffect(() => {
-      
-        dispatch( getRanches() ) // get all the ranches of the loogged user
     
-    }, [] )
-
-    // console.log({ ranches })
-    
-
     return (
 
         <div className="relative inline-flex">
@@ -35,7 +30,7 @@ export const DropdownRanch = () => {
             >
                 {
                     ranches.map( ( ranch, index ) => (
-                        <option key={ index } value={ ranch.ranchName }>{ ranch.ranchName }</option>
+                        <option key={ index } value={ ranch.id }>{ ranch.ranchName }</option>
                     ) )
                 }
             </select>
