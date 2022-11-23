@@ -1,5 +1,5 @@
 import axios from "axios"
-import { restaurantApi } from "../../../../api/restaurantsAPI"
+import { addRestaurant } from "../getRestaurants"
 import { setUploadRestaurantBranchStatus, startLoadingUploadBranch } from "./restaurantFormSlice"
 
 export const uploadRestaurantBranch = ( dataForm ) => {
@@ -25,6 +25,10 @@ export const uploadRestaurantBranch = ( dataForm ) => {
 
             dispatch( setUploadRestaurantBranchStatus({ status }) )
             // console.log( data )
+
+            // add the form in our state of getRestaurants to avoid make a request every uploaded
+            const values = dataForm
+            dispatch( addRestaurant({ values }) )
             
         } catch ( error ) {
             

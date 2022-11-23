@@ -1,4 +1,5 @@
 import axios from "axios"
+import { addRanch } from "../getRanches"
 import { setUploadRanchStatus, startLoadingUploadRanch } from "./ranchFormSlice"
 
 export const uploadRanch = ( dataForm ) => {
@@ -22,6 +23,10 @@ export const uploadRanch = ( dataForm ) => {
 
             dispatch( setUploadRanchStatus({ status }) )
             // console.log( status )
+            
+            // add the form in our state of getRanches to avoid make a request every uploaded
+            const values = dataForm
+            dispatch( addRanch({ values }) )
             
         } catch ( error ) {
             

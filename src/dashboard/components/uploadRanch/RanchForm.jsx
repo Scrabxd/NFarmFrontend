@@ -40,9 +40,6 @@ export const RanchForm = () => {
                 onSubmit={ ( values ) => {
                     console.log( 'formulario enviado' )
                     dispatch( uploadRanch( values ) ) // make a post petition through thunks to create a ranch
-                    // make that the table rerender with the new data changing the state of the table when we click the button
-                    // dispatch( setRerenderState() ) 
-                    dispatch( addRanch({ values }) )
                 } }
             >
                 
