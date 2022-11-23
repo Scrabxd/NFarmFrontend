@@ -1,13 +1,16 @@
 import { Formik } from "formik"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
+import { uploadCow } from "../../../store/slices/dashCowSlices/cowForm"
 import { getRanches } from "../../../store/slices/dashRanchSlices/getRanches"
 import { validationSchemeUploadCow } from "../../validations"
+import { SuccesMessage } from "../messages"
 import { Input, Spacer } from "@nextui-org/react"
 
 export const CowForm = () => {
 
     const dispatch = useDispatch()
+    const { status, isLoading } = useSelector( state => state.uploadCow ) // reference to store -> reducer -> uploadCow
     const { ranches } = useSelector( state => state.ranches ) // reference to store -> reducer -> ranches
 
     useEffect(() => {
@@ -19,6 +22,12 @@ export const CowForm = () => {
     return (
 
         <div className="px-3 md:px-10">
+
+            {
+                ( status === 200 ) // 200 == ok
+                    ? <SuccesMessage message='Ranch created'/>
+                    : ''
+            }
 
             <Formik
                 initialValues={{
@@ -32,6 +41,7 @@ export const CowForm = () => {
 
                 onSubmit={ ( values ) => {
                     console.log( values )
+                    dispatch( uploadCow( values, values.idRanch ) )
                 } }
             >
                 
@@ -106,7 +116,7 @@ export const CowForm = () => {
                                 >
                                     {
                                         ranches.map( ( ranch, index ) => (
-                                            <option key={ index } value={ ranch.ranchName }>{ ranch.ranchName }</option>
+                                            <option key={ index } value={ ranch.id }>{ ranch.ranchName }</option>
                                         ) )
                                     }
                                 </select>
@@ -134,6 +144,7 @@ export const CowForm = () => {
                             css={{ bg: '$primary' }}
                             value='Upload cow'
                             animated='false'
+                            disabled={ isLoading }
                         />
 
                         <Spacer y={1.5}/>

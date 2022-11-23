@@ -1,22 +1,22 @@
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { getCows } from "../../../store/slices/dashCowSlices/getCows/thunks"
 import { NoElementsMessage } from "../messages"
 import { CowsTable } from "./CowsTable"
 
 export const LoadCow = () => {
 
-    //TODO
-
     // const dispatch = useDispatch()
-	// const { cows } = useSelector( state => state.cows ) // store -> reducer -> ranches
+    // const { cows } = useSelector( state => state.cows ) // reference to store -> reducer -> cows
 
-	// useEffect(() => {
-	  
-	// 	dispatch( getCows() )
-	
-	// }, [  ] )
+    // useEffect(() => {
+    
+    //     dispatch( getCows() )
+    
+    // }, [  ])
+    
 
-    // console.log({ ranches })
-
-    const cows = []
+    // console.log({ cows })
     
     return (
         <>
