@@ -10,7 +10,7 @@ export const getRanches = () => {
         try {
     
             // request to get all the logged user's ranches
-            const { data: { ranch } } = await axios.get( 'http://nfarm-back.herokuapp.com/api/ranch?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
+            const { data: { ranch } } = await axios.get( 'http://localhost:4000/api/ranch?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
                 {
                     headers: {
                         'x-token': localStorage.getItem( 'token' )

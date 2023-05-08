@@ -12,7 +12,7 @@ export const uploadRanch = ( dataForm ) => {
         try {
 
             // get the status of the request, 201 = created
-            const { status } = await axios.post( 'http://nfarm-back.herokuapp.com/api/ranch?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
+            const { status } = await axios.post( 'http://localhost:4000/api/ranch?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
                 dataForm, 
                 {
                     headers:{

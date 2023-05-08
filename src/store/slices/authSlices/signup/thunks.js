@@ -11,7 +11,7 @@ export const registerUser = ( dataForm ) => {
         try {
 
             // get the status of the reques, 200 = ok
-            const { status } = await axios.post( "http://nfarm-back.herokuapp.com/api/nfarm?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=", dataForm )
+            const { status } = await axios.post( "http://localhost:4000/api/nfarm?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=", dataForm )
             dispatch( setRegisterStatus({ status }) )
             // console.log( status )
             
