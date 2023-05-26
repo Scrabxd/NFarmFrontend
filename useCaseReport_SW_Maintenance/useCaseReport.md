@@ -1,5 +1,5 @@
 ![Cover](cover.png)
-# Use Case Report
+# USE CASE REPORT
 **Software Engineer 8A BIS**
 
 **Teacher:** Alondra Ramos
