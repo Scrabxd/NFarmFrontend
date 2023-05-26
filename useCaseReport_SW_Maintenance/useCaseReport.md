@@ -57,7 +57,9 @@ Also maintenance is really important in this project in particular since some pa
 
 ## Esteban Pereda Soria
 For this project Gtihub was a very useful platform due to its robust set of features and collaborative capabilities. It provided us a centralized repository for our codebase, making it easy to manage version control, track changes, and collaborate with other team members.
+
 Monday provided us a complete scope by addressing project planning, task management, and team coordination. It allowed us to streamline our work processes, assign tasks, set deadlines, and monitor progress through visual representations such as Kanban boards. Something that I liked about Monday was that it offered a user-friendly interface, making the management and collaboration of our project way easier.
+
 Software maintenance is a very important matter in our project, since it is essential to keep the software up to date, address issues, and respond to user feedback. Avoiding maintenance can lead to system failures, security vulnerabilities, and reduced user satisfaction. With this in mind, software maintenance will help us to extend the lifespan of the project, improves its reliability, and allow feature additions.
 
 ## Paul Obed Vega Soto
