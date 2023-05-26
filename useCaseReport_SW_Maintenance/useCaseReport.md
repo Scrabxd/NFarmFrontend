@@ -45,18 +45,18 @@ Monday offers a comprehensive set of features that make it a suitable project ma
 ![kanbvanEx](kanbvanEx.png)
 
 
-# REFERENCES
-Raymond, D. (2023). The Pros and Cons of Using Monday.com Software. Articles for Project Managers - the Project Management Network. https://projectmanagers.net/the-pros-and-cons-of-using-monday-com-software/
-
-Seymour, S. (2023, May 21). Why will monday.com work great for any company? Monday.com will work great for any company because it uses a v. Financesonline.com. https://financesonline.com/reasons-why-monday-com-will-work-great-for-any-company/
 
 # PERSONAL CONCLUSIONS
 
 
 ## Luis Fernando Cabral Tamayo
 
+Personally I feel like the technologies we choose both on the operational side of the project is fairly usefu, on the Github side we choose it mainly due to a vast majority of the project was already in there, so It was a no brainer, also because of the stability and it being the most popular, and Monday was another option really similar to click-up which was a great starting point, and the free tier also has a really generous level of control perfect for a project this size.
+
+Also maintenance is really important in this project in particular since some parts of the code are not as functional as one would wish, adding features and re disigning the project in genral will become work like experience and really brigthen another aspect of software creation itself, I will enjoy going back to my first Node code with the experience and knowledge I now have.
 
 ## Esteban Pereda Soria
+
 
 ## Paul Obed Vega Soto
 
@@ -65,5 +65,12 @@ Seymour, S. (2023, May 21). Why will monday.com work great for any company? Mond
 
 
 ## Alejandra Katherina Corrales Muro
+
+
+# REFERENCES
+Raymond, D. (2023). The Pros and Cons of Using Monday.com Software. Articles for Project Managers - the Project Management Network. https://projectmanagers.net/the-pros-and-cons-of-using-monday-com-software/
+
+Seymour, S. (2023, May 21). Why will monday.com work great for any company? Monday.com will work great for any company because it uses a v. Financesonline.com. https://financesonline.com/reasons-why-monday-com-will-work-great-for-any-company/
+
 
 
