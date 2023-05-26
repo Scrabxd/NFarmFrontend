@@ -1,4 +1,16 @@
-![Portada]()
+![Cover](cover.png)
+# Use Case Report
+**Software Engineer 8A BIS**
+
+**Teacher:** Alondra Ramos
+
+**Students:**
+- Luis Fernando Cabral Tamayo
+- Esteban Pereda Soria
+- Alejandra Katherina Corrales Muro
+- José Arturo Claudio Barrios
+- Paul Obed Vega Soto
+
 # GITHUB
 Github has revolutionised the way software projects are maintained and collaborated upon, providing developers with an invaluable platform for streamlined software maintenance. With its versatile range of features and tools, Github has become an indispensable asset for teams and individuals alike, empowering them to efficiently manage, track, and update their projects. Whether it's bug fixes, feature enhancements, or version control, Github offers a comprehensive set of functionalities that enhance the software maintenance process and foster collaboration among developers.
 1. **Version Control**:  GitHub provides powerful version control capabilities, allowing us to track changes, collaborate, and manage different versions of the software. For a project like this, where data related to the life process of cows is being tracked, having a robust version control system ensures that the project remains transparent and can be easily reverted to previous versions if needed.
