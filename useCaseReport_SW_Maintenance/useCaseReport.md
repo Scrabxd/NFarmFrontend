@@ -66,7 +66,9 @@ Software maintenance is a very important matter in our project, since it is esse
 
 
 ## José Arturo Claudio Barrios
+The usage of GIT as a control version system is great during the development, maintenance, and updating of software. This tool helps to keep track of the changes made over time. Thus, if there is a point in which data is compromised or there are issues, we can go back to a version in which the software was in a stable state. GitHub helps us to manage projects easily, allowing us to work with a GUI. The thing I find most useful is to have a remote space to upload projects and have access from any device to which we need to work. We can also share it with colleagues and collaborate.
 
+Now, in the space of collaboration, we have Monday. This management tool will help us keep track of team progress, assign tasks, show, and have a more structured workflow.
 
 ## Alejandra Katherina Corrales Muro
 
