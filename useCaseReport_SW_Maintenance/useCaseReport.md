@@ -39,7 +39,7 @@ Monday offers a comprehensive set of features that make it a suitable project ma
 # METHODOLOGY
 Repository creation
 
-![GitCommands](git commands.jpeg)
+![GitCommands](git%20commands.jpeg)
 
 
 # REFERENCES
