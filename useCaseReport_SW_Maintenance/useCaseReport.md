@@ -18,8 +18,8 @@ Github has revolutionised the way software projects are maintained and collabora
 2. **Documentation and Issue Tracking**: GitHub provides a variety of tools for documenting code, managing issues, and tracking project progress. These features are crucial for maintaining a comprehensive record of the software's functionality, documenting the development process, and addressing any bugs or feature requests that may arise.
 3. **Security and Reliability**: GitHub offers robust security features, such as encrypted connections, two-factor authentication, and access control mechanisms. These measures help protect the project's source code, data, and associated intellectual property from unauthorised access. Given the sensitive nature of the data being tracked, ensuring the security and reliability of the software is essential.
 4. **Continuous Integration and Deployment**: GitHub integrates seamlessly with various continuous integration and deployment tools, enabling automated testing, code reviews, and deployment workflows. This helps maintain the project's stability and reliability by automating keys. Regular updates and improvements can be implemented efficiently, ensuring that the software remains up-to-date and capable of tracking the evolving life process of cows accurately.
-## MONDAY
 
+## MONDAY
 Effective project management is crucial for the successful maintenance of software systems. It involves planning, organizing, and executing tasks to ensure timely delivery, efficient resource allocation, and collaboration among team members. **Monday** is a versatile project management tool that offers numerous features and benefits, making it an excellent choice for managing software maintenance projects.
 
 1. **Task and Project Tracking**: Monday provides a visual and intuitive interface for creating and tracking tasks and projects. It allows you to break down complex software maintenance activities into smaller, manageable tasks.
@@ -37,10 +37,10 @@ Effective project management is crucial for the successful maintenance of softwa
 Monday offers a comprehensive set of features that make it a suitable project management tool for software maintenance projects. Its task and project tracking capabilities, collaboration and communication features, resource management functionalities, time and schedule management tools, reporting and analytics capabilities, and integration options provide a robust framework for effectively managing software maintenance tasks.
 
 # METHODOLOGY
-Repository creation
-
+## PROJECT UPLUODING TO GITHUB
 ![GitCommands](git%20commands.jpeg)
 
+## MANAGEMENT ENVIRONMENT
 
 # REFERENCES
 Raymond, D. (2023). The Pros and Cons of Using Monday.com Software. Articles for Project Managers - the Project Management Network. https://projectmanagers.net/the-pros-and-cons-of-using-monday-com-software/
