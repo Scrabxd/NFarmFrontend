@@ -49,3 +49,21 @@ Monday offers a comprehensive set of features that make it a suitable project ma
 Raymond, D. (2023). The Pros and Cons of Using Monday.com Software. Articles for Project Managers - the Project Management Network. https://projectmanagers.net/the-pros-and-cons-of-using-monday-com-software/
 
 Seymour, S. (2023, May 21). Why will monday.com work great for any company? Monday.com will work great for any company because it uses a v. Financesonline.com. https://financesonline.com/reasons-why-monday-com-will-work-great-for-any-company/
+
+# PERSONAL CONCLUSIONS
+
+
+## Luis Fernando Cabral Tamayo
+
+
+## Esteban Pereda Soria
+
+## Paul Obed Vega Soto
+
+
+## José Arturo Claudio Barrios
+
+
+## Alejandra Katherina Corrales Muro
+
+
