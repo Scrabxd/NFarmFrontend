@@ -66,6 +66,7 @@ Also maintenance is really important in this project in particular since some pa
 
 ## Alejandra Katherina Corrales Muro
 
+Both GitHub and Monday offer valuable tools and features for managing and maintaining software projects. GitHub provides powerful version control, documentation, issue tracking, security, and continuous integration features, while Monday provides task and project tracking, collaboration, resource management, time management, reporting, and integration features. Together, these platforms improve the efficiency, collaboration, and organization of software maintenance projects, enabling teams and individuals to successfully manage and update their projects. Personally, both are great to develop a project, because it helps a lot to make the thiongs more organized and understandables as posible.
 
 # REFERENCES
 Raymond, D. (2023). The Pros and Cons of Using Monday.com Software. Articles for Project Managers - the Project Management Network. https://projectmanagers.net/the-pros-and-cons-of-using-monday-com-software/
