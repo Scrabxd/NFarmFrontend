@@ -36,7 +36,7 @@ Effective project management is crucial for the successful maintenance of softwa
 
 Monday offers a comprehensive set of features that make it a suitable project management tool for software maintenance projects. Its task and project tracking capabilities, collaboration and communication features, resource management functionalities, time and schedule management tools, reporting and analytics capabilities, and integration options provide a robust framework for effectively managing software maintenance tasks.
 
-Ex.png
+![kanbvanEx](kanbvanEx.png)
 
 # METHODOLOGY
 ## PROJECT UPLUODING TO GITHUB
