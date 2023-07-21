@@ -10,7 +10,7 @@ export const CowImageForm = () => {
     const { lastCowId } = useSelector( state => state.uploadCow ) // reference to store -> reducer -> uploadCow
 
     return (
-        <div className="px-3 md:px-10">
+        <div>
 
             <Formik
                 initialValues={{
@@ -26,14 +26,13 @@ export const CowImageForm = () => {
                 {/* form props from Formik */}
                 { ({ values, errors, touched, handleSubmit, handleChange, handleBlur, setFieldValue }) => (
 
-                    <form onSubmit={ handleSubmit }>
-
-                        <Divider />
-
-                        <Spacer y={1.5}/>
+                    <form className="w-full" onSubmit={ handleSubmit }>
 
                         <input
-                            className="w-full rounded-xl text-[#147452] font-semibold p-2 bg-[#18916654] focus:outline-none appearance-none"
+                            className="w-full rounded-xl border-2 border-[#005100] cursor-pointer text-[#005100] font-semibold p-2 bg-[#FFFFFF] focus:outline-none appearance-none
+                            file:rounded-md file:border-0 file:text-sm file:font-semibold
+                            file:bg-[#005100] file:text-white
+                            hover:file:bg-[#7CB93E]"
                             type="file"
                             name="file"
                             onChange={ ( event ) => {
@@ -41,7 +40,7 @@ export const CowImageForm = () => {
                             } }
                         />
 
-                        <Spacer y={1.5}/>
+                        {/* <Spacer y={1.5}/>
 
                         <Input 
                             type="submit" 
@@ -53,7 +52,7 @@ export const CowImageForm = () => {
                             animated='false'
                         />
 
-                        <Spacer y={1.5}/>
+                        <Spacer y={1.5}/> */}
 
                     </form> 
 

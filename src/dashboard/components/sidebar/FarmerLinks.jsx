@@ -5,16 +5,16 @@ export const FarmerLinks = () => {
         <ul>
             <li>
                 <NavLink
-                    className="text-inherit font-semibold text-base sm:text-lg hover:bg-[#323232] p-2 rounded-lg duration-150" 
+                    className="text-inherit font-semibold text-base sm:text-lg hover:bg-[#F5F5F7] p-2 rounded-lg duration-150" 
                     to="/dash/upload-cow"
                 >
-                    Upload a cow
+                    Upload Cows
                 </NavLink>
             </li>
 
             <li>
                 <NavLink
-                    className="text-inherit font-semibold text-base sm:text-lg hover:bg-[#323232] p-2 rounded-lg duration-150 w-full" 
+                    className="text-inherit font-semibold text-base sm:text-lg hover:bg-[#F5F5F7] p-2 rounded-lg duration-150" 
                     to="/dash/cattle"
                 >
                     Your Cattle
@@ -23,10 +23,10 @@ export const FarmerLinks = () => {
 
             <li>
                 <NavLink
-                    className="text-inherit font-semibold text-base sm:text-lg hover:bg-[#323232] p-2 rounded-lg duration-150" 
+                    className="text-inherit font-semibold text-base sm:text-lg hover:bg-[#F5F5F7] p-2 rounded-lg duration-150" 
                     to="/dash/upload-ranch"
                 >
-                    Upload a Ranch
+                    Upload Ranch
                 </NavLink>
             </li>
         </ul>

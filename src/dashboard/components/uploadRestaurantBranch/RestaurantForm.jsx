@@ -6,7 +6,7 @@ import { uploadRestaurantBranch } from "../../../store/slices/dashRestaurantSlic
 import { addRestaurant, setRerenderState } from "../../../store/slices/dashRestaurantSlices/getRestaurants/"
 
 import { SuccesMessage } from "../messages"
-import { Input, Loading, Spacer } from "@nextui-org/react"
+import { Button, Input, Loading, Spacer } from "@nextui-org/react"
 
 export const RestaurantForm = () => {
 
@@ -41,13 +41,14 @@ export const RestaurantForm = () => {
                                 // make that the table rerender with the new data changing the state of the table when we click the button
                                 // dispatch( setRerenderState() )
                                 dispatch( addRestaurant({ values }) )
+                                console.log(status)
                             } }
                         >
                             
                             {/* form props from Formik */}
                             { ({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
 
-                                <form className="w-full flex flex-col" onSubmit={ handleSubmit }>
+                                <form className="w-full flex flex-col sm:items-center" onSubmit={ handleSubmit }>
 
                                     <Spacer y={1.5}/>
 
@@ -82,7 +83,7 @@ export const RestaurantForm = () => {
 
                                     <Spacer y={1.5}/>
 
-                                    <div className="flex flex-col flex-wrap md:flex-row md:flex-nowrap">
+                                    <div className="flex flex-col flex-wrap md:flex-row md:flex-nowrap w-full">
 
                                         <div className="w-full md:w-1/3">
                                             <Input 
@@ -137,7 +138,7 @@ export const RestaurantForm = () => {
 
                                         <Spacer  y={ 1.5 } />
 
-                                    <div className="flex">
+                                    <div className="flex w-full">
 
                                         <div className="w-1/2">
                                             <Input 
@@ -179,16 +180,14 @@ export const RestaurantForm = () => {
 
                                     {
                                         ( !isLoading )
-                                            ? <Input 
+                                            ? <Button 
                                                 type="submit" 
                                                 aria-label="send-form"
                                                 bordered
                                                 fullWidth
-                                                css={{ bg: '$primary' }}
-                                                value='Upload Restaurant'
-                                                animated='false' 
                                                 disabled={ isLoading }
-                                            />
+                                                css={{ color: "#F5F5F7", bg: "#005100" }}
+                                            >Upload Restaurant</Button>
                                             : <Loading type="points"/>
                                     }
 

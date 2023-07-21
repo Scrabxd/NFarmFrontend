@@ -23,7 +23,7 @@ export const RanchesTable = ({ ranches }) => {
 					<Table.Column>Ranch Name</Table.Column>
 					<Table.Column>Country</Table.Column>
 					<Table.Column>City</Table.Column>
-					<Table.Column >Cow Heads</Table.Column>
+					<Table.Column>Cow Heads</Table.Column>
 					<Table.Column align="center">Actions</Table.Column>
 				</Table.Header>
 				<Table.Body>
@@ -37,14 +37,14 @@ export const RanchesTable = ({ ranches }) => {
 								<Table.Cell>
 									<div className="w-full flex justify-around">
 										<Tooltip
-											content="Delete ranch"
+											content="Delete Ranch"
 											color="error"
 											onClick={ () => console.log( ranch.ranchName ) }
 										>
 											<DeleteIcon size={20} fill="#FF0080"/>
 										</Tooltip>
 										<Tooltip
-											content="Edit ranch"
+											content="Edit Ranch"
 											onClick={ () => console.log( ranch.ranchName ) }
 										>
 											<EditIcon size={20} fill="#979797"/>

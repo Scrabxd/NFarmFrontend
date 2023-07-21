@@ -39,7 +39,7 @@ export const ModalQR = ({ idCow }) => {
                 flat
                 auto
                 rounded
-                css={{ color: "#fff", bg: "$primary" }}
+                css={{ color: "#fff", bg: "#005100" }}
                 onPress={ () => { dispatch( openModal() ) } } 
             >
                 QR code

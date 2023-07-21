@@ -17,15 +17,19 @@ export const SidebarMenu = () => {
     const { idRole, name, lastName, email } = JSON.parse( localStorage.getItem( 'userData' ) )
     const farmerRole = 1
 
+    const handleRefresh = () => {
+        localStorage.clear(); // Clears the Local Storage data
+      };
+
     return (
 
         <>
             {/* full screen sidebar in movile and sidebar always open in tablet or desketop resolution */}
-            <div className={ `h-full ${ isOpenSidebar ? 'w-screen' : 'w-0' } w-screen md:w-56 bg-[#1b1b1b] duration-300 absolute top-0 left-0 z-10 md:relative` }>
+            <div className={ `h-full ${ isOpenSidebar ? 'w-screen' : 'w-0' } w-screen md:w-56 bg-[#C2C2C4] duration-300 absolute top-0 left-0 z-10 md:relative` }>
 
                 {/* close sidebar when click on the icon */}
                 <div className="absolute top-0 -right-0 md:hidden">
-                    <FontAwesomeIcon icon={ faXmark } className="p-4 cursor-pointer text-lg" onClick={ () => { dispatch( closeSidebar() ) } }/>
+                    <FontAwesomeIcon icon={ faXmark } className="px-8 py-4 cursor-pointer text-lg" onClick={ () => { dispatch( closeSidebar() ) } }/>
                 </div>
 
                 {/* in movile hide the content if the sidebar is closed, in desktop always show the content */}
@@ -38,8 +42,8 @@ export const SidebarMenu = () => {
                     </div>
 
                     <div className="w-full text-center mb-2">
-                        <p>{ name + ' ' + lastName }</p>
-                        <small >{ email }</small>
+                        <p className="text-lg font-semibold text-[#1D1D1F]">{ name + ' ' + lastName }</p>
+                        <p className="text-base font-semibold text-[#1D1D1F] mb-4">{ email }</p>
                         <Divider css={{ mt: 6 }} />
                     </div>
 
@@ -52,9 +56,14 @@ export const SidebarMenu = () => {
                     </div>
 
 
-                    <div className="w-full text-center bottom-0 absolute">
-                        <Divider css={{ mt: 6 }} />
-                        <p className="p-2">Log out</p>
+                    <div className="w-full text-center bottom-0 absolute my-2">
+                        <Divider css={{ mb: 6 }}/>
+                            <a className="text-lg font-semibold text-[#1D1D1F] my-2 flex justify-center" onClick={handleRefresh} href="/#">Log Out 
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6">
+                                    <path d="M4,12a1,1,0,0,0,1,1h7.59l-2.3,2.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l4-4a1,1,0,0,0,.21-.33,1,1,0,0,0,0-.76,1,1,0,0,0-.21-.33l-4-4a1,1,0,1,0-1.42,1.42L12.59,11H5A1,1,0,0,0,4,12ZM17,2H7A3,3,0,0,0,4,5V8A1,1,0,0,0,6,8V5A1,1,0,0,1,7,4H17a1,1,0,0,1,1,1V19a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V16a1,1,0,0,0-2,0v3a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V5A3,3,0,0,0,17,2Z"></path>
+                                </svg>
+                            </a>
+                        
                     </div>
 
                 </div>

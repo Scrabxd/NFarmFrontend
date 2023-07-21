@@ -10,7 +10,7 @@ export const getRestaurants = () => {
         try {
 
             // request to get all the logged user's restaurants
-            const { data: { findRestaurant } } = await axios.get( 'http://nfarm-back.herokuapp.com/api/restaurant?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
+            const { data: { findRestaurant } } = await axios.get( 'http://localhost:4000/api/restaurant?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
                 {
                     headers: {
                         'x-token': localStorage.getItem( 'token' )

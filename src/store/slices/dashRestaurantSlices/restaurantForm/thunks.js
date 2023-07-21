@@ -14,7 +14,7 @@ export const uploadRestaurantBranch = ( dataForm ) => {
             // get the status of the request, 201 = created
             // const { status } = await restaurantApi( dataForm )
             // const  { status } = await restaurantApi.post( dataForm )
-            const { status } = await axios.post( 'http://nfarm-back.herokuapp.com/api/restaurant?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
+            const { status } = await axios.post( 'http://localhost:4000/api/restaurant?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
                 dataForm, 
                 {
                     headers:{

@@ -35,14 +35,14 @@ export const RestaurantsTable = ({ restaurants }) => {
 								<Table.Cell>
 									<div className="w-full flex justify-around">
 										<Tooltip
-											content="Delete ranch"
+											content="Delete Restaurant"
 											color="error"
 											onClick={ () => console.log( restaurant.branchName ) }
 										>
 											<DeleteIcon size={20} fill="#FF0080"/>
 										</Tooltip>
 										<Tooltip
-											content="Edit ranch"
+											content="Edit Restaurant"
 											onClick={ () => console.log( restaurant.branchName ) }
 										>
 											<EditIcon size={20} fill="#979797"/>

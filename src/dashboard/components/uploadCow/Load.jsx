@@ -1,10 +1,9 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getRanches } from "../../../store/slices/dashRanchSlices/getRanches"
-import { NoElementsMessage } from "../messages"
-import { CowsList } from "./CowsList"
+import { ModalCow } from "./ModalCow"
 
-export const LoadCow = () => {
+export const Load = () => {
 
     const dispatch = useDispatch()
     const { ranches } = useSelector( state => state.ranches ) // reference to store -> reducer -> ranches
@@ -15,16 +14,12 @@ export const LoadCow = () => {
     
     }, [] )
     
-
-    // const cows = []
-    // console.log({ ranches })
-    
     return (
         <>
         {
             ( ranches.length != 0 ) // check if we have any ranches
-                ? <CowsList ranches={ ranches } />
-                : <NoElementsMessage title="Upload a cow" message="You haven't uploaded any cow"/>
+                ? <span></span>
+                : <ModalCow/>
         }
     </> 
     )

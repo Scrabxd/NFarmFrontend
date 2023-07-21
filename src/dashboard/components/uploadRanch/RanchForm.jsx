@@ -5,7 +5,7 @@ import { uploadRanch } from "../../../store/slices/dashRanchSlices/rancheForm"
 
 import { validationSchemeUploadRanch } from "../../validations"
 import { SuccesMessage } from "../messages"
-import { Input, Loading, Spacer } from "@nextui-org/react"
+import { Input, Loading, Spacer, Button } from "@nextui-org/react"
 
 export const RanchForm = () => {
 
@@ -46,7 +46,7 @@ export const RanchForm = () => {
                 {/* form props from Formik */}
                 { ({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
 
-                    <form className="w-full flex flex-col" onSubmit={ handleSubmit }>
+                    <form className="w-full flex flex-col sm:items-center" onSubmit={ handleSubmit }>
 
                         <Spacer y={1.5}/>
 
@@ -81,7 +81,7 @@ export const RanchForm = () => {
 
                         <Spacer y={1.5}/>
 
-                        <div className="flex">
+                        <div className="flex w-full">
 
                             <div className="w-1/2">
                                 <Input 
@@ -118,7 +118,7 @@ export const RanchForm = () => {
 
                             <Spacer  y={ 1.5 } />
 
-                        <div className="flex">
+                        <div className="flex w-full">
 
                             <div className="w-1/2">
                                 <Input 
@@ -176,16 +176,14 @@ export const RanchForm = () => {
 
                         {
                             ( !isLoading )
-                                ? <Input 
-                                    type="submit" 
-                                    aria-label="send-form"
-                                    bordered
-                                    fullWidth
-                                    css={{ bg: '$primary' }}
-                                    value='Upload Ranch'
-                                    animated='false' 
-                                    disabled={ isLoading }
-                                />
+                                ? <Button 
+                                type="submit" 
+                                aria-label="send-form"
+                                bordered
+                                fullWidth
+                                disabled={ isLoading }
+                                css={{ color: "#F5F5F7", bg: "#005100" }}
+                            >Upload Ranch</Button>
                                 : <Loading type="points"/>
                         }
 

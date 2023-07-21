@@ -1,9 +1,9 @@
 import { NextUIProvider } from "@nextui-org/react"
-import { darkTheme } from "./darkTheme"
+import { lightTheme } from "./lightTheme"
 
 export const AppTheme = ({ children }) => {
     return (
-        <NextUIProvider theme={ darkTheme }>
+        <NextUIProvider theme={ lightTheme }>
             
             { children }
 

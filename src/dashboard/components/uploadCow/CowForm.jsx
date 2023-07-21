@@ -5,7 +5,8 @@ import { uploadCow } from "../../../store/slices/dashCowSlices/cowForm"
 import { getRanches } from "../../../store/slices/dashRanchSlices/getRanches"
 import { validationSchemeUploadCow } from "../../validations"
 import { SuccesMessage } from "../messages"
-import { Input, Spacer } from "@nextui-org/react"
+import { Input, Spacer, Button } from "@nextui-org/react"
+import { CowImageForm } from "./CowImageForm"
 
 export const CowForm = () => {
 
@@ -21,7 +22,7 @@ export const CowForm = () => {
 
     return (
 
-        <div className="px-3 md:px-10">
+        <div className="px-3 md:px-10" style={{margin: "0"}}>
 
             {
                 ( status === 200 ) // 200 == ok
@@ -48,7 +49,7 @@ export const CowForm = () => {
                 {/* form props from Formik */}
                 { ({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
 
-                    <form onSubmit={ handleSubmit }>
+                    <form className="w-full flex flex-col sm:items-center" onSubmit={ handleSubmit }>
 
                         <Spacer y={1.5}/>
 
@@ -83,7 +84,7 @@ export const CowForm = () => {
 
                         <Spacer y={1.5}/>
 
-                        <div className="flex">
+                        <div className="flex w-full">
 
                             <div className="w-1/2">
                                 <Input 
@@ -108,7 +109,7 @@ export const CowForm = () => {
                                 <svg className="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fillRule="nonzero"/></svg>
 
                                 <select 
-                                    className="w-full rounded-xl text-[#147452] font-semibold h-10 pl-5 pr-10 bg-[#18916654] focus:outline-none appearance-none"
+                                    className="w-full rounded-xl border-2 border-[#005100] text-[#005100] font-semibold h-10 pl-5 pr-10 bg-[#FFFFFF] focus:outline-none appearance-none"
                                     value={ values.idRanch } 
                                     onChange={ handleChange }
                                     name="idRanch"
@@ -135,18 +136,19 @@ export const CowForm = () => {
                         /> */}
 
                         <Spacer y={1.5}/>
+                        
+                        <CowImageForm />
 
+                        <Spacer y={1.5}/>
 
-                        <Input 
+                        <Button 
                             type="submit" 
                             aria-label="send-form"
                             bordered
                             fullWidth
-                            css={{ bg: '$primary' }}
-                            value='Upload cow'
-                            animated='false'
                             disabled={ isLoading }
-                        />
+                            css={{ color: "#F5F5F7", bg: "#005100" }}
+                        >Upload Cow</Button>
 
                         <Spacer y={1.5}/>
 

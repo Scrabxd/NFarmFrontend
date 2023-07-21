@@ -21,7 +21,7 @@ export const LoadYourCattle = () => {
             {
                 ( ranches.length != 0 )
                     ? <CattleList ranches={ ranches }/> 
-                    : <NoElementsMessage title="You haven't uploaded any ranch"/>
+                    : <NoElementsMessage title="Your cattle" message="You haven't uploaded any ranch"/>
             }
         </>
     )

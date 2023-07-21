@@ -10,7 +10,7 @@ export const SignInFrom = () => {
 
     return (
         
-        <AuthLayout title='Create an account'>
+        <AuthLayout content="Already have an account?" input="Login here" route="/auth/login">
 
             <div className="flex justify-center items-center text-center mb-5">
                 

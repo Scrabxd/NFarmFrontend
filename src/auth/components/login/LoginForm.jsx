@@ -17,7 +17,7 @@ export const LoginForm = () => {
 
     return (
 
-        <AuthLayout title='Access to the system'>
+        <AuthLayout content="Do not have an account?" input="Sign Up here" route="/auth/register">
 
             {
                 ( errorMessage )
@@ -31,7 +31,7 @@ export const LoginForm = () => {
                     : ''
             }
 
-            <Card css={{ border:"none" }}>
+            <Card css={{ border:"none"}}>
                 <Card.Body>
 
                     <Formik
@@ -49,11 +49,17 @@ export const LoginForm = () => {
 
                         } }
                     >
+                        
 
                         {/* form props from Formik */}
                         { ({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
 
                             <form className="w-full flex flex-col gap-2" onSubmit={ handleSubmit }>
+
+                                <div className="flex flex-col relative items-center">
+                                    <p className="text-4xl text-[#7CB93E] sm:text-5xl">Welcome</p>
+                                    <p className="text-lg text-[#444446] sm:text-xl">Please login to continue</p>
+                                </div>
 
                                 <Spacer x={1.5}/>
 
@@ -90,10 +96,11 @@ export const LoginForm = () => {
                                         ? <Input 
                                             type="submit" 
                                             aria-label="send-form" 
-                                            value='Access' 
+                                            value='Login' 
                                             bordered
                                             fullWidth
-                                            css={{ bg: '$primary', cursor: 'pointer' }}
+                                            css={{ bg: '#7CB93E', cursor: 'pointer'}}
+                                            style={{color:"#EBEBED"}}
                                             animated='false'
                                         />
                                         : <Loading type="points"/>

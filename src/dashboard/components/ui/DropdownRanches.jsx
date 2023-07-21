@@ -18,11 +18,13 @@ export const DropdownRanches = ({ ranches }) => {
     
     return (
 
-        <div className="relative inline-flex">
-            <svg className="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fillRule="nonzero"/></svg>
+        <div className="relative inline-flex mb-4">
+            <svg className="w-6 h-6 absolute top-0 right-0 my-2 mr-3 pointer-events-none" viewBox="0 0 24 24" fill="#none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 8.79289C6.68342 8.40237 7.31658 8.40237 7.70711 8.79289L12 13.0858L16.2929 8.79289C16.6834 8.40237 17.3166 8.40237 17.7071 8.79289C18.0976 9.18342 18.0976 9.81658 17.7071 10.2071L12.7071 15.2071C12.3166 15.5976 11.6834 15.5976 11.2929 15.2071L6.29289 10.2071C5.90237 9.81658 5.90237 9.18342 6.29289 8.79289Z" fill="#F5F5F7"/>
+            </svg>
 
             <select 
-                className="rounded-xl text-[#147452] font-semibold h-10 pl-5 pr-10 bg-[#18916654] focus:outline-none appearance-none"
+                className="rounded-xl text-[#F5F5F7] font-semibold h-10 pl-5 pr-10 bg-[#7CB93E99] focus:outline-none appearance-none"
                 value={ dropdownValue } 
                 onChange={ handleChange }
             >
