@@ -9,7 +9,7 @@ export const NoElementsMessage = ({ title, message }) => {
                 </div>
                 <div className='flex flex-col justify-center items-center p-1' style={{filter: 'none'}}>
                     <p className="text-3xl md:text-6xl font-semibold text-[#F5F5F7] text-center" >{ title }</p>
-                    <img src='/assets/img/about/cowi.png' className="w-20 md:w-24" />
+                    <img src='/assets/img/logos/nfarm-logoCircle.png' className="mt-8 w-24 md:w-32 drop-shadow-md" />
                     <p className="text-xl md:text-3xl font-semibold text-center text-[#F5F5F7]">{ message }</p>
                 </div>
             </div>

@@ -1,18 +1,29 @@
 import { Card, Col, Row, Text } from "@nextui-org/react";
 import { ModalQR } from "./ModalQR";
 
-export const CattleItem = ({ breed, name, weight, id }) => {
+export const CattleItem = ({ breed, name, weight, id, images }) => {
+
+    // console.log(images)
+
+    const deleteAfterComma = (str) => {
+        const index = str.indexOf(',');
+        return index !== -1 ? str.substring(0, index) : str;
+      };
+    
+      const resultString = deleteAfterComma(images);
+
+    // console.log(resultString)
 
     return (
         
-        <Card css={{ maxWidth: "17rem", minWidth:"14rem", maxHeight: "17rem", minHeight: "14rem", border: "none" }}>
+        <Card css={{ width: "17rem", height: "14rem", border: "none" }}>
             <Card.Body css={{ p: 0 }}>
             <Card.Image
-                src="/assets/img/cow.jfif"
+                src={resultString}
                 objectFit="cover"
-                // width="100%"
-                // height="100%"
-                alt="Relaxing app background"
+                width="100%"
+                height="100%"
+                alt={`Cow: ${name}`}
             />
             </Card.Body>
             <Card.Footer

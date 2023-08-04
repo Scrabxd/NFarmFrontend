@@ -9,12 +9,13 @@ export const uploadCow = ( dataForm, idRanch ) => {
 
         // make a post request to register a new user
         try {
- 
+            console.log(dataForm)
             // get the status of the request, 201 = created
-            const { status, data: { createCow: { id } } } = await axios.post( 'http://localhost:4000/api/cow?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
+            const { status, data: { createCow: { id } } } = await axios.post( 'http://localhost:4000/api/cow', 
                 dataForm, 
                 {
                     headers:{
+                        'Content-Type': 'multipart/form-data',
                         'x-token': localStorage.getItem( 'token' ),
                         'idRanch': idRanch
                     }

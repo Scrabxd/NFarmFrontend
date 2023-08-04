@@ -1,14 +1,22 @@
 import { Formik } from "formik"
 import { useDispatch, useSelector } from "react-redux"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { uploadCow } from "../../../store/slices/dashCowSlices/cowForm"
 import { getRanches } from "../../../store/slices/dashRanchSlices/getRanches"
 import { validationSchemeUploadCow } from "../../validations"
 import { SuccesMessage } from "../messages"
-import { Input, Spacer, Button } from "@nextui-org/react"
+import { Input, Spacer, Button, Loading } from "@nextui-org/react"
 import { CowImageForm } from "./CowImageForm"
 
 export const CowForm = () => {
+
+    const [timeLeft, setTimeLeft] = useState(5); // 5 seconds initially
+
+    const [archivos, setArchivos] = useState(null);
+
+    const subirArchivos = e => {
+        setArchivos(e);
+    }
 
     const dispatch = useDispatch()
     const { status, isLoading } = useSelector( state => state.uploadCow ) // reference to store -> reducer -> uploadCow
@@ -20,13 +28,33 @@ export const CowForm = () => {
     
     }, [] )
 
+    useEffect(() => {
+        let intervalId;
+    
+        if (status === 200 && timeLeft > 0) {
+          intervalId = setInterval(() => {
+            setTimeLeft((prevTime) => prevTime - 1);
+          }, 1000); // Update time every second (1000 milliseconds)
+        }
+    
+        return () => {
+          clearInterval(intervalId);
+        };
+      }, [status, timeLeft]);
+    
+      useEffect(() => {
+        if (status === 200 && timeLeft === 0) {
+          window.location.reload();
+        }
+      }, [status, timeLeft]);
+
     return (
 
         <div className="px-3 md:px-10" style={{margin: "0"}}>
 
             {
                 ( status === 200 ) // 200 == ok
-                    ? <SuccesMessage message='Ranch created'/>
+                    ? <><Spacer y={1.5}/><SuccesMessage message={`Wait! Loading Information in ${timeLeft} Seconds`}/></>
                     : ''
             }
 
@@ -35,14 +63,26 @@ export const CowForm = () => {
                     name: '',
                     breed: '',
                     weight: '',
-                    idRanch: ''
+                    idRanch: '',
+                    files: [],
                 }}
 
                 validationSchema={ validationSchemeUploadCow }
 
                 onSubmit={ ( values ) => {
-                    console.log( values )
-                    dispatch( uploadCow( values, values.idRanch ) )
+                    const f = new FormData();
+
+                    f.append("name", values.name)
+                    f.append("breed", values.breed)
+                    f.append("weight", values.weight)
+                    f.append("idRanch", values.idRanch)
+                    for (let index = 0; index < archivos.length; index++) {
+                        f.append("imageArray", archivos[index]);
+                    }
+                    // for (const pair of f.entries()) {
+                    //     console.log(`${pair[0]}, ${pair[1]}`);
+                    //   }
+                    dispatch( uploadCow( f, values.idRanch ) )
                 } }
             >
                 
@@ -137,18 +177,31 @@ export const CowForm = () => {
 
                         <Spacer y={1.5}/>
                         
-                        <CowImageForm />
+                        <input
+                            className="w-full rounded-xl border-2 border-[#005100] cursor-pointer text-[#005100] font-semibold p-2 bg-[#FFFFFF] focus:outline-none appearance-none
+                            file:rounded-md file:border-0 file:text-sm file:font-semibold
+                            file:bg-[#005100] file:text-white
+                            hover:file:bg-[#7CB93E]"
+                            type="file"
+                            name="files"
+                            onChange={ (e) => subirArchivos(e.target.files) }
+                            multiple
+                        />
 
                         <Spacer y={1.5}/>
 
-                        <Button 
+                        {
+                        ( !isLoading )
+                        ? <Button 
                             type="submit" 
                             aria-label="send-form"
                             bordered
                             fullWidth
                             disabled={ isLoading }
                             css={{ color: "#F5F5F7", bg: "#005100" }}
-                        >Upload Cow</Button>
+                            >Upload Cow</Button>
+                        : <Loading type="points"/>
+                        }
 
                         <Spacer y={1.5}/>
 

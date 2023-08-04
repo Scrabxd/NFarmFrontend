@@ -19,7 +19,7 @@ export const RanchForm = () => {
 
             {
                 ( status === 201 ) // 201 == created
-                    ? <SuccesMessage message='Ranch created'/>
+                    ? <SuccesMessage message='Ranch Created'/>
                     : ''
             }
 

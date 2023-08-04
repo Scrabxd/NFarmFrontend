@@ -36,8 +36,9 @@ export const SidebarMenu = () => {
                 <div className={ `${ isOpenSidebar ? 'block' : 'hidden' } md:block` }>
 
                     <div className="flex justify-center items-center py-4">
-                        <div className="border-2 rounded-full w-16 h-16 bg-purple-600">
-                    </div>
+                        {/* <div className="border-2 rounded-full w-16 h-16 bg-purple-600">
+                        </div> */}
+                        <img src="/assets/img/logos/nfarm-logoCircle.png" alt="NFarmLogo" className="w-auto h-16 drop-shadow-xl"/>
 
                     </div>
 
