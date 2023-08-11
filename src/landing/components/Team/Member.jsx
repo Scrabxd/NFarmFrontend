@@ -48,6 +48,7 @@ export const Member= ({ name, role, social, img }) => (
                     <User.Link
                     color={"inherit"}
                     href={ social }
+                    target={"_blank"}
                     css={{fontWeight:"bold"}}
                     >
 

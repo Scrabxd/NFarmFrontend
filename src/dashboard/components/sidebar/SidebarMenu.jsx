@@ -42,7 +42,7 @@ export const SidebarMenu = () => {
 
                     </div>
 
-                    <div className="w-full text-center mb-2">
+                    <div className="w-full text-center mb-2 overflow-x-hidden">
                         <p className="text-lg font-semibold text-[#1D1D1F]">{ name + ' ' + lastName }</p>
                         <p className="text-base font-semibold text-[#1D1D1F] mb-4">{ email }</p>
                         <Divider css={{ mt: 6 }} />

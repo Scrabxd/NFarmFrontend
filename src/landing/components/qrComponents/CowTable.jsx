@@ -25,13 +25,18 @@ export const CowTable = ( cow ) => {
                         </Table.Row>
 
                         <Table.Row>
-                            <Table.Cell>Breed:</Table.Cell>
-                            <Table.Cell>{ cow.breed }</Table.Cell>
+                            <Table.Cell>Name:</Table.Cell>
+                            <Table.Cell>{ cow.name }</Table.Cell>
                         </Table.Row>
 
                         <Table.Row>
-                            <Table.Cell>Name:</Table.Cell>
-                            <Table.Cell>{ cow.name }</Table.Cell>
+                            <Table.Cell>Breed:</Table.Cell>
+                            <Table.Cell>{ cow.breed }</Table.Cell>
+                        </Table.Row>
+                        
+                        <Table.Row>
+                            <Table.Cell>Weight:</Table.Cell>
+                            <Table.Cell>{ cow.weight }</Table.Cell>
                         </Table.Row>
 
                         <Table.Row>

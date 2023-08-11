@@ -7,7 +7,7 @@ export const Price = () => {
         <>
             
             <section className="flex w-full justify-center content-center mt-10 sm:mt-20" id="pricing">
-				<div className="flex flex-col w-11/12 justify-center content-center">
+				<div className="flex flex-col w-2/3 justify-center content-center">
 					
 					<div className="flex flex-col justify-center items-center">
                         <p className="line text-xl sm:text-2xl font-semibold">Pricing</p>

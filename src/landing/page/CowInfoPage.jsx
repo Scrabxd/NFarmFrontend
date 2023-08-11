@@ -4,7 +4,7 @@ export const CowInfoPage = () => {
     return (
         <>
             <div className="w-full flex flex-col justify-center items-center">
-                <h1>NFarm</h1>
+                <a href="/"><img src="/assets/img/logos/nfarm-logoCircle.png" className="w-24 my-4"/></a>
             </div>
 
             <div className="w-full flex justify-center items-center">

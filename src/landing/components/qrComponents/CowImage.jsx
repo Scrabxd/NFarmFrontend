@@ -2,7 +2,7 @@ import { Card  } from "@nextui-org/react"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
-import { getImageCow } from "../../../store/slices/dashCowSlices/getCowImage/thunks"
+// import { getImageCow } from "../../../store/slices/dashCowSlices/getCowImage/thunks"
 import { getSingleCow } from "../../../store/slices/dashCowSlices/getSingelCow/thunks"
 import { CowTable } from "./cowTable"
 
@@ -12,16 +12,22 @@ export const CowImage = () => {
     const { cowId } = useParams()
 
     const dispatch = useDispatch()
-    const { img } = useSelector( state => state.imageCow ) // reference to store -> reducer ->imageCow
+    // const { img } = useSelector( state => state.imageCow ) // reference to store -> reducer ->imageCow
     const { cow } = useSelector( state => state.cow ) // reference to store -> reducer -> cow
-
+    
+    
     useEffect(() => {
         
-        dispatch( getImageCow( cowId ) )
         dispatch( getSingleCow( cowId ) )
-    
+        
     }, [ ])
     
+    // console.log(cow)
+
+    // const deleteAfterComma = (str) => {
+    //     const index = str.indexOf(',');
+    //     return index !== -1 ? str.substring(0, index) : str;
+    //   };
 
     return (
 
@@ -30,11 +36,11 @@ export const CowImage = () => {
                 <Card.Body>
 
                     <div className="w-full flex justify-center items-center mb-5">
-                        <p className="text-lg md:text-2xl">{ cow.name }</p>
+                        <p className="text-lg md:text-2xl font-bold"> {cow.name} </p>
                     </div>
 
                     <div className="w-full flex justify-center items-center">
-                        <img src={ img } className="rounded-xl w-96"/>
+                        <img src={cow.images} className="rounded-xl w-80" alt={cow.name}/>
                     </div>
 
 

@@ -9,13 +9,13 @@ export const NavbarSessionButtons = () => {
                 Login
             </NavLink>
 
-            <NavLink to="/auth/register" className="text-white font-bold p-3 bg-[#147452] rounded-xl">
+            <NavLink to="/auth/register" className="text-white font-bold p-3 bg-[#005100] rounded-xl hover:bg-[#286400]">
                 SignUp
             </NavLink>
 
-            <Navbar.Item>
-                <SwitchTheme />
-            </Navbar.Item>
+            {/* <Navbar.Item>
+                <SwitchTheme className="hidden"/>
+            </Navbar.Item> */}
         </>
     )
 }

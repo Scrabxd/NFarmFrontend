@@ -1,9 +1,7 @@
 import { Card, Col, Row, Text } from "@nextui-org/react";
 import { ModalQR } from "./ModalQR";
 
-export const CattleItem = ({ breed, name, weight, id, images }) => {
-
-    // console.log(images)
+export const CattleItem = ({ id, breed, name, weight, images }) => {
 
     const deleteAfterComma = (str) => {
         const index = str.indexOf(',');
@@ -51,7 +49,10 @@ export const CattleItem = ({ breed, name, weight, id, images }) => {
                 </Col>
                 <Col>
                 <Row justify="flex-end">
-                    <ModalQR idCow={ id }/>
+                    <a href={`http://localhost:5173/cow/${ id }`} target="_blank">
+                        <button className="rounded-full bg-[#005100] text-[#F5F5F7] py-2 px-6">More</button>
+                    </a>
+                    {/* <ModalQR idCow={ id }/> */}
                 </Row>
                 </Col>
             </Row>

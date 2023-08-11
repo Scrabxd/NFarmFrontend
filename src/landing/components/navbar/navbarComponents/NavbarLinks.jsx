@@ -7,24 +7,24 @@ export const NavbarLinks = () => {
         <Navbar.Content
         //   enableCursorHighlight
         activeColor="success"
-        hideIn="sm"
+        hideIn="md"
         variant="underline-rounded"
         >
             <NavLink to="/" className="text-inherit">
                 Home
             </NavLink>
 
-            <NavLink to="/" className="text-inherit">
+            <a href="/#about" className="text-inherit">
                 About
-            </NavLink>
+            </a>
 
-            <NavLink to="/" className="text-inherit">
+            <a href="/#pricing" className="text-inherit">
                 Pricing
-            </NavLink>
+            </a>
 
-            <NavLink to="/" className="text-inherit">
+            <a href="/#team" className="text-inherit">
                 Team
-            </NavLink>
+            </a>
 
             <NavLink to="/questions" className="text-inherit">
                 FAQ

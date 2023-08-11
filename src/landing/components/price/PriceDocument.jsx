@@ -4,7 +4,7 @@ export const PriceDocument = () => {
     return (
         <Card css={{ maxWidth: "18rem", alignItems:"center", border:"none" }}>
             <Card.Header css={{ justifyContent:"center", bg:"#147452" }}>
-              	<Text h4 b>Document authentification</Text>
+              	<Text h4 css={{ color: "#F5F5F7" }}>Document authentification</Text>
             </Card.Header>
 
             <Card.Divider />

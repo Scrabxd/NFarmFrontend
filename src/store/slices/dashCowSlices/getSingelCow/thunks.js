@@ -20,7 +20,7 @@ export const getSingleCow = ( cowIdReal ) => {
 
     
             dispatch( setCow({ findCow }) ) // return to our slice, the ranch array and this also set our isLoading in false
-            console.log( findCow )
+            // console.log( findCow )
             
         } catch ( error ) {
             console.log( error )

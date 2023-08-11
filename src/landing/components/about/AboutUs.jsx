@@ -6,7 +6,7 @@ export const AboutUs = () => {
     return (
 
         <section className="flex w-full justify-center content-center mt-10" id="about">
-            <div className="flex w-11/12 justify-center content-center">
+            <div className="flex w-2/3 justify-center content-center">
 
                 <div className="hidden lg:flex lg:justify-center lg:items-center lg:w-2/5">
                     <img src="assets/img/about/about.png" className="w-full"/>

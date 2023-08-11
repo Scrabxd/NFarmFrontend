@@ -6,7 +6,7 @@ export const FooterSubscribe = () => {
 
     return (
         <>  
-            <Spacer y={2}/>
+            <Spacer y={1}/>
             <Text weight={"semibold"} color="white">Our Newsletter</Text>
             <Text color="white">Subscribe to the newsletter to keep in touch with NFarm</Text>
             <Input

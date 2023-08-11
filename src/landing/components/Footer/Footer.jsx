@@ -9,14 +9,15 @@ export const Footer = () => {
         
             <footer className="flex flex-col w-full sm:flex-row justify-around mt-10 sm:mt-20 bg-[#147452] text-white">
 
-                <div className="flex flex-col justify-center items-center sm:mb-10">
-                    <div className="footer-line mt-5"></div>
+                <div className="flex flex-col justify-center items-center sm:mb-10 mt-4">
+                    <img src="/assets/img/logos/nfarm-logoCircle.png" alt="NFarmLogo" className="w-auto h-16 mb-2"/>
                     <p className="text-2xl font-bold">NFarm</p>
-                    <p>You, Your Cattle & The System</p>
+                    <p className="text-base">You, Your Cattle & The System</p>
+                    <p className="text-xs">© NFarm. All rights reserved.</p>
                     <FooterSubscribe />
                 </div>
 
-                <div className="flex flex-col justify-center items-center mt-8 mb-8">
+                <div className="flex flex-col justify-center items-center mt-4 mb-4">
                     <p className="text-xl">Useful Links</p>
                     <FooterLinks title={"Home"}/>
                     <FooterLinks title={"About us"}/>

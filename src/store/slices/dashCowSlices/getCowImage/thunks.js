@@ -10,11 +10,11 @@ export const getImageCow = ( idCow ) => {
         try {
     
             // get the image of the corresponding cow
-            const data = await axios.get( 'http://nfarm-back.herokuapp.com/api/cow?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
+            const data = await axios.get( 'http://localhost:4000/api/cow?apiToken=O1H7D701v4ZiWydw1OHPD/6Lq8gHeNBRqzdDGg1shjc=', 
                 {
                     headers: {
                         'x-token': localStorage.getItem( 'token' ),
-                        'idCow': idCow
+                        'idCow': idCow,
                     }
                 } 
             )

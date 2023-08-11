@@ -12,7 +12,7 @@ export const ModalQR = ({ idCow }) => {
     const { qr } = useSelector( state => state.qrCodes )
 
     // provisional code - CHANGE TO THE CORRECT URL
-    const url = `http://127.0.0.1:5173/cow/${ idCow }`
+    const url = `http://localhost:5173/cow/${ idCow }`
 
     // generate a qr
     const generateQRCode = () => {
@@ -21,13 +21,13 @@ export const ModalQR = ({ idCow }) => {
             width: 800,
             margin: 1,
             color: {
-                dark: '#000',
-                light: '#fff'
+                dark: '#1D1D1D',
+                light: '#F5F5F7'
             }
         }, ( err, url ) => {
             if ( err ) throw Error( err )
             // console.log( url )
-            dispatch( setQr({ url }) )
+            dispatch( setQr( url ) )
         })
     }
 
@@ -39,7 +39,7 @@ export const ModalQR = ({ idCow }) => {
                 flat
                 auto
                 rounded
-                css={{ color: "#fff", bg: "#005100" }}
+                css={{ color: "#F5F5F7", bg: "#005100" }}
                 onPress={ () => { dispatch( openModal() ) } } 
             >
                 QR code
@@ -52,6 +52,7 @@ export const ModalQR = ({ idCow }) => {
                 open={ isModalOpen }
                 onClose={ () => { dispatch( closeModal() ) } }
                 onOpen={ generateQRCode }
+                style={{background: "#F5F5F7"}}
             >
                 <Modal.Header>
                     <p className="text-xl font-semibold">Here is you code</p>

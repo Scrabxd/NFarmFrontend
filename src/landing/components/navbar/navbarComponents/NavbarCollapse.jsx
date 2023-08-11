@@ -15,21 +15,21 @@ export const NavbarCollapse = () => {
             </Navbar.CollapseItem>
 
             <Navbar.CollapseItem>
-                <NavLink className="text-inherit" to="/">
+                <a href="/#about" className="text-inherit">
                     About
-                </NavLink>
+                </a>
             </Navbar.CollapseItem>
 
             <Navbar.CollapseItem>
-                <NavLink className="text-inherit" to="/">
+                <a href="/#pricing" className="text-inherit">
                     Pricing
-                </NavLink>
+                </a>
             </Navbar.CollapseItem>
 
             <Navbar.CollapseItem>
-                <NavLink className="text-inherit" to="/">
+                <a href="/#team" className="text-inherit">
                     Team
-                </NavLink>
+                </a>
             </Navbar.CollapseItem>
 
             <Navbar.CollapseItem>
@@ -50,9 +50,9 @@ export const NavbarCollapse = () => {
                 </NavLink>
             </Navbar.CollapseItem>
 
-            <Navbar.CollapseItem>
+            {/* <Navbar.CollapseItem>
                 <SwitchTheme />
-            </Navbar.CollapseItem>
+            </Navbar.CollapseItem> */}
 
         </Navbar.Collapse>
     )
